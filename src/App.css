@@ -1,33 +1,95 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #1abc9c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 354px);
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.left-panel {
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+.left-panel ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-panel li{
+  text-align: right;
+}
+
+.left-panel li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+}
+
+.left-panel a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+/* Main column */
+.main {
+  flex: 75%;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+/* Footer */
+.footer {
+  height: 30px;
+  color: #a5a5a5;
+  line-height: 30px;
+  text-align: right;
+}
+
+.footer p{
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
   }
 }
