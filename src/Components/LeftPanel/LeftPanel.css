@@ -1,0 +1,28 @@
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.left-panel {
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+.left-panel ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-panel li{
+  text-align: right;
+}
+
+.left-panel li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+}
+
+.left-panel a:hover {
+  background-color: #ddd;
+  color: black;
+}
