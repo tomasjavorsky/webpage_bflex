@@ -1,0 +1,10 @@
+.footer {
+  height: 30px;
+  color: #a5a5a5;
+  line-height: 30px;
+  text-align: right;
+}
+
+.footer p{
+  padding-right: 50px;
+}
