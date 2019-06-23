@@ -11,12 +11,26 @@ class LeftPanel extends React.Component {
   render() {
     return (
       <div className={"left-panel"}>
-        <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
+        {/*<ul>*/}
+        {/*  <li><a href="#">Link</a></li>*/}
+        {/*  <li><a href="#">Link</a></li>*/}
+        {/*  <li><a href="#">Link</a></li>*/}
+        {/*  <li><a href="#">Link</a></li>*/}
+        {/*</ul>*/}
+
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+
       </div>
     )
   }

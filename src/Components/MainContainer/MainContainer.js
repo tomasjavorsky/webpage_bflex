@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainContainer.css';
+import Product from '../Product/Product';
 
 class MainContainer extends React.Component {
 
@@ -15,6 +16,9 @@ class MainContainer extends React.Component {
         <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco.</p>
+        <Product/>
+        <Product/>
+        <Product/>
       </div>
     )
   }

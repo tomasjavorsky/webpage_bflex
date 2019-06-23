@@ -22,4 +22,7 @@
   .row, .navbar {
     flex-direction: column;
   }
+  .left-panel{
+    height: 20px;
+  }
 }

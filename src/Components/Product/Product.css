@@ -1,0 +1,26 @@
+.productContainer{
+  display: flex;
+  background-color: #fefffd;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex: 65%;
+}
+
+.productImage{
+  align-self: center;
+  flex: 35%;
+  height: 35%;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .productContainer, .productImage {
+    flex-direction: column;
+  }
+
+  .productImage{
+    max-width: 200px;
+  }
+}
