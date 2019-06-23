@@ -8,7 +8,7 @@ import MainContainer  from './Components/MainContainer/MainContainer';
 
 function App() {
   return (
-    <div className={"App"}>
+    <div className={"app"}>
       <Header />
       <Navbar />
       <div className={"row"}>

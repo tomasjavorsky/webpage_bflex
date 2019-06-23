@@ -1,10 +1,19 @@
 .footer {
+  display: flex;
+  justify-content: flex-end;
   height: 30px;
   color: #a5a5a5;
-  line-height: 30px;
-  text-align: right;
 }
 
-.footer p{
-  padding-right: 50px;
+.adminButton{
+  margin: 20px;
+  background-color: #3d362d; /* Green */
+  border: none;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.adminButton:hover{
+  background-color: #665847;
 }

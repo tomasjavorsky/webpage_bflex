@@ -1,7 +1,7 @@
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #333;
+  background-color: #3d362d;
   justify-content: center;
 }
 
@@ -15,6 +15,6 @@
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #fefffd;
   color: black;
 }

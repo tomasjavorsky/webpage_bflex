@@ -11,7 +11,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div class="footer">
-        <p>Footer</p>
+        <button className={"adminButton"} type={"button"} />
       </div>
     )
   }

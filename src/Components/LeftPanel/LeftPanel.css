@@ -1,8 +1,7 @@
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .left-panel {
-  width: 200px;
-  background-color: #f1f1f1;
+  background-color: #665847;
 }
 
 .left-panel ul {
@@ -12,7 +11,7 @@
 }
 
 .left-panel li{
-  text-align: right;
+  text-align: center;
 }
 
 .left-panel li a{
@@ -23,6 +22,6 @@
 }
 
 .left-panel a:hover {
-  background-color: #ddd;
+  background-color: #fefffd;
   color: black;
 }
