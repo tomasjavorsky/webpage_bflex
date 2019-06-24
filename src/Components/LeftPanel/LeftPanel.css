@@ -2,20 +2,20 @@
 /* Sidebar/left column */
 .left-panel {
   display: flex;
-  background-color: #665847;
+  background-color: var(--colorUIMiddle);
   flex-direction: column;
 }
 
 .left-panel a{
   text-align: center;
   display: block;
-  color: white;
+  color: var(--colorUILight);
   text-decoration: none;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .left-panel a:hover {
-  background-color: #eaebe9;
+  background-color: var(--colorUISemiLight);
   color: black;
 }

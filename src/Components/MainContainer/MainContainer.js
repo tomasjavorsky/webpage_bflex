@@ -19,6 +19,7 @@ class MainContainer extends React.Component {
         <Product/>
         <Product/>
         <Product/>
+        <Product/>
       </div>
     )
   }

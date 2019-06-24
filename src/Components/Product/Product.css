@@ -1,6 +1,6 @@
 .productContainer{
   display: flex;
-  background-color: #fefffd;
+  background-color: var(--colorUILight);
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -13,6 +13,35 @@
   flex: 35%;
   height: 35%;
   margin-right: 20px;
+}
+
+.productAlt{
+  font-size: 12px;
+  color: var(--colorTextNonFocus);
+}
+
+.productTable{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.productDetailsButton{
+  background-color: var(--colorPrimary);
+  border: none;
+  display: block;
+  color: var(--colorTextLight);
+  padding: 10px;
+}
+
+.productDetailsButton:hover{
+  background-color: var(--colorPrimaryDark);
+}
+
+hr{
+  color: var(--colorTextNonFocus);
+  border-style: solid;
+  border-width: 1px;
 }
 
 @media screen and (max-width: 700px) {

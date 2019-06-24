@@ -1,13 +1,13 @@
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #3d362d;
+  background-color: var(--colorUIDark);
   justify-content: center;
 }
 
 /* Style the navigation bar links */
 .navbar a {
-  color: white;
+  color: var(--colorUILight);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -15,6 +15,6 @@
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #eaebe9;
-  color: black;
+  background-color: var(--colorUISemiLight);
+  color: var(--colorTextDark);
 }

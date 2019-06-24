@@ -2,11 +2,10 @@
   display: flex;
   justify-content: flex-end;
   height: 30px;
-  color: #a5a5a5;
 }
 
 .adminButton{
-  background-color: #3d362d; /* Green */
+  background-color: var(--colorUIDark);;
   border: none;
   height: 20px;
   width: 20px;
@@ -14,5 +13,5 @@
 }
 
 .adminButton:hover{
-  background-color: #665847;
+  background-color: var(--colorUIMiddle);;
 }
