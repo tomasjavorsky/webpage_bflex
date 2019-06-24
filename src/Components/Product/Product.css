@@ -29,19 +29,45 @@
 .productDetailsButton{
   background-color: var(--colorPrimary);
   border: none;
-  display: block;
+  display: flex;
   color: var(--colorTextLight);
   padding: 10px;
+  margin-top: 10px;
 }
 
 .productDetailsButton:hover{
   background-color: var(--colorPrimaryDark);
 }
 
+.tableHideButton{
+  display: flex;
+  justify-content: right;
+}
+
+.productTableContainer{
+  width: 100%;
+}
+
 hr{
   color: var(--colorTextNonFocus);
   border-style: solid;
   border-width: 1px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 @media screen and (max-width: 700px) {
