@@ -1,17 +1,67 @@
 .footer {
   display: flex;
-  justify-content: flex-end;
-  height: 30px;
+  justify-content: center;
 }
 
 .adminButton{
-  background-color: var(--colorUIDark);;
+  background-color: var(--colorUIDark);
   border: none;
   height: 20px;
   width: 20px;
   display: block;
 }
 
+.adminConsole{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+
+.adminConsoleFields{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.adminConsoleDescription{
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.adminConsoleTable{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], textarea {
+  background-color : var(--colorUIConsoleDark);
+  margin: 2px;
+  border: none;
+  outline: none;
+  color: var(--colorTextAdminConsole);
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+}
+
 .adminButton:hover{
   background-color: var(--colorUIMiddle);;
+}
+
+.adminConsoleProductName{
+  font-size: 20px;
+  font-weight: bold;
+}
+.adminConsoleTableColumns{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.adminConsoleButtonArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
 }

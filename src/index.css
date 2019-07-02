@@ -2,12 +2,14 @@
   --colorPrimary: #ff9900;
   --colorPrimaryDark: #cd6b00;
   --colorUIDark: #3d362d;
+  --colorUIConsoleDark: #443d34;
   --colorUIMiddle: #665847;
   --colorUISemiLight: #eaebe9;
   --colorUILight: #ffffff;
   --colorTextDark: #000000;
   --colorTextNonFocus: #cccdcb;
   --colorTextLight: #ffffff;
+  --colorTextAdminConsole: #d8d5d0;
 }
 
 
@@ -24,4 +26,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.primaryButton{
+  background-color: var(--colorPrimary);
+  border: none;
+  display: flex;
+  color: var(--colorTextLight);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.primaryButton:hover{
+  background-color: var(--colorPrimaryDark);
+}
+
+.secondaryButton{
+  background-color: var(--colorUIDark);
+  border: none;
+  display: flex;
+  color: var(--colorTextLight);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.secondaryButton:hover{
+  background-color: var(--colorUIMiddle);
 }

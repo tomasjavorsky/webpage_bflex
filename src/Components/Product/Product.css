@@ -23,25 +23,12 @@
 .productTable{
   display: flex;
   flex-direction: row;
-  justify-content: right;
-}
-
-.productDetailsButton{
-  background-color: var(--colorPrimary);
-  border: none;
-  display: flex;
-  color: var(--colorTextLight);
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.productDetailsButton:hover{
-  background-color: var(--colorPrimaryDark);
+  justify-content: left;
 }
 
 .tableHideButton{
   display: flex;
-  justify-content: right;
+  justify-content: left;
 }
 
 .productTableContainer{

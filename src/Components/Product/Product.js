@@ -14,7 +14,7 @@ class Product extends React.Component {
         image: tempImage
       },
       tableOpen: false
-    }
+    };
 
     this.detailsClicked = this.detailsClicked.bind(this);
   }
@@ -60,7 +60,7 @@ class Product extends React.Component {
           </tr>
         </table>
         <div className={"tableHideButton"}>
-          <button className={"productDetailsButton"} type={"button"} onClick={props.closeMethod}>Zavrieť</button>
+          <button className={"primaryButton"} type={"button"} onClick={props.closeMethod}>Zavrieť</button>
         </div>
       </div>
     );
@@ -79,7 +79,7 @@ class Product extends React.Component {
             <h4>{this.state.productData.name}</h4>
             <p className={"productDescription"}>{this.state.productData.description}</p>
             <div className={"productTable"}>
-              {!this.state.tableOpen && <button className={"productDetailsButton"} type={"button"} onClick={this.detailsClicked}>Detaily</button>}
+              {!this.state.tableOpen && <button className={"primaryButton"} type={"button"} onClick={this.detailsClicked}>Detaily</button>}
               {this.state.tableOpen && <this.ProductTable closeMethod={this.detailsClicked}/>}
             </div>
             <hr/>
