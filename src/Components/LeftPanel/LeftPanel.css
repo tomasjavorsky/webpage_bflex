@@ -1,5 +1,3 @@
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
 .left-panel {
   display: flex;
   background-color: var(--colorUIMiddle);
@@ -18,4 +16,23 @@
 .left-panel a:hover {
   background-color: var(--colorUISemiLight);
   color: black;
+}
+
+.categoryCreatorContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.categoryInput{
+  font-size: 15px;
+}
+
+input[type="text"]{
+  background-color : var(--colorUIConsoleDark);
+  margin: 2px;
+  border: none;
+  outline: none;
+  color: var(--colorTextAdminConsole);
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
 }

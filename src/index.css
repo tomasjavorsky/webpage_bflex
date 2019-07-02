@@ -1,9 +1,9 @@
 :root{
   --colorPrimary: #ff9900;
   --colorPrimaryDark: #cd6b00;
-  --colorUIDark: #3d362d;
+  --colorUIDark: rgba(61, 54, 45, 0);
   --colorUIConsoleDark: #443d34;
-  --colorUIMiddle: #665847;
+  --colorUIMiddle: rgba(102, 88, 71, 0.6);
   --colorUISemiLight: #eaebe9;
   --colorUILight: #ffffff;
   --colorTextDark: #000000;
@@ -31,10 +31,10 @@ code {
 .primaryButton{
   background-color: var(--colorPrimary);
   border: none;
-  display: flex;
   color: var(--colorTextLight);
   padding: 10px;
-  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .primaryButton:hover{
@@ -44,10 +44,10 @@ code {
 .secondaryButton{
   background-color: var(--colorUIDark);
   border: none;
-  display: flex;
   color: var(--colorTextLight);
   padding: 10px;
-  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .secondaryButton:hover{

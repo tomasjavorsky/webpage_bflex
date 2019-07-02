@@ -47,7 +47,7 @@ input[type="text"], textarea {
 }
 
 .adminButton:hover{
-  background-color: var(--colorUIMiddle);;
+  background-color: var(--colorUIMiddle);
 }
 
 .adminConsoleProductName{
@@ -56,12 +56,26 @@ input[type="text"], textarea {
 }
 .adminConsoleTableColumns{
   font-size: 16px;
-  font-weight: bold;
 }
 
 .adminConsoleButtonArea{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.adminConsoleProductCategory{
+  border: none;
+  outline: none;
+  margin: 2px;
+  background-color : var(--colorUIConsoleDark);
+  color: var(--colorTextAdminConsole);
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+}
+
+.adminConsoleProductCategory option:hover {
+  background-color: var(--colorPrimary);
 }

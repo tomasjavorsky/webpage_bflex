@@ -5,33 +5,36 @@ class Footer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      adminConsoleOpen: false
-    };
-    this.adminConsoleClicked = this.adminConsoleClicked.bind(this);
+    this.state = {}
   }
 
-  adminConsoleClicked(){
-    this.setState(state => ({adminConsoleOpen: !this.state.adminConsoleOpen}));
-  }
-
-  AdminConsole(props){
-    return(
+  AdminConsole(props) {
+    return (
       <div className={"adminConsole"}>
         <div className={"adminConsoleFields"}>
           <div className={"adminConsoleDescription"}>
-            <input className={"adminConsoleProductName"} type="text" placeholder="Product Name"></input>
-            <textarea className={"adminConsoleProductDescription"} rows = "5" cols = "75" placeholder="Product Description"></textarea>
-            <input className={"adminConsoleProductTags"} type="text" placeholder="Product Tags"></input>
+            <input className={"adminConsoleProductName"} type="text" placeholder="Product Name"/>
+            <textarea className={"adminConsoleProductDescription"} rows="5" cols="75"
+                      placeholder="Product Description"/>
+            <input className={"adminConsoleProductTags"} type="text"
+                   placeholder="Product Tags (separate with ,)"/>
+            <select className={"adminConsoleProductCategory"}>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
           </div>
           <div className={"adminConsoleTable"}>
-            <input className={"adminConsoleTableColumns"} type="text" placeholder="Table Columns (separate with ,)"></input>
-            <textarea className={"adminConsoleTableRows"} rows = "7" cols = "75" placeholder="Table Data (separate with ,)"></textarea>
+            <input className={"adminConsoleTableColumns"} type="text"
+                   placeholder="Table Columns (separate with ,)"/>
+            <textarea className={"adminConsoleTableRows"} rows="8" cols="75"
+                      placeholder="Table Data (separate with ,)"/>
           </div>
         </div>
         <div className={"adminConsoleButtonArea"}>
           <button className={"primaryButton"} type={"button"} onClick={""}>Create</button>
-          <button className={"secondaryButton"} type={"button"} onClick={""}>Cancel</button>
+          <button className={"secondaryButton"} type={"button"} onClick={props.adminConsoleClick}>Cancel</button>
         </div>
 
       </div>
@@ -41,8 +44,8 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <button className={"adminButton"} type={"button"} onClick={this.adminConsoleClicked}/>
-        {this.state.adminConsoleOpen && <this.AdminConsole />}
+        <button className={"adminButton"} type={"button"} onClick={this.props.adminConsoleClick}/>
+        {this.props.adminConsoleOpen && <this.AdminConsole adminConsoleClick={this.props.adminConsoleClick}/>}
       </div>
     )
   }

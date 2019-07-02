@@ -6,18 +6,34 @@ import Navbar         from './Components/Navbar/Navbar';
 import LeftPanel      from './Components/LeftPanel/LeftPanel';
 import MainContainer  from './Components/MainContainer/MainContainer';
 
-function App() {
-  return (
-    <div className={"app"}>
-      <Header />
-      <Navbar />
-      <div className={"row"}>
-        <LeftPanel />
-        <MainContainer />
+class App extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      adminConsoleOpen: false
+    };
+    this.adminConsoleClicked = this.adminConsoleClicked.bind(this);
+  }
+
+  adminConsoleClicked() {
+    this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
+  }
+
+  render(){
+    return (
+      <div className={"app"}>
+        <Header />
+        <Navbar />
+        <div className={"row"}>
+          <LeftPanel adminConsoleOpen={this.state.adminConsoleOpen}/>
+          <MainContainer />
+        </div>
+        <Footer adminConsoleOpen={this.state.adminConsoleOpen} adminConsoleClick={this.adminConsoleClicked} />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+}
+
 }
 
 export default App;

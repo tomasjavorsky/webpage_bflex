@@ -8,16 +8,18 @@ class LeftPanel extends React.Component {
     this.state = {}
   }
 
+  CategoryCreator(props){
+    return(
+      <div className={"categoryCreatorContainer"}>
+        <input className={"categoryInput"} type="text" placeholder="Category Name"/>
+        <button className={"primaryButton"} type={"button"} onClick={""}>+</button>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className={"left-panel"}>
-        {/*<ul>*/}
-        {/*  <li><a href="#">Link</a></li>*/}
-        {/*  <li><a href="#">Link</a></li>*/}
-        {/*  <li><a href="#">Link</a></li>*/}
-        {/*  <li><a href="#">Link</a></li>*/}
-        {/*</ul>*/}
-
         <a href="#">Link</a>
         <a href="#">Link</a>
         <a href="#">Link</a>
@@ -30,7 +32,7 @@ class LeftPanel extends React.Component {
         <a href="#">Link</a>
         <a href="#">Link</a>
         <a href="#">Link</a>
-
+        {this.props.adminConsoleOpen && <this.CategoryCreator/>}
       </div>
     )
   }
