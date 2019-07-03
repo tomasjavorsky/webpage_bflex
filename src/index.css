@@ -1,9 +1,9 @@
 :root{
   --colorPrimary: #ff9900;
   --colorPrimaryDark: #cd6b00;
-  --colorUIDark: rgba(61, 54, 45, 0);
+  --colorUIDark: rgb(61, 54, 45);
   --colorUIConsoleDark: #443d34;
-  --colorUIMiddle: rgba(102, 88, 71, 0.6);
+  --colorUIMiddle: rgb(102, 88, 71);
   --colorUISemiLight: #eaebe9;
   --colorUILight: #ffffff;
   --colorTextDark: #000000;

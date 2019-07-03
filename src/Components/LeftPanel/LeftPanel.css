@@ -4,16 +4,19 @@
   flex-direction: column;
 }
 
-.left-panel a{
+.left-panel button{
   text-align: center;
   display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--colorUIMiddle);
   color: var(--colorUILight);
-  text-decoration: none;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 16px;
 }
 
-.left-panel a:hover {
+.left-panel button:hover {
   background-color: var(--colorUISemiLight);
   color: black;
 }

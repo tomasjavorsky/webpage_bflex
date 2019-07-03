@@ -17,21 +17,18 @@ class LeftPanel extends React.Component {
     );
   }
 
+  CategoryList(props){
+    return(
+      <div>
+        {props.categories.map((category,index) => <button key={index} href="#">{category}</button>)}
+      </div>
+    )
+  }
+
   render() {
     return (
       <div className={"left-panel"}>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <this.CategoryList categories={this.props.categories}/>
         {this.props.adminConsoleOpen && <this.CategoryCreator/>}
       </div>
     )

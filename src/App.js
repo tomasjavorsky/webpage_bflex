@@ -11,7 +11,8 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      adminConsoleOpen: false
+      adminConsoleOpen: false,
+      productCategories: ["Lešenie","Distančné prvky","Armovanie","Bednenie","Tesniace prvky","Akustická izolácia"]
     };
     this.adminConsoleClicked = this.adminConsoleClicked.bind(this);
   }
@@ -20,13 +21,21 @@ class App extends React.Component{
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
 
+  addProductCategory(categoryName){
+    this.setState({productCategories: [this.state.productCategories, {categoryName}]})
+  }
+
   render(){
     return (
       <div className={"app"}>
         <Header />
         <Navbar />
         <div className={"row"}>
-          <LeftPanel adminConsoleOpen={this.state.adminConsoleOpen}/>
+          <LeftPanel
+            adminConsoleOpen={this.state.adminConsoleOpen}
+            categories={this.state.productCategories}
+            addCategory={this.addProductCategory}
+          />
           <MainContainer />
         </div>
         <Footer adminConsoleOpen={this.state.adminConsoleOpen} adminConsoleClick={this.adminConsoleClicked} />
