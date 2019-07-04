@@ -7,8 +7,7 @@ class LeftPanel extends React.Component {
     super(props);
     this.state = {
       categoryName: ""
-    }
-
+    };
     this.getCategoryName = this.getCategoryName.bind(this);
   }
 
@@ -20,6 +19,10 @@ class LeftPanel extends React.Component {
     return this.state.categoryName;
   }
 
+  generateProductCategoryButtons(){
+    return this.props.categories.map((category,index) => <button className={"productCategoryButton"} key={index}>{category}</button>)
+  }
+
   // ---------- Components ----------
 
   CategoryCreator(props){
@@ -28,25 +31,16 @@ class LeftPanel extends React.Component {
         <input className={"categoryInput"} type="text" placeholder="Category Name" onChange={props.onCategoryChange}/>
         <button className={"primaryButton"}
                 type={"button"}
-                // onClick={props.addCategory(props.getCategoryName)}
                 onClick={() => props.addCategory(props.getCategoryName())}
         >+</button>
       </div>
     );
   }
 
-  CategoryList(props){
-    return(
-      <div>
-        {props.categories.map((category,index) => <button key={index}>{category}</button>)}
-      </div>
-    )
-  }
-
   render() {
     return (
       <div className={"left-panel"}>
-        <this.CategoryList categories={this.props.categories}/>
+        {this.generateProductCategoryButtons()}
         {this.props.adminConsoleOpen &&
         <this.CategoryCreator
           addCategory={this.props.addCategory}

@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.left-panel button{
+.productCategoryButton{
   text-align: center;
   display: block;
   width: 100%;
@@ -16,7 +16,7 @@
   font-size: 16px;
 }
 
-.left-panel button:hover {
+.productCategoryButton:hover {
   background-color: var(--colorUISemiLight);
   color: black;
 }
