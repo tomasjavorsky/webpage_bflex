@@ -15,6 +15,7 @@ class App extends React.Component{
       productCategories: ["Lešenie","Distančné prvky","Armovanie","Bednenie","Tesniace prvky","Akustická izolácia"]
     };
     this.adminConsoleClicked = this.adminConsoleClicked.bind(this);
+    this.addProductCategory = this.addProductCategory.bind(this);
   }
 
   adminConsoleClicked() {
@@ -22,7 +23,10 @@ class App extends React.Component{
   }
 
   addProductCategory(categoryName){
-    this.setState({productCategories: [this.state.productCategories, {categoryName}]})
+    if(categoryName !== ""){
+      let currentCategories = this.state.productCategories;
+      this.setState({productCategories: [...currentCategories, categoryName]})
+    }
   }
 
   render(){
