@@ -11,10 +11,8 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className={"navbar"}>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <button onClick="#">Produkty</button>
+        <button onClick="#">Kontakt</button>
       </div>
     )
   }

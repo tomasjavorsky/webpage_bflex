@@ -1,11 +1,30 @@
 import React from 'react';
 import './Footer.css';
+import AdminLogin from './AdminLogin';
 
 class Footer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      adminLoginOpen: false
+    };
+    this.adminLoginClick = this.adminLoginClick.bind(this);
+    this.adminConsoleOpen = this.adminConsoleOpen.bind(this);
+    this.adminLoginCancel = this.adminLoginCancel.bind(this);
+  }
+
+  adminLoginClick(){
+    this.setState({adminLoginOpen: true});
+  }
+
+  adminLoginCancel(){
+    this.setState({adminLoginOpen: false});
+  }
+
+  adminConsoleOpen(){
+    this.setState({adminLoginOpen: false});
+    this.props.adminConsoleClick();
   }
 
   AdminConsole(props) {
@@ -32,7 +51,7 @@ class Footer extends React.Component {
         </div>
         <div className={"adminConsoleButtonArea"}>
           <button className={"primaryButton"} type={"button"} onClick={""}>Create</button>
-          <button className={"secondaryButton"} type={"button"} onClick={props.adminConsoleClick}>Cancel</button>
+          <button className={"secondaryButton"} type={"button"} onClick={props.adminConsoleOpen}>Cancel</button>
         </div>
       </div>
     );
@@ -41,10 +60,11 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <button className={"adminButton"} type={"button"} onClick={this.props.adminConsoleClick}/>
+        <button className={"adminButton"} type={"button"} onClick={this.adminLoginClick}/>
+        {this.state.adminLoginOpen && <AdminLogin adminConsoleOpen={this.adminConsoleOpen} cancelPressed={this.adminLoginCancel}/>}
         {this.props.adminConsoleOpen &&
         <this.AdminConsole
-          adminConsoleClick={this.props.adminConsoleClick}
+          adminConsoleOpen={this.adminConsoleOpen}
           productCategories={this.props.productCategories}
         />}
       </div>

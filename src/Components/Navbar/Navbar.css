@@ -6,16 +6,18 @@
 }
 
 /* Style the navigation bar links */
-.navbar a {
+.navbar button {
   color: var(--colorUILight);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
   font-size: 16px;
+  border: none;
+  background-color: var(--colorUIDark);
 }
 
 /* Change color on hover */
-.navbar a:hover {
+.navbar button:hover {
   background-color: var(--colorUISemiLight);
   color: var(--colorTextDark);
 }

@@ -6,8 +6,8 @@
 .adminButton{
   background-color: var(--colorUIDark);
   border: none;
-  height: 20px;
-  width: 20px;
+  height: 50px;
+  width: 50px;
   display: block;
 }
 
@@ -78,4 +78,12 @@ input[type="text"], textarea {
 
 .adminConsoleProductCategory option:hover {
   background-color: var(--colorPrimary);
+}
+
+.adminLogin{
+  margin: 10px;
+}
+
+.adminLogin button{
+  margin-left: 20px;
 }
