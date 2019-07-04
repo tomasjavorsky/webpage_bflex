@@ -42,7 +42,7 @@ class App extends React.Component{
           />
           <MainContainer />
         </div>
-        <Footer adminConsoleOpen={this.state.adminConsoleOpen} adminConsoleClick={this.adminConsoleClicked} />
+        <Footer adminConsoleOpen={this.state.adminConsoleOpen} adminConsoleClick={this.adminConsoleClicked} productCategories={this.state.productCategories} />
       </div>
     );
 }

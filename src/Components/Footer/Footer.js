@@ -19,10 +19,7 @@ class Footer extends React.Component {
             <input className={"adminConsoleProductTags"} type="text"
                    placeholder="Product Tags (separate with ,)"/>
             <select className={"adminConsoleProductCategory"}>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
+              {props.productCategories.map(option => <option value={option}>{option}</option>)}
             </select>
           </div>
           <div className={"adminConsoleTable"}>
@@ -45,7 +42,9 @@ class Footer extends React.Component {
     return (
       <div className="footer">
         <button className={"adminButton"} type={"button"} onClick={this.props.adminConsoleClick}/>
-        {this.props.adminConsoleOpen && <this.AdminConsole adminConsoleClick={this.props.adminConsoleClick}/>}
+        {this.props.adminConsoleOpen && <this.AdminConsole
+          adminConsoleClick={this.props.adminConsoleClick}
+          productCategories={this.props.productCategories}/>}
       </div>
     )
   }
