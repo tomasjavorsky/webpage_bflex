@@ -14,10 +14,17 @@
   font-size: 16px;
   border: none;
   background-color: var(--colorUIDark);
+  margin-right: 20px;
 }
 
 /* Change color on hover */
 .navbar button:hover {
   background-color: var(--colorUISemiLight);
   color: var(--colorTextDark);
+}
+
+@media screen and (max-width: 720px) {
+  .navbar button{
+    margin-right: 0px;
+  }
 }

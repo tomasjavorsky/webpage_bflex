@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-/* container */
 .row {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1400px;
   min-height: calc(100vh - 354px);
 }
 
@@ -18,7 +18,16 @@
   padding: 20px;
 }
 
-@media screen and (max-width: 700px) {
+.mainContentContainer{
+  display: flex;
+  justify-content: center;
+  background-color: var(--colorUISemiLight);
+}
+
+.side{
+}
+
+@media screen and (max-width: 720px) {
   .row, .navbar {
     flex-direction: column;
   }

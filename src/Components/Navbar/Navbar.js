@@ -11,8 +11,8 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className={"navbar"}>
-        <button onClick="#">Produkty</button>
-        <button onClick="#">Kontakt</button>
+        <button onClick={this.props.productsTabClicked}>Produkty</button>
+        <button onClick={this.props.contactTabClicked}>Kontakt</button>
       </div>
     )
   }

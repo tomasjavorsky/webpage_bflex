@@ -6,6 +6,8 @@
   margin-bottom: 20px;
   justify-content: center;
   flex: 65%;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #d7d4ce;
 }
 
 .productImage{
@@ -45,6 +47,7 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 8px;
 }
 
 td, th {
@@ -57,7 +60,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .productContainer, .productImage {
     flex-direction: column;
   }

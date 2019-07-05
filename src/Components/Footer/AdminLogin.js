@@ -13,7 +13,7 @@ class AdminLogin extends React.Component {
   }
 
   loginPressed() {
-    if(this.state.name === "name" && this.state.password === "password"){
+    if(this.state.name === "" && this.state.password === ""){
       this.props.adminConsoleOpen();
     }
   }

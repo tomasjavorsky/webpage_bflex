@@ -1,24 +1,27 @@
 .left-panel {
   display: flex;
-  background-color: var(--colorUIMiddle);
+  background-color: var(--colorUISemiLight);
   flex-direction: column;
+  margin-top: 20px;
+  border-right: 1px solid var(--colorUIMiddle);
 }
 
 .productCategoryButton{
-  text-align: center;
+  text-align: right;
   display: block;
   width: 100%;
   border: none;
-  background-color: var(--colorUIMiddle);
-  color: var(--colorUILight);
+  background-color: var(--colorUISemiLight);
+  color: var(--colorUIMiddle);
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 16px;
+  margin-bottom: 15px;
 }
 
 .productCategoryButton:hover {
-  background-color: var(--colorUISemiLight);
-  color: black;
+  background-color: var(--colorUIMiddle);
+  color: white;
 }
 
 .categoryCreatorContainer{
@@ -38,4 +41,17 @@ input[type="text"]{
   color: var(--colorTextAdminConsole);
   font-family: 'Open Sans', sans-serif;
   padding: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .left-panel{
+    margin-top: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--colorUIMiddle);
+  }
+
+  .productCategoryButton{
+    margin-bottom: 0;
+    text-align: center;
+  }
 }

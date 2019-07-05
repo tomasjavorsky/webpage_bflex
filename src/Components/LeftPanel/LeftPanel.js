@@ -11,24 +11,28 @@ class LeftPanel extends React.Component {
     this.getCategoryName = this.getCategoryName.bind(this);
   }
 
-  onCategoryChange = (event) =>{
+  onCategoryChange = (event) => {
     this.setState({categoryName: event.target.value})
   };
 
-  getCategoryName(){
+  getCategoryName() {
     return this.state.categoryName;
   }
 
-  generateProductCategoryButtons(){
-    return this.props.categories.map((category,index) => <button className={"productCategoryButton"} key={index}>{category}</button>)
+  generateProductCategoryButtons() {
+    return this.props.categories.map((category, index) => <button className={"productCategoryButton"}
+                                                                  key={index}>{category}</button>)
   }
 
   // ---------- Components ----------
 
-  CategoryCreator(props){
-    return(
+  CategoryCreator(props) {
+    return (
       <div className={"categoryCreatorContainer"}>
-        <input className={"categoryInput"} type="text" placeholder="Category Name" onChange={props.onCategoryChange}/>
+        <input className={"categoryInput"}
+               type="text"
+               placeholder="Category Name"
+               onChange={props.onCategoryChange}/>
         <button className={"primaryButton"}
                 type={"button"}
                 onClick={() => props.addCategory(props.getCategoryName())}

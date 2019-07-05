@@ -6,12 +6,14 @@ class MainContainer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      currentTab: "products"
+    }
   }
 
-  render() {
-    return (
-      <div className={'main'}>
+  ProductsTab(props){
+    return(
+      <div>
         <h2>TITLE HEADING</h2>
         <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -20,6 +22,28 @@ class MainContainer extends React.Component {
         <Product/>
         <Product/>
         <Product/>
+      </div>
+    );
+  }
+
+  ContactTab(props){
+    return(
+      <div>
+        <h2>Kontakt</h2>
+        <p>Ľ. Fullu 7, 841 05 Bratislava</p>
+        <p>tel.: +421 2 20721062</p>
+        <p>fax.: +421 2 20730795</p>
+        <p>mob.: +421 917 701028</p>
+        <p>e-mail: info@bflex.sk</p>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div className={'main'}>
+        {this.props.currentTab === "products" && <this.ProductsTab/>}
+        {this.props.currentTab === "contact" && <this.ContactTab/>}
       </div>
     )
   }
