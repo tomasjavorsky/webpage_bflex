@@ -1,3 +1,17 @@
-.main{
-  background-color: var(--colorUISemiLight);
+.main {
+  flex: 80%;
+}
+
+.productTab{
+  padding: 20px;
+  box-shadow: inset 3px 3px 5px var(--colorShadow);
+}
+
+.contactTabInfo{
+  flex-direction: column;
+  padding: 20px;
+  flex: 65%;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px var(--colorShadow);
+  background-color: var(--colorUILight);
 }

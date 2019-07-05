@@ -47,11 +47,11 @@ class App extends React.Component{
         <Navbar productsTabClicked={this.productsTabClicked} contactTabClicked={this.contactTabClicked}/>
         <div className={"mainContentContainer"}>
           <div className={"row"}>
-            <LeftPanel
+            {this.state.currentTab === "products" && <LeftPanel
               adminConsoleOpen={this.state.adminConsoleOpen}
               categories={this.state.productCategories}
               addCategory={this.addProductCategory}
-            />
+            />}
             <MainContainer currentTab={this.state.currentTab}/>
           </div>
         </div>

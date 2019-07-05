@@ -4,12 +4,15 @@
   --colorUIDark: rgb(61, 54, 45);
   --colorUIConsoleDark: #443d34;
   --colorUIMiddle: rgb(102, 88, 71);
+  --colorUIMiddleTransparent: rgba(102, 88, 71, 0.1);
   --colorUISemiLight: #eaebe9;
+  --colorUISemiLightDarker: #c2c3c1;
   --colorUILight: #ffffff;
   --colorTextDark: #000000;
   --colorTextNonFocus: #cccdcb;
   --colorTextLight: #ffffff;
   --colorTextAdminConsole: #d8d5d0;
+  --colorShadow: rgba(215, 212, 206, 0.71);
 }
 
 
