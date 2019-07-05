@@ -37,6 +37,7 @@
 }
 
 input[type="text"], textarea {
+  border-radius: 3px;
   background-color : var(--colorUIConsoleDark);
   margin: 2px;
   border: none;
@@ -44,6 +45,10 @@ input[type="text"], textarea {
   color: var(--colorTextAdminConsole);
   font-family: 'Open Sans', sans-serif;
   padding: 5px;
+}
+
+select{
+  border-radius: 3px;
 }
 
 .adminButton:hover{

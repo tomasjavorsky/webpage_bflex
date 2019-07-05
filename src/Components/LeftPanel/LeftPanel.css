@@ -17,7 +17,6 @@
   padding-bottom: 15px;
   font-size: 16px;
   box-shadow: 0px 0px 5px #d7d4ce;
-
 }
 
 .productCategoryButton:hover {
@@ -29,6 +28,7 @@
 .categoryCreatorContainer{
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 .categoryInput{
@@ -36,6 +36,7 @@
 }
 
 input[type="text"]{
+  border-radius: 3px;
   background-color : var(--colorUIConsoleDark);
   margin: 2px;
   border: none;
