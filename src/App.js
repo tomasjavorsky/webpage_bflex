@@ -44,7 +44,8 @@ class App extends React.Component{
     return (
       <div className={"app"}>
         <Header />
-        <Navbar productsTabClicked={this.productsTabClicked} contactTabClicked={this.contactTabClicked}/>
+        <Navbar productsTabClicked={this.productsTabClicked}
+                contactTabClicked={this.contactTabClicked}/>
         <div className={"mainContentContainer"}>
           <div className={"row"}>
             {this.state.currentTab === "products" && <LeftPanel
@@ -55,7 +56,9 @@ class App extends React.Component{
             <MainContainer currentTab={this.state.currentTab}/>
           </div>
         </div>
-        <Footer adminConsoleOpen={this.state.adminConsoleOpen} adminConsoleClick={this.adminConsoleClicked} productCategories={this.state.productCategories} />
+        <Footer adminConsoleOpen={this.state.adminConsoleOpen}
+                adminConsoleClick={this.adminConsoleClicked}
+                productCategories={this.state.productCategories} />
       </div>
     );
   }

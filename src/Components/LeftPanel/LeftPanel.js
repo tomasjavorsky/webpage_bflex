@@ -27,16 +27,33 @@ class LeftPanel extends React.Component {
   // ---------- Components ----------
 
   CategoryCreator(props) {
+
+    const inlineMargin = {
+      marginRight: "8px",
+      marginLeft: "8px"
+    };
+
     return (
       <div className={"categoryCreatorContainer"}>
-        <input className={"categoryInput"}
+        <div>
+          <input className={"categoryInput"}
                type="text"
                placeholder="Category Name"
                onChange={props.onCategoryChange}/>
-        <button className={"primaryButton"}
-                type={"button"}
-                onClick={() => props.addCategory(props.getCategoryName())}
-        >+</button>
+          <button className={"primaryButton"}
+                  type={"button"}
+                  style={inlineMargin}
+                  onClick={() => props.addCategory(props.getCategoryName())}
+          >+</button>
+          <button className={"secondaryButton"}
+                  type={"button"}
+                  onClick={""}
+          >-</button>
+        </div>
+        <textarea className={"adminConsoleTableRows"}
+                  rows="8" cols="10"
+                  placeholder="Category description"/>
+
       </div>
     );
   }
