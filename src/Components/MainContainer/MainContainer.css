@@ -1,11 +1,14 @@
 .main {
   flex: 80%;
-  margin-bottom: 20px;
 }
 
 .productTab{
   padding: 20px;
   box-shadow: inset 3px 3px 5px var(--colorShadow);
+}
+
+.contactTab{
+  margin-bottom: 20px;
 }
 
 .contactTabInfo{
@@ -18,7 +21,7 @@
 }
 
 .howToTab{
-  max-width: 500px;
+  max-width: 350px;
 }
 
 @media screen and (max-width: 720px) {
