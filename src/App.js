@@ -19,6 +19,7 @@ class App extends React.Component{
     this.addProductCategory = this.addProductCategory.bind(this);
     this.productsTabClicked = this.productsTabClicked.bind(this);
     this.contactTabClicked = this.contactTabClicked.bind(this);
+    this.howToOrderTabClicked = this.howToOrderTabClicked.bind(this);
   }
 
   productsTabClicked(){
@@ -27,6 +28,10 @@ class App extends React.Component{
 
   contactTabClicked(){
     this.setState({currentTab: "contact"});
+  }
+
+  howToOrderTabClicked(){
+    this.setState({currentTab: "howToOrder"});
   }
 
   adminConsoleClicked() {
@@ -45,7 +50,8 @@ class App extends React.Component{
       <div className={"app"}>
         <Header />
         <Navbar productsTabClicked={this.productsTabClicked}
-                contactTabClicked={this.contactTabClicked}/>
+                contactTabClicked={this.contactTabClicked}
+                howToOrderTabClicked={this.howToOrderTabClicked}/>
         <div className={"mainContentContainer"}>
           <div className={"row"}>
             {this.state.currentTab === "products" && <LeftPanel

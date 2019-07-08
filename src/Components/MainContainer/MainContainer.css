@@ -17,6 +17,10 @@
   background-color: var(--colorUILight);
 }
 
+.howToTab{
+  max-width: 500px;
+}
+
 @media screen and (max-width: 720px) {
   .productTab{
     box-shadow: none;

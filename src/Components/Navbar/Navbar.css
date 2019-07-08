@@ -1,11 +1,18 @@
-/* Style the top navigation bar */
 .navbar {
   display: flex;
   background-color: var(--colorUIDark);
+  justify-content: space-around;
+}
+
+.navHidden{
+  visibility: hidden;
+}
+
+.navSearch{
+  display: flex;
   justify-content: center;
 }
 
-/* Style the navigation bar links */
 .navbar button {
   color: var(--colorUILight);
   padding: 14px 20px;
@@ -17,14 +24,45 @@
   margin-right: 20px;
 }
 
-/* Change color on hover */
+.navSearch input[type="text"]{
+  align-self: center;
+  border-radius: 3px;
+  background-color: var(--colorUISemiDark);
+  border: none;
+  outline: none;
+  color: var(--colorTextLight);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  height: 65%;
+  margin-right: 5px;
+  max-height: 30px;
+}
+
 .navbar button:hover {
   background-color: var(--colorUISemiLight);
   color: var(--colorTextDark);
 }
 
-@media screen and (max-width: 720px) {
+/*TODO solve navbar layout problem*/
+@media screen and (max-width: 990px) {
+
   .navbar button{
     margin-right: 0px;
+  }
+
+  .navButtons{
+    align-self: center;
+  }
+
+  .navHidden{
+    visibility: collapse;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .navButtons{
+    display: flex;
+    flex-direction: column;
   }
 }

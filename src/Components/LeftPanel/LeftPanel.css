@@ -32,11 +32,7 @@
   margin: 10px;
 }
 
-.categoryInput{
-  font-size: 15px;
-}
-
-input[type="text"]{
+.categoryInput input[type="text"]{
   border-radius: 3px;
   background-color : var(--colorUIConsoleDark);
   margin: 2px;
@@ -45,6 +41,7 @@ input[type="text"]{
   color: var(--colorTextAdminConsole);
   font-family: 'Open Sans', sans-serif;
   padding: 5px;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 720px) {

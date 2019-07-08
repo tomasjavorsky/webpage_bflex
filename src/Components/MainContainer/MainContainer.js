@@ -42,11 +42,25 @@ class MainContainer extends React.Component {
     );
   }
 
+  HowToOrder(props){
+    return(
+      <div className={"contactTab"}>
+        <h2>AKO OBJEDNAŤ</h2>
+        <div className={"contactTabInfo howToTab"}>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.</p>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className={'main'}>
         {this.props.currentTab === "products" && <this.ProductsTab/>}
         {this.props.currentTab === "contact" && <this.ContactTab/>}
+        {this.props.currentTab === "howToOrder" && <this.HowToOrder/>}
       </div>
     );
   }

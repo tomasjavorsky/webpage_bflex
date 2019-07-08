@@ -8,6 +8,7 @@ class Footer extends React.Component {
     super(props);
     this.state = {
       adminLoginOpen: false
+
     };
     this.adminLoginClick = this.adminLoginClick.bind(this);
     this.adminConsoleOpen = this.adminConsoleOpen.bind(this);
