@@ -5,6 +5,7 @@ import Footer         from './Components/Footer/Footer';
 import Navbar         from './Components/Navbar/Navbar';
 import LeftPanel      from './Components/LeftPanel/LeftPanel';
 import MainContainer  from './Components/MainContainer/MainContainer';
+import tempImage from "./Components/Product/tempImage.jpg";
 
 class App extends React.Component{
 
@@ -13,7 +14,42 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       currentTab: "products",
-      productCategories: ["Lešenie","Distančné prvky","Armovanie","Bednenie","Tesniace prvky","Akustická izolácia"]
+      productCategories: ["Lešenie","Distančné prvky","Armovanie","Bednenie","Tesniace prvky","Akustická izolácia"],
+      productData:[
+        {
+          name: "Omnis voluptas",
+          description: "Minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au",
+          tags: "Sunt, In, Culpa",
+          image: tempImage,
+          tabColumns: "Name,Age,Occupation",
+          tabRows: "Ayyman,18,Loler," +
+            "Gigatron,23,Astroboy," +
+            "Ashley,32,Telephonist," +
+            "Rose,28,Driver"
+        },
+        {
+          name: "Meleniti atque",
+          description: "sthrtthrthrhrh",
+          tags: "Sunt, In, Culpa",
+          image: tempImage,
+          tabColumns: "Name,Age,Occupation",
+          tabRows: "John,18,Student," +
+            "Miranda,23,Nurse," +
+            "Ashley,32,Telephonist," +
+            "Rose,28,Driver"
+        },
+        {
+          name: "Deserunt mollit",
+          description: "Yr lo-fi next level, edison bulb vexillologist la croix bicycle rights cliche dreamcatcher everyday carry adaptogen master cleanse kombucha. Asymmetrical ramps pabst celiac banjo, four loko tumeric stumptown la croix freegan VHS sartorial meditation food truck.",
+          tags: "Sunt, In, Culpa",
+          image: tempImage,
+          tabColumns: "Name,Age,Occupation",
+          tabRows: "John,18,Student," +
+            "Miranda,23,Nurse," +
+            "Ashley,32,Telephonist," +
+            "Rose,28,Driver"
+        }
+      ]
     };
     this.adminConsoleClicked = this.adminConsoleClicked.bind(this);
     this.addProductCategory = this.addProductCategory.bind(this);
@@ -25,15 +61,12 @@ class App extends React.Component{
   productsTabClicked(){
     this.setState({currentTab: "products"});
   }
-
   contactTabClicked(){
     this.setState({currentTab: "contact"});
   }
-
   howToOrderTabClicked(){
     this.setState({currentTab: "howToOrder"});
   }
-
   adminConsoleClicked() {
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
@@ -59,7 +92,10 @@ class App extends React.Component{
               categories={this.state.productCategories}
               addCategory={this.addProductCategory}
             />}
-            <MainContainer currentTab={this.state.currentTab}/>
+            <MainContainer
+              currentTab={this.state.currentTab}
+              productData={this.state.productData}
+            />
           </div>
         </div>
         <Footer adminConsoleOpen={this.state.adminConsoleOpen}

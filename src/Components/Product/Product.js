@@ -8,17 +8,6 @@ class Product extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productData:{
-        name: "Deserunt mollit",
-        description: "Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-        tags: "Sunt, In, Culpa",
-        image: tempImage,
-        tabColumns: "Name,Age,Occupation",
-        tabRows: "John,18,Student," +
-          "Miranda,23,Nurse," +
-          "Ashley,32,Telephonist," +
-          "Rose,28,Driver"
-      },
       tableOpen: false
     };
 
@@ -27,10 +16,9 @@ class Product extends React.Component {
 
   ProductTable(props){
 
-    let numberOfColumns = props.tabColumns.split(",").length;
-    let tableData = props.tabRows.split(",");
-
     function generateRows(){
+      let numberOfColumns = props.tabColumns.split(",").length;
+      let tableData = props.tabRows.split(",");
       let r = ``;
       for (let i=0; i<tableData.length/numberOfColumns; i++){
         r =`${r}<tr>`;
@@ -53,7 +41,10 @@ class Product extends React.Component {
           </tbody>
         </table>
         <div className={"tableHideButton"}>
-          <button className={"primaryButton"} type={"button"} onClick={props.closeMethod}>Close</button>
+          <button className={"primaryButton"}
+                  type={"button"}
+                  onClick={props.closeMethod}
+          >Close</button>
         </div>
       </div>
     );
@@ -67,20 +58,20 @@ class Product extends React.Component {
     return (
       <div>
         <div className={"productContainer"}>
-          <img className={"productImage"} alt={"product"} src={this.state.productData.image}/>
+          <img className={"productImage"} alt={"product"} src={tempImage}/>
           <div>
-            <h4>{this.state.productData.name}</h4>
-            <p className={"productDescription"}>{this.state.productData.description}</p>
+            <h4>{this.props.name}</h4>
+            <p className={"productDescription"}>{this.props.description}</p>
             <div className={"productTable"}>
               {!this.state.tableOpen && <button className={"primaryButton"} type={"button"} onClick={this.detailsClicked}>Details</button>}
               {this.state.tableOpen && <this.ProductTable
                 closeMethod={this.detailsClicked}
-                tabColumns={this.state.productData.tabColumns}
-                tabRows={this.state.productData.tabRows}
+                tabColumns={this.props.tabColumns}
+                tabRows={this.props.tabRows}
               />}
             </div>
             <hr/>
-            <p className={"productAlt"}>{this.state.productData.tags}</p>
+            <p className={"productAlt"}>{this.props.tags}</p>
           </div>
         </div>
       </div>
