@@ -115,7 +115,8 @@ class Footer extends React.Component {
                    type="text"
                    placeholder="Product Tags (separate with ,)"
                    onChange={props.onProductTagsChange}/>
-            <select className={"adminConsoleProductCategory"} onChange={props.onProductCategoryChange}>
+            <select className={"adminConsoleProductCategory"}
+                    onChange={props.onProductCategoryChange}>
               {generateProductCategories()}
             </select>
           </div>
@@ -150,11 +151,10 @@ class Footer extends React.Component {
     return (
       <div className="footer">
         <button className={"adminButton"} type={"button"} onClick={this.adminLoginClick}/>
-        {this.state.adminLoginOpen &&
-        <AdminLogin adminConsoleOpen={this.adminConsoleOpen}
-                    cancelPressed={this.adminLoginCancel}/>}
-        {this.props.adminConsoleOpen &&
-        <this.AdminConsole
+        {this.state.adminLoginOpen && <AdminLogin
+          adminConsoleOpen={this.adminConsoleOpen}
+          cancelPressed={this.adminLoginCancel}/>}
+        {this.props.adminConsoleOpen && <this.AdminConsole
           adminConsoleOpen={this.adminConsoleOpen}
           productCategories={this.props.productCategories}
           onProductNameChange={this.onProductNameChange}

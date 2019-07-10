@@ -47,7 +47,6 @@ class LeftPanel extends React.Component {
           >+</button>
           <button className={"secondaryButton"}
                   type={"button"}
-                  onClick={""}
           >-</button>
         </div>
         <textarea className={"adminConsoleTableRows"}

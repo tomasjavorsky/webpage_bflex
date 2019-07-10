@@ -22,11 +22,8 @@ class Navbar extends React.Component {
           <button onClick={this.props.howToOrderTabClicked}>Ako Objednať</button>
         </div>
         <div className={"navSearch"}>
-          <input type="text"
-                 onChange={""}/>
-          <button type={"button"}
-                  onClick={""}
-          >Hľadať</button>
+          <input type="text"/>
+          <button type={"button"}>Hľadať</button>
         </div>
       </div>
     )
