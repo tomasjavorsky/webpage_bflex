@@ -59,7 +59,7 @@ class Product extends React.Component {
       <div>
         <div className={"productContainer"}>
           <img className={"productImage"} alt={"product"} src={tempImage}/>
-          <div>
+          <div className={"productInfo"}>
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
             <div className={"productTable"}>

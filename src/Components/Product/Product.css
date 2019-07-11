@@ -4,7 +4,7 @@
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
-  justify-content: center;
+  justify-content: left;
   flex: 65%;
   border-radius: 5px;
   box-shadow: 0px 5px 5px var(--colorShadow);
@@ -12,10 +12,12 @@
 
 .productImage{
   align-self: center;
-  max-width: 300px;
-  flex: 35%;
-  height: 35%;
+  flex: 25%;
   margin-right: 20px;
+}
+
+.productInfo{
+  flex: 75%;
 }
 
 .productAlt{
