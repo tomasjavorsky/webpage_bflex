@@ -7,6 +7,8 @@ import LeftPanel      from './Components/LeftPanel/LeftPanel';
 import MainContainer  from './Components/MainContainer/MainContainer';
 import tempImage from "./Components/Product/tempImage.jpg";
 
+const endpoint = 'http://127.0.0.1:3001';
+
 class App extends React.Component{
 
   constructor(props) {
@@ -56,6 +58,13 @@ class App extends React.Component{
     this.productsTabClicked = this.productsTabClicked.bind(this);
     this.contactTabClicked = this.contactTabClicked.bind(this);
     this.howToOrderTabClicked = this.howToOrderTabClicked.bind(this);
+  }
+
+  testFetch(){
+    fetch(endpoint + '/productCategories')
+      .then(res => res.json())
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
   }
 
   productsTabClicked(){
