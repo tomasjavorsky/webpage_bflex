@@ -16,7 +16,28 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       currentTab: "products",
-      productCategories: ["Lešenie","Distančné prvky","Armovanie","Bednenie","Tesniace prvky","Akustická izolácia"],
+      productCategories: [
+        {
+          categoryName: "Lesenie",
+          categoryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          categoryName: "Debnenie",
+          categoryDescription: "Dorem gypsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          categoryName: "Zelezne tyce",
+          categoryDescription: "Morem hipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          categoryName: "Izolacie",
+          categoryDescription: "Orem lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          categoryName: "Stavebna chemia",
+          categoryDescription: "Worem ripsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ],
       productData:[
         {
           name: "Omnis voluptas",
@@ -80,10 +101,22 @@ class App extends React.Component{
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
 
-  addProductCategory(categoryName){
-    if(categoryName !== ""){
+  addProductCategory(newCategory){
+    console.log(newCategory.categoryName);
+    if(newCategory.categoryName !== ""){
       let currentCategories = this.state.productCategories;
-      this.setState({productCategories: [...currentCategories, categoryName]})
+      fetch(endpoint + '/productCategories',
+        {
+          method: 'post',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            categoryName: newCategory.categoryName,
+            categoryDescription: newCategory.categoryDescription
+          })
+        })
+        .then(console.log("fetched"));
+      console.log(newCategory);
+      this.setState({productCategories: [...currentCategories, newCategory.categoryName]})
     }
   }
 

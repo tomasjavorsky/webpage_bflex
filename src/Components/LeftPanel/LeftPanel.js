@@ -6,44 +6,55 @@ class LeftPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categoryName: ""
+      categoryName: "",
+      categoryDescription: ""
     };
-    this.getCategoryName = this.getCategoryName.bind(this);
+    this.getCategoryData = this.getCategoryData.bind(this);
   }
 
-  onCategoryChange = (event) => {
+  //-------INPUT EVENTS-------
+  onCategoryNameChange = (event) => {
     this.setState({categoryName: event.target.value})
   };
+  onCategoryDescriptionChange = (event) => {
+    this.setState({categoryDescription: event.target.value})
+  };
 
-  getCategoryName() {
-    return this.state.categoryName;
+  //-------HELPER METHODS-------
+  getCategoryData() {
+    return ({
+      categoryName: this.state.categoryName,
+      categoryDescription: this.state.categoryDescription
+    });
   }
-
+  getProductCategoriesNames(productCategoriesData){
+    console.log(Array.from(productCategoriesData, x => x.categoryName));
+    return Array.from(productCategoriesData, x => x.categoryName);
+  }
   generateProductCategoryButtons() {
-    return this.props.categories.map((category, index) => <button className={"productCategoryButton"}
-                                                                  key={index}>{category}</button>)
+    return this.getProductCategoriesNames(this.props.categories)
+      .map((category, index) => <button
+        className={"productCategoryButton"}
+        key={index}>{category}</button>)
   }
 
-  // ---------- Components ----------
-
+  // ---------- COMPONENTS ----------
   CategoryCreator(props) {
-
     const inlineMargin = {
       marginRight: "8px",
       marginLeft: "8px"
     };
-
     return (
       <div className={"categoryCreatorContainer"}>
         <div>
           <input className={"categoryInput"}
                type="text"
                placeholder="Category Name"
-               onChange={props.onCategoryChange}/>
+               onChange={props.onCategoryNameChange}/>
           <button className={"primaryButton"}
                   type={"button"}
                   style={inlineMargin}
-                  onClick={() => props.addCategory(props.getCategoryName())}
+                  onClick={() => props.addCategory(props.getCategoryData())}
           >+</button>
           <button className={"secondaryButton"}
                   type={"button"}
@@ -51,7 +62,8 @@ class LeftPanel extends React.Component {
         </div>
         <textarea className={"adminConsoleTableRows"}
                   rows="8" cols="10"
-                  placeholder="Category description"/>
+                  placeholder="Category description"
+                  onChange={props.onCategoryDescriptionChange}/>
 
       </div>
     );
@@ -64,8 +76,9 @@ class LeftPanel extends React.Component {
         {this.props.adminConsoleOpen &&
         <this.CategoryCreator
           addCategory={this.props.addCategory}
-          onCategoryChange={this.onCategoryChange}
-          getCategoryName={this.getCategoryName}
+          onCategoryNameChange={this.onCategoryNameChange}
+          onCategoryDescriptionChange={this.onCategoryDescriptionChange}
+          getCategoryData={this.getCategoryData}
         />}
       </div>
     )

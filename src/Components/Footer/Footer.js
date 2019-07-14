@@ -30,6 +30,7 @@ class Footer extends React.Component {
     this.showObject                 = this.showObject.bind(this);
   }
 
+  //-------INPUT EVENTS-------
   onProductNameChange = (event) => {
     let value = event.target.value;
     this.setState(prevState => {
@@ -79,10 +80,6 @@ class Footer extends React.Component {
     });
   };
 
-  showObject(){
-    console.log(this.state.newProduct);
-  }
-
   adminLoginClick(){
     this.setState({adminLoginOpen: true});
   }
@@ -94,9 +91,22 @@ class Footer extends React.Component {
     this.props.adminConsoleClick();
   }
 
+  //-------HELPER METHODS-------
+  showObject(){
+    console.log(this.state.newProduct);
+  }
+
+  //-------COMPONENTS-------
   AdminConsole(props) {
+
+    function getProductCategoriesNames(productCategoriesData){
+      console.log(Array.from(productCategoriesData, x => x.categoryName));
+      return Array.from(productCategoriesData, x => x.categoryName);
+    }
+
     function generateProductCategories(){
-      return props.productCategories.map((option,index) => <option key={index} value={option}>{option}</option>);
+      return getProductCategoriesNames(props.productCategories)
+        .map((option,index) => <option key={index} value={option}>{option}</option>);
     }
 
     return (
