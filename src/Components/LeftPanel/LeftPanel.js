@@ -6,8 +6,8 @@ class LeftPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categoryName: "",
-      categoryDescription: ""
+      category_name: "",
+      category_description: ""
     };
     this.getCategoryData = this.getCategoryData.bind(this);
   }
@@ -23,19 +23,22 @@ class LeftPanel extends React.Component {
   //-------HELPER METHODS-------
   getCategoryData() {
     return ({
-      categoryName: this.state.categoryName,
-      categoryDescription: this.state.categoryDescription
+      category_name: this.state.category_name,
+      category_description: this.state.category_description
     });
   }
-  getProductCategoriesNames(productCategoriesData){
-    console.log(Array.from(productCategoriesData, x => x.categoryName));
-    return Array.from(productCategoriesData, x => x.categoryName);
+
+  getProductCategoryNames(productCategoriesData){
+    return Array.from(productCategoriesData, x => x.category_name);
   }
+
   generateProductCategoryButtons() {
-    return this.getProductCategoriesNames(this.props.categories)
-      .map((category, index) => <button
+    console.log(this.props.productCategories);
+    return this.getProductCategoryNames(this.props.productCategories)
+      .map((categoryName, index) => <button
         className={"productCategoryButton"}
-        key={index}>{category}</button>)
+        key={index}
+      >{categoryName}</button>)
   }
 
   // ---------- COMPONENTS ----------
@@ -54,7 +57,7 @@ class LeftPanel extends React.Component {
           <button className={"primaryButton"}
                   type={"button"}
                   style={inlineMargin}
-                  onClick={() => props.addCategory(props.getCategoryData())}
+                  onClick={() => props.addProductCategory(props.getCategoryData())}
           >+</button>
           <button className={"secondaryButton"}
                   type={"button"}
@@ -75,7 +78,7 @@ class LeftPanel extends React.Component {
         {this.generateProductCategoryButtons()}
         {this.props.adminConsoleOpen &&
         <this.CategoryCreator
-          addCategory={this.props.addCategory}
+          addProductCategory={this.props.addProductCategory}
           onCategoryNameChange={this.onCategoryNameChange}
           onCategoryDescriptionChange={this.onCategoryDescriptionChange}
           getCategoryData={this.getCategoryData}

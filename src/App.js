@@ -16,28 +16,7 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       currentTab: "products",
-      productCategories: [
-        {
-          categoryName: "Lesenie",
-          categoryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        },
-        {
-          categoryName: "Debnenie",
-          categoryDescription: "Dorem gypsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        },
-        {
-          categoryName: "Zelezne tyce",
-          categoryDescription: "Morem hipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        },
-        {
-          categoryName: "Izolacie",
-          categoryDescription: "Orem lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        },
-        {
-          categoryName: "Stavebna chemia",
-          categoryDescription: "Worem ripsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        }
-      ],
+      productCategories: [],
       productData:[
         {
           name: "Omnis voluptas",
@@ -79,12 +58,13 @@ class App extends React.Component{
     this.productsTabClicked = this.productsTabClicked.bind(this);
     this.contactTabClicked = this.contactTabClicked.bind(this);
     this.howToOrderTabClicked = this.howToOrderTabClicked.bind(this);
+    this.getProductCategoriesData();
   }
 
-  testFetch(){
+  getProductCategoriesData(){
     fetch(endpoint + '/productCategories')
       .then(res => res.json())
-      .then(res => console.log(res))
+      .then(res => this.setState({productCategories: res}))
       .catch(err => console.log(err));
   }
 
@@ -105,6 +85,7 @@ class App extends React.Component{
     console.log(newCategory.categoryName);
     if(newCategory.categoryName !== ""){
       let currentCategories = this.state.productCategories;
+
       fetch(endpoint + '/productCategories',
         {
           method: 'post',
@@ -114,9 +95,7 @@ class App extends React.Component{
             categoryDescription: newCategory.categoryDescription
           })
         })
-        .then(console.log("fetched"));
-      console.log(newCategory);
-      this.setState({productCategories: [...currentCategories, newCategory.categoryName]})
+      //this.setState({productCategories: [...currentCategories, newCategory.categoryName]})
     }
   }
 
@@ -131,8 +110,8 @@ class App extends React.Component{
           <div className={"row"}>
             {this.state.currentTab === "products" && <LeftPanel
               adminConsoleOpen={this.state.adminConsoleOpen}
-              categories={this.state.productCategories}
-              addCategory={this.addProductCategory}
+              productCategories={this.state.productCategories}
+              addProductCategory={this.addProductCategory}
             />}
             <MainContainer
               currentTab={this.state.currentTab}
