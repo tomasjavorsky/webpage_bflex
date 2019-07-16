@@ -100,8 +100,7 @@ class Footer extends React.Component {
   AdminConsole(props) {
 
     function getProductCategoriesNames(productCategoriesData){
-      console.log(Array.from(productCategoriesData, x => x.categoryName));
-      return Array.from(productCategoriesData, x => x.categoryName);
+      return Array.from(productCategoriesData, x => x.category_name);
     }
 
     function generateProductCategories(){

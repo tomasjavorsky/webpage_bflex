@@ -14,18 +14,20 @@ class LeftPanel extends React.Component {
 
   //-------INPUT EVENTS-------
   onCategoryNameChange = (event) => {
-    this.setState({categoryName: event.target.value})
+    this.setState({category_name: event.target.value});
   };
   onCategoryDescriptionChange = (event) => {
-    this.setState({categoryDescription: event.target.value})
+    this.setState({category_description: event.target.value});
   };
 
   //-------HELPER METHODS-------
   getCategoryData() {
-    return ({
+    let categoryData = {
       category_name: this.state.category_name,
       category_description: this.state.category_description
-    });
+    };
+    console.log(categoryData);
+    return categoryData;
   }
 
   getProductCategoryNames(productCategoriesData){
@@ -33,7 +35,6 @@ class LeftPanel extends React.Component {
   }
 
   generateProductCategoryButtons() {
-    console.log(this.props.productCategories);
     return this.getProductCategoryNames(this.props.productCategories)
       .map((categoryName, index) => <button
         className={"productCategoryButton"}
@@ -67,7 +68,6 @@ class LeftPanel extends React.Component {
                   rows="8" cols="10"
                   placeholder="Category description"
                   onChange={props.onCategoryDescriptionChange}/>
-
       </div>
     );
   }

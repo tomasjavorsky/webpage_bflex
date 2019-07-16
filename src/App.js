@@ -53,11 +53,13 @@ class App extends React.Component{
         }
       ]
     };
-    this.adminConsoleClicked = this.adminConsoleClicked.bind(this);
-    this.addProductCategory = this.addProductCategory.bind(this);
-    this.productsTabClicked = this.productsTabClicked.bind(this);
-    this.contactTabClicked = this.contactTabClicked.bind(this);
+    this.adminConsoleClicked  = this.adminConsoleClicked.bind(this);
+    this.addProductCategory   = this.addProductCategory.bind(this);
+    this.productsTabClicked   = this.productsTabClicked.bind(this);
+    this.contactTabClicked    = this.contactTabClicked.bind(this);
     this.howToOrderTabClicked = this.howToOrderTabClicked.bind(this);
+
+    //-------DATA FROM DB-------
     this.getProductCategoriesData();
   }
 
@@ -82,20 +84,18 @@ class App extends React.Component{
   }
 
   addProductCategory(newCategory){
-    console.log(newCategory.categoryName);
-    if(newCategory.categoryName !== ""){
-      let currentCategories = this.state.productCategories;
-
+    console.log(newCategory.category_name);
+    if(newCategory.category_name !== ""){
       fetch(endpoint + '/productCategories',
         {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
-            categoryName: newCategory.categoryName,
-            categoryDescription: newCategory.categoryDescription
+            category_name: newCategory.category_name,
+            category_description: newCategory.category_description
           })
-        })
-      //this.setState({productCategories: [...currentCategories, newCategory.categoryName]})
+        }
+      )
     }
   }
 
