@@ -49,6 +49,23 @@ class LeftPanel extends React.Component {
       marginRight: "8px",
       marginLeft: "8px"
     };
+    const endpoint = 'http://127.0.0.1:3001';
+
+    function removeProductCategory(categoryData){
+      console.log('deleting: ' + categoryData.category_name);
+      if(categoryData.category_name !== ""){
+        fetch(endpoint + '/productCategories',
+          {
+            method: 'delete',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              category_name: categoryData.category_name
+            })
+          }
+        )
+      }
+    }
+
     return (
       <div className={"categoryCreatorContainer"}>
         <div>
@@ -63,6 +80,7 @@ class LeftPanel extends React.Component {
           >+</button>
           <button className={"secondaryButton"}
                   type={"button"}
+                  onClick={() => removeProductCategory(props.getCategoryData())}
           >-</button>
         </div>
         <textarea className={"adminConsoleTableRows"}
