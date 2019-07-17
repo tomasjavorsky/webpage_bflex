@@ -39,6 +39,7 @@ class LeftPanel extends React.Component {
       .map((categoryName, index) => <button
         className={"productCategoryButton"}
         key={index}
+        onClick={() => this.props.setSelectedProductCategory(categoryName)}
       >{categoryName}</button>)
   }
 

@@ -13,6 +13,8 @@ class MainContainer extends React.Component {
 
   ProductsTab(props){
 
+    console.log(props.selectedProductCategoryData.category_name + ' ' + props.selectedProductCategoryData.category_description);
+
     function productGenerator(productData) {
       return productData.map((currentProduct, index) => <Product
         key={index+currentProduct.name}
@@ -26,10 +28,8 @@ class MainContainer extends React.Component {
 
     return(
       <div className={"productTab"}>
-        <h2>TITLE HEADING</h2>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco.</p>
+        <h2>{props.selectedProductCategoryData.category_name}</h2>
+        <p>{props.selectedProductCategoryData.category_description}</p>
         {productGenerator(props.productData)}
       </div>
     );
@@ -67,7 +67,9 @@ class MainContainer extends React.Component {
   render() {
     return (
       <div className={'main'}>
-        {this.props.currentTab === "products" && <this.ProductsTab productData={this.props.productData}/>}
+        {this.props.currentTab === "products" && <this.ProductsTab
+          productData={this.props.productData}
+          selectedProductCategoryData={this.props.selectedProductCategoryData}/>}
         {this.props.currentTab === "contact" && <this.ContactTab/>}
         {this.props.currentTab === "howToOrder" && <this.HowToOrder/>}
       </div>

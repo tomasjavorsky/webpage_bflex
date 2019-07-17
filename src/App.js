@@ -16,6 +16,11 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       currentTab: "products",
+      selectedProductCategory: "home",
+      selectedProductCategoryData: {
+        category_name: 'Home',
+        category_description: 'newest products'
+      },
       productCategories: [],
       productData:[
         {
@@ -53,23 +58,42 @@ class App extends React.Component{
         }
       ]
     };
-    this.adminConsoleClicked  = this.adminConsoleClicked.bind(this);
-    this.addProductCategory   = this.addProductCategory.bind(this);
-    this.productsTabClicked   = this.productsTabClicked.bind(this);
-    this.contactTabClicked    = this.contactTabClicked.bind(this);
-    this.howToOrderTabClicked = this.howToOrderTabClicked.bind(this);
+    this.adminConsoleClicked        = this.adminConsoleClicked.bind(this);
+    this.addProductCategory         = this.addProductCategory.bind(this);
+    this.productsTabClicked         = this.productsTabClicked.bind(this);
+    this.contactTabClicked          = this.contactTabClicked.bind(this);
+    this.howToOrderTabClicked       = this.howToOrderTabClicked.bind(this);
+    this.setSelectedProductCategory = this.setSelectedProductCategory.bind(this);
 
     //-------DATA FROM DB-------
     this.getProductCategoriesData();
   }
-
+  //-------HELPER FUNCTIONS-------
   getProductCategoriesData(){
     fetch(endpoint + '/productCategories')
       .then(res => res.json())
       .then(res => this.setState({productCategories: res}))
       .catch(err => console.log(err));
   }
+  getCurrentCategoryData(currentCategoryName){
+    if(currentCategoryName === 'home'){
+      return {
+        category_name: 'Home',
+        category_description: 'Newest products'
+      }
+    }else{
+      let categoryData = this.state.productCategories.filter(category => category.category_name === currentCategoryName);
+      return categoryData[0];
+    }
+  }
+  setSelectedProductCategory(selectedCategoryName){
+    this.setState({
+      selectedProductCategory: selectedCategoryName,
+      selectedProductCategoryData: this.getCurrentCategoryData(selectedCategoryName)
+    });
+  }
 
+  //-------INPUT-------
   productsTabClicked(){
     this.setState({currentTab: "products"});
   }
@@ -112,10 +136,12 @@ class App extends React.Component{
               adminConsoleOpen={this.state.adminConsoleOpen}
               productCategories={this.state.productCategories}
               addProductCategory={this.addProductCategory}
+              setSelectedProductCategory = {this.setSelectedProductCategory}
             />}
             <MainContainer
               currentTab={this.state.currentTab}
               productData={this.state.productData}
+              selectedProductCategoryData={this.state.selectedProductCategoryData}
             />
           </div>
         </div>
