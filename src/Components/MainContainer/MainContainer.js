@@ -13,8 +13,6 @@ class MainContainer extends React.Component {
 
   ProductsTab(props){
 
-    console.log(props.selectedProductCategoryData.category_name + ' ' + props.selectedProductCategoryData.category_description);
-
     function productGenerator(productData) {
       return productData.map((currentProduct, index) => <Product
         key={index+currentProduct.name}

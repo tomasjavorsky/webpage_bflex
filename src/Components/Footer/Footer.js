@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 import AdminLogin from './AdminLogin';
 
+const endpoint = 'http://127.0.0.1:3001';
+
 class Footer extends React.Component {
 
   constructor(props) {
@@ -27,6 +29,7 @@ class Footer extends React.Component {
     this.onProductCategoryChange    = this.onProductCategoryChange.bind(this);
     this.onProductTabColumnsChange  = this.onProductTabColumnsChange.bind(this);
     this.onProductTabRowsChange     = this.onProductTabRowsChange.bind(this);
+    this.addProduct                 = this.addProduct.bind(this);
     this.showObject                 = this.showObject.bind(this);
   }
 
@@ -91,9 +94,29 @@ class Footer extends React.Component {
     this.props.adminConsoleClick();
   }
 
-  //-------HELPER METHODS-------
+  //-------METHODS-------
   showObject(){
     console.log(this.state.newProduct);
+  }
+  addProduct(){
+    console.log(this.state.newProduct.name);
+    if(this.state.newProduct.name !== ""){
+      fetch(endpoint + '/products',
+        {
+          method: 'post',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            product_name: this.state.newProduct.name,
+            product_description: this.state.newProduct.description,
+            //product_image: this.state.newProduct.imageLink,
+            product_tags: this.state.newProduct.tags,
+            product_columns: this.state.newProduct.tabColumns,
+            product_rows: this.state.newProduct.tabRows,
+            product_category: this.state.newProduct.categoryName
+          })
+        }
+      )
+    }
   }
 
   //-------COMPONENTS-------
@@ -172,7 +195,7 @@ class Footer extends React.Component {
           onProductCategoryChange={this.onProductCategoryChange}
           onProductTabColumnsChange={this.onProductTabColumnsChange}
           onProductTabRowsChange={this.onProductTabRowsChange}
-          onCreatePressed={this.showObject}
+          onCreatePressed={this.addProduct}
         />}
       </div>
     )

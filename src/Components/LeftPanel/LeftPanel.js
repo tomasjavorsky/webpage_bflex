@@ -52,7 +52,6 @@ class LeftPanel extends React.Component {
     const endpoint = 'http://127.0.0.1:3001';
 
     function removeProductCategory(categoryData){
-      console.log('deleting: ' + categoryData.category_name);
       if(categoryData.category_name !== ""){
         fetch(endpoint + '/productCategories',
           {
