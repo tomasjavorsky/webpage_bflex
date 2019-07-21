@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import AdminLogin from './AdminLogin';
+import {storage} from '../Firebase/FirebaseSetup';
 
 const endpoint = 'http://127.0.0.1:3001';
 
@@ -10,6 +11,7 @@ class Footer extends React.Component {
     super(props);
     this.state = {
       adminLoginOpen: false,
+      imageFile: null,
       newProduct:{
         name: "",
         description: "",
@@ -29,8 +31,10 @@ class Footer extends React.Component {
     this.onProductCategoryChange    = this.onProductCategoryChange.bind(this);
     this.onProductTabColumnsChange  = this.onProductTabColumnsChange.bind(this);
     this.onProductTabRowsChange     = this.onProductTabRowsChange.bind(this);
+    this.onProductImageFileChange   = this.onProductImageFileChange.bind(this);
     this.addProduct                 = this.addProduct.bind(this);
     this.showObject                 = this.showObject.bind(this);
+    this.uploadImageToFirebase      = this.uploadImageToFirebase.bind(this);
   }
 
   //-------INPUT EVENTS-------
@@ -82,6 +86,13 @@ class Footer extends React.Component {
       return {newProduct};
     });
   };
+  onProductImageFileChange = (event) => {
+    let value = event.target.files[0];
+    this.setState({
+      imageFile: value
+    });
+    console.log(value);
+  };
 
   adminLoginClick(){
     this.setState({adminLoginOpen: true});
@@ -99,7 +110,7 @@ class Footer extends React.Component {
     console.log(this.state.newProduct);
   }
   addProduct(){
-    console.log(this.state.newProduct.name);
+    console.log(this.state.newProduct);
     if(this.state.newProduct.name !== ""){
       fetch(endpoint + '/products',
         {
@@ -118,6 +129,28 @@ class Footer extends React.Component {
       )
     }
   }
+  uploadImageToFirebase(){
+    console.log("image name: " + this.state.imageFile.name);
+    console.log("image: " + this.state.imageFile);
+    const uploadTask = storage
+      .ref(`product_images/${this.state.imageFile.name}`)
+      .put(this.state.imageFile);
+    uploadTask.on('state_changed',
+      (snapshot) =>{
+        //progress
+      },
+      (error) =>{
+        console.log(error);
+      },
+      (complete) =>{
+        console.log("image uploaded");
+        storage
+          .ref('product_images')
+          .child(this.state.imageFile.name)
+          .getDownloadURL()
+          .then(url => console.log("url: \n" + url))
+      });
+  }
 
   //-------COMPONENTS-------
   AdminConsole(props) {
@@ -131,6 +164,10 @@ class Footer extends React.Component {
         .map((option,index) => <option key={index} value={option}>{option}</option>);
     }
 
+    const inlineTextColor = {
+      color: "var(--colorUISemiLightDarker)"
+    };
+
     return (
       <div className={"adminConsole"}>
         <div className={"adminConsoleFields"}>
@@ -139,7 +176,7 @@ class Footer extends React.Component {
                    type="text" placeholder="Product Name"
                    onChange={props.onProductNameChange}/>
             <textarea className={"adminConsoleProductDescription"}
-                      rows="5" cols="75"
+                      rows="3" cols="75"
                       placeholder="Product Description"
                       onChange={props.onProductDescriptionChange}
             />
@@ -149,8 +186,12 @@ class Footer extends React.Component {
                    onChange={props.onProductTagsChange}/>
             <select className={"adminConsoleProductCategory"}
                     onChange={props.onProductCategoryChange}>
+              <option key={"default"} style={inlineTextColor} value={"Vyber kategóriu"}>Vyber kategóriu</option>
               {generateProductCategories()}
             </select>
+            <input className={"adminConsoleProductTags"}
+                   type="file"
+                   onChange={props.onProductImageFileChange}/>
           </div>
           <div className={"adminConsoleTable"}>
             <input className={"adminConsoleTableColumns"}
@@ -195,7 +236,8 @@ class Footer extends React.Component {
           onProductCategoryChange={this.onProductCategoryChange}
           onProductTabColumnsChange={this.onProductTabColumnsChange}
           onProductTabRowsChange={this.onProductTabRowsChange}
-          onCreatePressed={this.addProduct}
+          onProductImageFileChange={this.onProductImageFileChange}
+          onCreatePressed={this.uploadImageToFirebase}
         />}
       </div>
     )

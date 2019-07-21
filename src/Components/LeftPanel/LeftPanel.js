@@ -1,6 +1,8 @@
 import React from 'react';
 import './LeftPanel.css';
 
+const endpoint = 'http://127.0.0.1:3001';
+
 class LeftPanel extends React.Component {
 
   constructor(props) {
@@ -33,16 +35,23 @@ class LeftPanel extends React.Component {
   getProductCategoryNames(productCategoriesData){
     return Array.from(productCategoriesData, x => x.category_name);
   }
-
   generateProductCategoryButtons() {
     return this.getProductCategoryNames(this.props.productCategories)
       .map((categoryName, index) => <button
         className={"productCategoryButton"}
         key={index}
-        onClick={() => this.props.setSelectedProductCategory(categoryName)}
+        onClick={() => {
+          this.props.setSelectedProductCategory(categoryName);
+          this.getProductsForThisCategory(categoryName);
+        }}
       >{categoryName}</button>)
   }
-
+  getProductsForThisCategory(categoryName){
+    if(categoryName !== ""){
+      fetch(endpoint + '/products?category='+categoryName)
+        .then(res=> console.log(res.body))
+    }
+  }
   // ---------- COMPONENTS ----------
   CategoryCreator(props) {
     const inlineMargin = {
