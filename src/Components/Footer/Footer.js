@@ -32,9 +32,10 @@ class Footer extends React.Component {
     this.onProductTabColumnsChange  = this.onProductTabColumnsChange.bind(this);
     this.onProductTabRowsChange     = this.onProductTabRowsChange.bind(this);
     this.onProductImageFileChange   = this.onProductImageFileChange.bind(this);
-    this.addProduct                 = this.addProduct.bind(this);
+    this.addProductToDB             = this.addProductToDB.bind(this);
     this.showObject                 = this.showObject.bind(this);
-    this.uploadImageToFirebase      = this.uploadImageToFirebase.bind(this);
+    this.setProductImageLink        = this.setProductImageLink.bind(this);
+    this.createNewProduct           = this.createNewProduct.bind(this);
   }
 
   //-------INPUT EVENTS-------
@@ -86,12 +87,18 @@ class Footer extends React.Component {
       return {newProduct};
     });
   };
+  setProductImageLink = (link) => {
+    this.setState(prevState => {
+      let newProduct = {...prevState.newProduct};
+      newProduct.imageLink = link;
+      return {newProduct};
+    });
+  };
   onProductImageFileChange = (event) => {
     let value = event.target.files[0];
     this.setState({
       imageFile: value
     });
-    console.log(value);
   };
 
   adminLoginClick(){
@@ -109,8 +116,7 @@ class Footer extends React.Component {
   showObject(){
     console.log(this.state.newProduct);
   }
-  addProduct(){
-    console.log(this.state.newProduct);
+  addProductToDB(){
     if(this.state.newProduct.name !== ""){
       fetch(endpoint + '/products',
         {
@@ -119,7 +125,7 @@ class Footer extends React.Component {
           body: JSON.stringify({
             product_name: this.state.newProduct.name,
             product_description: this.state.newProduct.description,
-            //product_image: this.state.newProduct.imageLink,
+            product_image: this.state.newProduct.imageLink,
             product_tags: this.state.newProduct.tags,
             product_columns: this.state.newProduct.tabColumns,
             product_rows: this.state.newProduct.tabRows,
@@ -129,9 +135,7 @@ class Footer extends React.Component {
       )
     }
   }
-  uploadImageToFirebase(){
-    console.log("image name: " + this.state.imageFile.name);
-    console.log("image: " + this.state.imageFile);
+  createNewProduct(){
     const uploadTask = storage
       .ref(`product_images/${this.state.imageFile.name}`)
       .put(this.state.imageFile);
@@ -148,8 +152,12 @@ class Footer extends React.Component {
           .ref('product_images')
           .child(this.state.imageFile.name)
           .getDownloadURL()
-          .then(url => console.log("url: \n" + url))
-      });
+          .then(url => this.setProductImageLink(url))
+          .then(() => {
+              console.log(this.state.newProduct.imageLink);
+              this.addProductToDB()
+            })
+          });
   }
 
   //-------COMPONENTS-------
@@ -237,7 +245,7 @@ class Footer extends React.Component {
           onProductTabColumnsChange={this.onProductTabColumnsChange}
           onProductTabRowsChange={this.onProductTabRowsChange}
           onProductImageFileChange={this.onProductImageFileChange}
-          onCreatePressed={this.uploadImageToFirebase}
+          onCreatePressed={this.createNewProduct}
         />}
       </div>
     )

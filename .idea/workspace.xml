@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Firebase/FirebaseSetup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Firebase/FirebaseSetup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="504">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -35,20 +31,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="238" column="29" selection-start-line="238" selection-start-column="29" selection-end-line="238" selection-end-column="29" />
+            <state relative-caret-position="280">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#1338#1528#0" />
-                <element signature="e#1572#1769#0" />
-                <element signature="e#1806#1996#0" />
-                <element signature="e#2037#2235#0" />
-                <element signature="e#2278#2474#0" />
+                <element signature="e#1569#1759#0" />
+                <element signature="e#1803#2000#0" />
+                <element signature="e#2037#2227#0" />
+                <element signature="e#2268#2466#0" />
+                <element signature="e#2509#2705#0" />
+                <element signature="e#2745#2938#0" />
+                <element signature="e#3002#3195#0" />
+                <element signature="e#2980#3099#0" />
                 <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
                 <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
                 <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
                 <element signature="n#!!block;n#showObject#0;n#Footer#0" />
                 <element signature="n#!!block;n#addProduct#0;n#Footer#0" />
+                <element signature="n#!!block;n#createNewProduct#0;n#Footer#0" />
                 <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
               </folding>
             </state>
@@ -106,9 +106,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1392" />
-    <option name="width" value="1175" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-7" />
+    <option name="width" value="1081" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -264,24 +264,25 @@
       <workItem from="1563448120501" duration="4227000" />
       <workItem from="1563550952896" duration="87000" />
       <workItem from="1563567951077" duration="5782000" />
-      <workItem from="1563704756646" duration="9357000" />
+      <workItem from="1563704756646" duration="9484000" />
+      <workItem from="1563829923147" duration="2693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218908000" />
+    <option name="totallyTimeSpent" value="221728000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1392" y="0" width="1175" height="1407" extended-state="0" />
+    <frame x="-7" y="0" width="1081" height="1407" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22251539" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2674976" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21718377" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.14423077" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.14423077" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Firebase/FirebaseSetup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="504">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -499,20 +500,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="238" column="29" selection-start-line="238" selection-start-column="29" selection-end-line="238" selection-end-column="29" />
+        <state relative-caret-position="280">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#1338#1528#0" />
-            <element signature="e#1572#1769#0" />
-            <element signature="e#1806#1996#0" />
-            <element signature="e#2037#2235#0" />
-            <element signature="e#2278#2474#0" />
+            <element signature="e#1569#1759#0" />
+            <element signature="e#1803#2000#0" />
+            <element signature="e#2037#2227#0" />
+            <element signature="e#2268#2466#0" />
+            <element signature="e#2509#2705#0" />
+            <element signature="e#2745#2938#0" />
+            <element signature="e#3002#3195#0" />
+            <element signature="e#2980#3099#0" />
             <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
             <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
             <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
             <element signature="n#!!block;n#showObject#0;n#Footer#0" />
             <element signature="n#!!block;n#addProduct#0;n#Footer#0" />
+            <element signature="n#!!block;n#createNewProduct#0;n#Footer#0" />
             <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
           </folding>
         </state>
