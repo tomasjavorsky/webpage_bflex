@@ -2,8 +2,15 @@ import React from 'react';
 import './Footer.css';
 import AdminLogin from './AdminLogin';
 import {storage} from '../Firebase/FirebaseSetup';
+import { css } from '@emotion/core';
+import BarLoader from 'react-spinners/BarLoader';
 
 const endpoint = 'http://127.0.0.1:3001';
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
 
 class Footer extends React.Component {
 
@@ -12,6 +19,7 @@ class Footer extends React.Component {
     this.state = {
       adminLoginOpen: false,
       imageFile: null,
+      isUploading: false,
       newProduct:{
         name: "",
         description: "",
@@ -36,6 +44,7 @@ class Footer extends React.Component {
     this.showObject                 = this.showObject.bind(this);
     this.setProductImageLink        = this.setProductImageLink.bind(this);
     this.createNewProduct           = this.createNewProduct.bind(this);
+    this.setUploading               = this.setUploading.bind(this);
   }
 
   //-------INPUT EVENTS-------
@@ -100,6 +109,9 @@ class Footer extends React.Component {
       imageFile: value
     });
   };
+  setUploading = () => {
+    this.setState({isUploading: !this.state.isUploading})
+  };
 
   adminLoginClick(){
     this.setState({adminLoginOpen: true});
@@ -133,6 +145,7 @@ class Footer extends React.Component {
           })
         }
       )
+        .then(this.setUploading())
     }
   }
   createNewProduct(){
@@ -162,11 +175,9 @@ class Footer extends React.Component {
 
   //-------COMPONENTS-------
   AdminConsole(props) {
-
     function getProductCategoriesNames(productCategoriesData){
       return Array.from(productCategoriesData, x => x.category_name);
     }
-
     function generateProductCategories(){
       return getProductCategoriesNames(props.productCategories)
         .map((option,index) => <option key={index} value={option}>{option}</option>);
@@ -215,14 +226,24 @@ class Footer extends React.Component {
           </div>
         </div>
         <div className={"adminConsoleButtonArea"}>
-          <button className={"primaryButton"}
+          <BarLoader
+            css={override}
+            sizeUnit={"px"}
+            size={10}
+            color={'#ff9900'}
+            loading={props.isUploading}
+          />
+          {!props.isUploading && <button className={"primaryButton"}
                   type={"button"}
-                  onClick={props.onCreatePressed}
-          >Create</button>
-          <button className={"secondaryButton"}
+                  onClick={()=>{
+                    props.setUploading();
+                    props.onCreatePressed();
+                  }}
+          >Create</button>}
+          {!props.isUploading && <button className={"secondaryButton"}
                   type={"button"}
                   onClick={props.adminConsoleOpen}
-          >Cancel</button>
+          >Cancel</button>}
         </div>
       </div>
     );
@@ -246,6 +267,8 @@ class Footer extends React.Component {
           onProductTabRowsChange={this.onProductTabRowsChange}
           onProductImageFileChange={this.onProductImageFileChange}
           onCreatePressed={this.createNewProduct}
+          isUploading={this.state.isUploading}
+          setUploading={this.setUploading}
         />}
       </div>
     )
