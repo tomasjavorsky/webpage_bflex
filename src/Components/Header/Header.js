@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import {texts} from '../../strings';
 
 class Header extends React.Component {
 
@@ -11,8 +12,8 @@ class Header extends React.Component {
   render() {
     return(
       <div className={"header"}>
-        <h1>Bflex, s.r.o.</h1>
-        <p>Predaj a technické poradenstvo</p>
+        <h1>{texts.companyName}</h1>
+        <p>{texts.companySlogan}</p>
       </div>
     )
   }

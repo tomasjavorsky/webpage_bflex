@@ -2,10 +2,11 @@ import React from 'react';
 import './Footer.css';
 import AdminLogin from './AdminLogin';
 import {storage} from '../Firebase/FirebaseSetup';
-import { css } from '@emotion/core';
+import {css} from '@emotion/core';
 import BarLoader from 'react-spinners/BarLoader';
+import {texts, constants} from '../../strings';
 
-const endpoint = 'http://127.0.0.1:3001';
+
 const override = css`
     display: block;
     margin: 0 auto;
@@ -130,7 +131,7 @@ class Footer extends React.Component {
   }
   addProductToDB(){
     if(this.state.newProduct.name !== ""){
-      fetch(endpoint + '/products',
+      fetch(constants.endpoint + '/products',
         {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
@@ -192,19 +193,22 @@ class Footer extends React.Component {
         <div className={"adminConsoleFields"}>
           <div className={"adminConsoleDescription"}>
             <input className={"adminConsoleProductName"}
-                   type="text" placeholder="Product Name"
+                   type="text" placeholder={texts.productNamePlaceholder}
                    onChange={props.onProductNameChange}/>
             <textarea className={"adminConsoleProductDescription"}
                       rows="3" cols="75"
-                      placeholder="Product Description"
+                      placeholder={texts.productDescriptionPlaceholder}
                       onChange={props.onProductDescriptionChange}/>
             <input className={"adminConsoleProductTags"}
                    type="text"
-                   placeholder="Product Tags (separate with ,)"
+                   placeholder={texts.productTagsPlaceholder}
                    onChange={props.onProductTagsChange}/>
             <select className={"adminConsoleProductCategory"}
                     onChange={props.onProductCategoryChange}>
-              <option key={"default"} style={inlineTextColor} value={"Vyber kategóriu"}>Vyber kategóriu</option>
+              <option key={"default"}
+                      style={inlineTextColor}
+                      value={texts.chooseCategoryPlaceholder}
+              >{texts.chooseCategoryPlaceholder}</option>
               {generateProductCategories()}
             </select>
             <input className={"adminConsoleProductTags"}
@@ -214,12 +218,12 @@ class Footer extends React.Component {
           <div className={"adminConsoleTable"}>
             <input className={"adminConsoleTableColumns"}
                    type="text"
-                   placeholder="Table Columns (separate with ,)"
+                   placeholder={texts.tableColumnsPlaceholder}
                    onChange={props.onProductTabColumnsChange}
             />
             <textarea className={"adminConsoleTableRows"}
                       rows="8" cols="75"
-                      placeholder="Table Data (separate with ,)"
+                      placeholder={texts.tableRowsPlaceholder}
                       onChange={props.onProductTabRowsChange}
             />
           </div>
@@ -238,11 +242,11 @@ class Footer extends React.Component {
                     props.setUploading();
                     props.onCreatePressed();
                   }}
-          >Create</button>}
+          >{texts.create}</button>}
           {!props.isUploading && <button className={"secondaryButton"}
                   type={"button"}
                   onClick={props.adminConsoleOpen}
-          >Cancel</button>}
+          >{texts.cancel}</button>}
         </div>
       </div>
     );

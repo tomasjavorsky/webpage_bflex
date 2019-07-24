@@ -1,6 +1,7 @@
 import React from 'react';
 import Parser from 'html-react-parser';
 import './Product.css';
+import {texts} from '../../strings';
 
 class Product extends React.Component {
 
@@ -43,7 +44,7 @@ class Product extends React.Component {
           <button className={"primaryButton"}
                   type={"button"}
                   onClick={props.closeMethod}
-          >Close</button>
+          >{texts.close}</button>
         </div>
       </div>
     );
@@ -61,14 +62,17 @@ class Product extends React.Component {
           <div className={"productInfo"}>
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
-            <div className={"productTable"}>
-              {!this.state.tableOpen && <button className={"primaryButton"} type={"button"} onClick={this.detailsClicked}>Details</button>}
+            {this.props.tabRows !== "" && <div className={"productTable"}>
+              {!this.state.tableOpen && <button className={"primaryButton"}
+                                                type={"button"}
+                                                onClick={this.detailsClicked}
+              >{texts.details}</button>}
               {this.state.tableOpen && <this.ProductTable
                 closeMethod={this.detailsClicked}
                 tabColumns={this.props.tabColumns}
                 tabRows={this.props.tabRows}
               />}
-            </div>
+            </div>}
             <hr/>
             <p className={"productAlt"}>{this.props.tags}</p>
           </div>

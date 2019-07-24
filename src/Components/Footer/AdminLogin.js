@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import {texts} from '../../strings';
 
 class AdminLogin extends React.Component {
 
@@ -33,17 +34,17 @@ class AdminLogin extends React.Component {
           <input
             className={"adminConsoleProductTags"}
             type="text"
-            placeholder="Name"
+            placeholder={texts.namePlaceholder}
             onChange={this.onNameChanged}
           />
           <input
             className={"adminConsoleProductTags"}
             type="text"
-            placeholder="Password"
+            placeholder={texts.passwordPlaceholder}
             onChange={this.onPasswordChanged}
           />
-          <button className={"primaryButton"} type={"button"} onClick={this.loginPressed}>Login</button>
-          <button className={"secondaryButton"} type={"button"} onClick={this.props.cancelPressed}>Cancel</button>
+          <button className={"primaryButton"} type={"button"} onClick={this.loginPressed}>{texts.login}</button>
+          <button className={"secondaryButton"} type={"button"} onClick={this.props.cancelPressed}>{texts.cancel}</button>
         </div>
       </div>
     )

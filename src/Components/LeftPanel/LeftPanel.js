@@ -1,7 +1,6 @@
 import React from 'react';
 import './LeftPanel.css';
-
-const endpoint = 'http://127.0.0.1:3001';
+import {texts, constants} from '../../strings';
 
 class LeftPanel extends React.Component {
 
@@ -48,7 +47,7 @@ class LeftPanel extends React.Component {
   }
   getProductsForThisCategory(categoryName){
     if(categoryName !== ""){
-      fetch(endpoint + '/products?category='+categoryName)
+      fetch(constants.endpoint + '/products?category='+categoryName)
         .then(res=> console.log(res.body))
     }
   }
@@ -58,11 +57,10 @@ class LeftPanel extends React.Component {
       marginRight: "8px",
       marginLeft: "8px"
     };
-    const endpoint = 'http://127.0.0.1:3001';
 
     function removeProductCategory(categoryData){
       if(categoryData.category_name !== ""){
-        fetch(endpoint + '/productCategories',
+        fetch(constants.endpoint + '/productCategories',
           {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
@@ -79,7 +77,7 @@ class LeftPanel extends React.Component {
         <div>
           <input className={"categoryInput"}
                type="text"
-               placeholder="Category Name"
+               placeholder={texts.categoryNamePlaceholder}
                onChange={props.onCategoryNameChange}/>
           <button className={"primaryButton"}
                   type={"button"}
@@ -93,7 +91,7 @@ class LeftPanel extends React.Component {
         </div>
         <textarea className={"adminConsoleTableRows"}
                   rows="8" cols="10"
-                  placeholder="Category description"
+                  placeholder={texts.categoryDescriptionPlaceholder}
                   onChange={props.onCategoryDescriptionChange}/>
       </div>
     );

@@ -5,9 +5,7 @@ import Footer         from './Components/Footer/Footer';
 import Navbar         from './Components/Navbar/Navbar';
 import LeftPanel      from './Components/LeftPanel/LeftPanel';
 import MainContainer  from './Components/MainContainer/MainContainer';
-import tempImage from "./Components/Product/tempImage.jpg";
-
-const endpoint = 'http://127.0.0.1:3001';
+import {texts, constants} from './strings';
 
 class App extends React.Component{
 
@@ -18,46 +16,11 @@ class App extends React.Component{
       currentTab: "products",
       selectedProductCategory: "",
       selectedProductCategoryData: {
-        category_name: 'Najnovšie produkty',
+        category_name: texts.newestProducts,
         category_description: ''
       },
       productCategories: [],
-      newProductData: [],
-      productData:[
-        {
-          name: "Omnis voluptas",
-          description: "Minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut au",
-          tags: "Sunt, In, Culpa",
-          image: tempImage,
-          tabColumns: "Name,Age,Occupation",
-          tabRows: "Ayyman,18,Loler," +
-            "Gigatron,23,Astroboy," +
-            "Ashley,32,Telephonist," +
-            "Rose,28,Driver"
-        },
-        {
-          name: "Meleniti atque",
-          description: "sthrtthrthrhrh",
-          tags: "Sunt, In, Culpa",
-          image: tempImage,
-          tabColumns: "Name,Age,Occupation",
-          tabRows: "John,18,Student," +
-            "Miranda,23,Nurse," +
-            "Ashley,32,Telephonist," +
-            "Rose,28,Driver"
-        },
-        {
-          name: "Deserunt mollit",
-          description: "Yr lo-fi next level, edison bulb vexillologist la croix bicycle rights cliche dreamcatcher everyday carry adaptogen master cleanse kombucha. Asymmetrical ramps pabst celiac banjo, four loko tumeric stumptown la croix freegan VHS sartorial meditation food truck.",
-          tags: "Sunt, In, Culpa",
-          image: tempImage,
-          tabColumns: "Name,Age,Occupation",
-          tabRows: "John,18,Student," +
-            "Miranda,23,Nurse," +
-            "Ashley,32,Telephonist," +
-            "Rose,28,Driver"
-        }
-      ]
+      productData: []
     };
     this.adminConsoleClicked        = this.adminConsoleClicked.bind(this);
     this.addProductCategory         = this.addProductCategory.bind(this);
@@ -72,25 +35,25 @@ class App extends React.Component{
   }
   //-------HELPER FUNCTIONS-------
   getProductCategoriesData(){
-    fetch(endpoint + '/productCategories')
+    fetch(constants.endpoint + '/productCategories')
       .then(res => res.json())
       .then(res => this.setState({productCategories: res}))
       .catch(err => console.log(err));
   }
   getCurrentCategoryData(currentCategoryName){
     if(currentCategoryName === '' || !currentCategoryName){
-      fetch(endpoint+'/products')
+      fetch(constants.endpoint+'/products')
         .then(res => res.json())
-        .then(res => this.setState({newProductData: res}))
+        .then(res => this.setState({productData: res}))
         .catch(err => console.log(err));
       return {
         category_name: 'Najnovšie produkty',
         category_description: ''
       }
     }else{
-      fetch(endpoint+'/products?category='+currentCategoryName)
+      fetch(constants.endpoint+'/products?category='+currentCategoryName)
         .then(res => res.json())
-        .then(res => this.setState({newProductData: res}))
+        .then(res => this.setState({productData: res}))
         .catch(err => console.log(err));
       let categoryData = this.state.productCategories.filter(category => category.category_name === currentCategoryName);
       return categoryData[0];
@@ -105,7 +68,13 @@ class App extends React.Component{
 
   //-------INPUT-------
   productsTabClicked(){
-    this.setState({currentTab: "products"});
+    this.setState({currentTab: "products",
+                        selectedProductCategory: "",
+                        selectedProductCategoryData: {
+                          category_name: 'Najnovšie produkty',
+                          category_description: ''
+                        }});
+    this.getCurrentCategoryData();
   }
   contactTabClicked(){
     this.setState({currentTab: "contact"});
@@ -119,7 +88,7 @@ class App extends React.Component{
   addProductCategory(newCategory){
     console.log(newCategory.category_name);
     if(newCategory.category_name !== ""){
-      fetch(endpoint + '/productCategories',
+      fetch(constants.endpoint + '/productCategories',
         {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
@@ -149,7 +118,7 @@ class App extends React.Component{
             />}
             <MainContainer
               currentTab={this.state.currentTab}
-              productData={this.state.newProductData}
+              productData={this.state.productData}
               selectedProductCategoryData={this.state.selectedProductCategoryData}
             />
           </div>
