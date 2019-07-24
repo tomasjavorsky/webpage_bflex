@@ -1,7 +1,6 @@
 import React from 'react';
 import Parser from 'html-react-parser';
 import './Product.css';
-import tempImage from './tempImage.jpg';
 
 class Product extends React.Component {
 
@@ -51,14 +50,14 @@ class Product extends React.Component {
   }
 
   detailsClicked(){
-    this.setState(state => ({tableOpen: !this.state.tableOpen}));
+    this.setState({tableOpen: !this.state.tableOpen});
   }
 
   render() {
     return (
       <div>
         <div className={"productContainer"}>
-          <img className={"productImage"} alt={"product"} src={tempImage}/>
+          <img className={"productImage"} alt={"product"} src={this.props.imageLink}/>
           <div className={"productInfo"}>
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>

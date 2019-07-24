@@ -15,12 +15,13 @@ class MainContainer extends React.Component {
 
     function productGenerator(productData) {
       return productData.map((currentProduct, index) => <Product
-        key={index+currentProduct.name}
-        name={currentProduct.name}
-        description={currentProduct.description}
-        tags={currentProduct.tags}
-        tabColumns={currentProduct.tabColumns}
-        tabRows={currentProduct.tabRows}
+        key={index+currentProduct.product_name}
+        name={currentProduct.product_name}
+        imageLink={currentProduct.product_image}
+        description={currentProduct.product_description}
+        tags={currentProduct.product_tags}
+        tabColumns={currentProduct.product_columns}
+        tabRows={currentProduct.product_rows}
       /> )
     }
 

@@ -16,12 +16,13 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       currentTab: "products",
-      selectedProductCategory: "home",
+      selectedProductCategory: "",
       selectedProductCategoryData: {
-        category_name: 'Home',
-        category_description: 'newest products'
+        category_name: 'Najnovšie produkty',
+        category_description: ''
       },
       productCategories: [],
+      newProductData: [],
       productData:[
         {
           name: "Omnis voluptas",
@@ -67,6 +68,7 @@ class App extends React.Component{
 
     //-------DATA FROM DB-------
     this.getProductCategoriesData();
+    this.getCurrentCategoryData();
   }
   //-------HELPER FUNCTIONS-------
   getProductCategoriesData(){
@@ -76,12 +78,20 @@ class App extends React.Component{
       .catch(err => console.log(err));
   }
   getCurrentCategoryData(currentCategoryName){
-    if(currentCategoryName === 'home'){
+    if(currentCategoryName === '' || !currentCategoryName){
+      fetch(endpoint+'/products')
+        .then(res => res.json())
+        .then(res => this.setState({newProductData: res}))
+        .catch(err => console.log(err));
       return {
-        category_name: 'Home',
-        category_description: 'Newest products'
+        category_name: 'Najnovšie produkty',
+        category_description: ''
       }
     }else{
+      fetch(endpoint+'/products?category='+currentCategoryName)
+        .then(res => res.json())
+        .then(res => this.setState({newProductData: res}))
+        .catch(err => console.log(err));
       let categoryData = this.state.productCategories.filter(category => category.category_name === currentCategoryName);
       return categoryData[0];
     }
@@ -106,7 +116,6 @@ class App extends React.Component{
   adminConsoleClicked() {
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
-
   addProductCategory(newCategory){
     console.log(newCategory.category_name);
     if(newCategory.category_name !== ""){
@@ -140,7 +149,7 @@ class App extends React.Component{
             />}
             <MainContainer
               currentTab={this.state.currentTab}
-              productData={this.state.productData}
+              productData={this.state.newProductData}
               selectedProductCategoryData={this.state.selectedProductCategoryData}
             />
           </div>
