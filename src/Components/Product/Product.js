@@ -1,7 +1,7 @@
 import React from 'react';
 import Parser from 'html-react-parser';
 import './Product.css';
-import {texts} from '../../strings';
+import {constants, texts} from '../../strings';
 
 class Product extends React.Component {
 
@@ -53,6 +53,16 @@ class Product extends React.Component {
   detailsClicked(){
     this.setState({tableOpen: !this.state.tableOpen});
   }
+  deleteClicked(props){
+    fetch(constants.endpoint + '/products',
+      {
+        method: 'delete',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            product_id: props.id}
+          )
+      })
+  }
 
   render() {
     return (
@@ -60,8 +70,13 @@ class Product extends React.Component {
         <div className={"productContainer"}>
           <img className={"productImage"} alt={"product"} src={this.props.imageLink}/>
           <div className={"productInfo"}>
+            {this.props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
+                             type={"button"}
+                             onClick={() => {this.deleteClicked(this.props)}}>
+              {texts.delete}</button>}
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
+
             {this.props.tabRows !== "" && <div className={"productTable"}>
               {!this.state.tableOpen && <button className={"primaryButton"}
                                                 type={"button"}

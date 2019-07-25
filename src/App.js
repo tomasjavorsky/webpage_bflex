@@ -120,6 +120,7 @@ class App extends React.Component{
               currentTab={this.state.currentTab}
               productData={this.state.productData}
               selectedProductCategoryData={this.state.selectedProductCategoryData}
+              adminConsoleOpen={this.state.adminConsoleOpen}
             />
           </div>
         </div>

@@ -17,6 +17,11 @@
   max-width: 300px;
 }
 
+.deleteButton{
+  background-color: var(--colorDelete);
+  float: right;
+}
+
 .productInfo{
   flex: 75%;
 }

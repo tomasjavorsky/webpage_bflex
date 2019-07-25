@@ -19,6 +19,7 @@ const texts = {
     </div>,
   create: "Vytvoriť",
   cancel: "Zrušiť",
+  delete: "✖",
   productNamePlaceholder: "Názov produktu",
   productDescriptionPlaceholder: "Popis produktu",
   productTagsPlaceholder: "Tagy (oddelovať s ,)",
@@ -35,7 +36,7 @@ const texts = {
 };
 
 const constants = {
-  endpoint: 'http://127.0.0.1:3001',
+  endpoint: 'http://192.168.0.31:3001',
 };
 
 export{texts, constants}
