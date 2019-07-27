@@ -146,7 +146,10 @@ class Footer extends React.Component {
           })
         }
       )
-        .then(this.setUploading())
+        .then(res => {
+          this.setUploading();
+          this.props.getCurrentCategoryData()
+        })
     }
   }
   createNewProduct(){

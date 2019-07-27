@@ -62,6 +62,7 @@ class Product extends React.Component {
             product_id: props.id}
           )
       })
+      .then(res => {console.log("deleting");props.getCurrentCategoryData()})
   }
 
   render() {

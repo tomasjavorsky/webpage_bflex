@@ -28,6 +28,7 @@ class App extends React.Component{
     this.howToOrderTabClicked       = this.howToOrderTabClicked.bind(this);
     this.setSelectedProductCategory = this.setSelectedProductCategory.bind(this);
     this.getProductCategoriesData   = this.getProductCategoriesData.bind(this);
+    this.getCurrentCategoryData     = this.getCurrentCategoryData.bind(this);
 
     //-------DATA FROM DB-------
     this.getProductCategoriesData();
@@ -106,12 +107,15 @@ class App extends React.Component{
               productData={this.state.productData}
               selectedProductCategoryData={this.state.selectedProductCategoryData}
               adminConsoleOpen={this.state.adminConsoleOpen}
+              getCurrentCategoryData={this.getCurrentCategoryData}
             />
           </div>
         </div>
         <Footer adminConsoleOpen={this.state.adminConsoleOpen}
                 adminConsoleClick={this.adminConsoleClicked}
-                productCategories={this.state.productCategories} />
+                productCategories={this.state.productCategories}
+                getCurrentCategoryData={this.getCurrentCategoryData}
+        />
       </div>
     );
   }
