@@ -23,7 +23,6 @@ class App extends React.Component{
       productData: []
     };
     this.adminConsoleClicked        = this.adminConsoleClicked.bind(this);
-    this.addProductCategory         = this.addProductCategory.bind(this);
     this.productsTabClicked         = this.productsTabClicked.bind(this);
     this.contactTabClicked          = this.contactTabClicked.bind(this);
     this.howToOrderTabClicked       = this.howToOrderTabClicked.bind(this);
@@ -86,22 +85,6 @@ class App extends React.Component{
   adminConsoleClicked() {
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
-  addProductCategory(newCategory){
-    console.log(newCategory.category_name);
-    if(newCategory.category_name !== ""){
-      fetch(constants.endpoint + '/productCategories',
-        {
-          method: 'post',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            category_name: newCategory.category_name,
-            category_description: newCategory.category_description
-          })
-        }
-      )
-        .then(res => this.getProductCategoriesData())
-    }
-  }
 
   render(){
     return (
@@ -115,7 +98,6 @@ class App extends React.Component{
             {this.state.currentTab === "products" && <LeftPanel
               adminConsoleOpen={this.state.adminConsoleOpen}
               productCategories={this.state.productCategories}
-              addProductCategory={this.addProductCategory}
               setSelectedProductCategory={this.setSelectedProductCategory}
               getProductCategoriesData={this.getProductCategoriesData}
             />}

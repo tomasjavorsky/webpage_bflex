@@ -58,6 +58,22 @@ class LeftPanel extends React.Component {
       marginLeft: "8px"
     };
 
+    function addProductCategory(newCategory){
+      console.log(newCategory.category_name);
+      if(newCategory.category_name !== ""){
+        fetch(constants.endpoint + '/productCategories',
+          {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              category_name: newCategory.category_name,
+              category_description: newCategory.category_description
+            })
+          }
+        )
+          .then(res => props.getProductCategoriesData())
+      }
+    }
     function removeProductCategory(categoryData){
       if(categoryData.category_name !== ""){
         fetch(constants.endpoint + '/productCategories',
@@ -83,7 +99,7 @@ class LeftPanel extends React.Component {
           <button className={"primaryButton"}
                   type={"button"}
                   style={inlineMargin}
-                  onClick={() => props.addProductCategory(props.getCategoryData())}
+                  onClick={() => addProductCategory(props.getCategoryData())}
           >+</button>
           <button className={"secondaryButton"}
                   type={"button"}
@@ -104,7 +120,6 @@ class LeftPanel extends React.Component {
         {this.generateProductCategoryButtons()}
         {this.props.adminConsoleOpen &&
         <this.CategoryCreator
-          addProductCategory={this.props.addProductCategory}
           onCategoryNameChange={this.onCategoryNameChange}
           onCategoryDescriptionChange={this.onCategoryDescriptionChange}
           getCategoryData={this.getCategoryData}
