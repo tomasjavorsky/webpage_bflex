@@ -69,6 +69,7 @@ class LeftPanel extends React.Component {
             })
           }
         )
+          .then(res => props.getProductCategoriesData())
       }
     }
 
@@ -107,6 +108,7 @@ class LeftPanel extends React.Component {
           onCategoryNameChange={this.onCategoryNameChange}
           onCategoryDescriptionChange={this.onCategoryDescriptionChange}
           getCategoryData={this.getCategoryData}
+          getProductCategoriesData={this.props.getProductCategoriesData}
         />}
       </div>
     )
