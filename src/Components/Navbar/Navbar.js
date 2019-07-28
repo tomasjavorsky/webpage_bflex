@@ -6,9 +6,14 @@ class Navbar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {}
-
+    this.state = {
+      searchKeyword: "",
+    }
   }
+
+  onKeywordChanged = (event) =>{
+    this.setState({searchKeyword: event.target.value});
+  };
 
   render() {
     return (
@@ -23,8 +28,14 @@ class Navbar extends React.Component {
           <button onClick={this.props.howToOrderTabClicked}>{texts.howToOrder}</button>
         </div>
         <div className={"navSearch"}>
-          <input type="text"/>
-          <button type={"button"}>{texts.search}</button>
+          <input
+            type="text"
+            onChange={this.onKeywordChanged}
+          />
+          <button
+            type={"button"}
+            onClick={() => {this.props.searchProducts(this.state.searchKeyword)}}
+          >{texts.search}</button>
         </div>
       </div>
     )

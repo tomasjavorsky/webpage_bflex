@@ -64,7 +64,8 @@ class MainContainer extends React.Component {
   render() {
     return (
       <div className={'main'}>
-        {this.props.currentTab === "products" && <this.ProductsTab
+        {this.props.currentTab === "products" &&
+        <this.ProductsTab
           productData={this.props.productData}
           selectedProductCategoryData={this.props.selectedProductCategoryData}
           adminConsoleOpen={this.props.adminConsoleOpen}

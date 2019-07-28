@@ -33,6 +33,7 @@ const texts = {
   categoryDescriptionPlaceholder: "Popis kategórie",
   newestProducts: "Najnovšie produkty",
   howToOrderDescription: "Kombucha brooklyn bitters, jean shorts kinfolk yuccie +1 sed butcher qui heirloom dolor occupy vexillologist. Kogi trust fund vaporware ut mustache pok pok humblebrag small batch freegan hell of artisan pariatur culpa chartreuse occupy. Twee YOLO shaman vaporware ramps. Salvia laboris slow-carb, vaporware irure nostrud viral. Fanny pack taxidermy kitsch kombucha selfies blog. Normcore aute health goth, pinterest mlkshk chambray ennui ethical ullamco prism ut heirloom.",
+  searchResultFor: "Výsledok hladania: ",
 };
 
 const constants = {

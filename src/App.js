@@ -29,6 +29,7 @@ class App extends React.Component{
     this.setSelectedProductCategory = this.setSelectedProductCategory.bind(this);
     this.getProductCategoriesData   = this.getProductCategoriesData.bind(this);
     this.getCurrentCategoryData     = this.getCurrentCategoryData.bind(this);
+    this.searchProducts             = this.searchProducts.bind(this);
 
     //-------DATA FROM DB-------
     this.getProductCategoriesData();
@@ -67,6 +68,22 @@ class App extends React.Component{
     });
   }
 
+  searchProducts(keyword){
+    console.log("searching" + keyword);
+    if(keyword && keyword !== ''){
+      fetch(constants.endpoint+'/products?searchKeyword='+keyword)
+        .then(res => res.json())
+        .then(res => this.setState({
+          productData: res,
+          selectedProductCategoryData: {
+            category_name: texts.searchResultFor + keyword,
+            category_description: ''
+          }
+        }))
+        .catch(err => console.log(err));
+    }
+  }
+
   //-------INPUT-------
   productsTabClicked(){
     this.setState({currentTab: "products",
@@ -93,7 +110,9 @@ class App extends React.Component{
         <Header />
         <Navbar productsTabClicked={this.productsTabClicked}
                 contactTabClicked={this.contactTabClicked}
-                howToOrderTabClicked={this.howToOrderTabClicked}/>
+                howToOrderTabClicked={this.howToOrderTabClicked}
+                searchProducts={this.searchProducts}
+        />
         <div className={"mainContentContainer"}>
           <div className={"row"}>
             {this.state.currentTab === "products" && <LeftPanel
