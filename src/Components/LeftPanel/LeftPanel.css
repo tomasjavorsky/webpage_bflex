@@ -3,6 +3,7 @@
   background-color: var(--colorUISemiLight);
   flex-direction: column;
   border-right: 1px solid var(--colorUIMiddleTransparent);
+  min-width: 280px;
 }
 
 .productCategoryButton{

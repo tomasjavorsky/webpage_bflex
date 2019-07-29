@@ -4,9 +4,9 @@
 
 .row {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1400px;
   min-height: calc(100vh - 354px);
+  max-width: 1400px;
+  width: 100%;
 }
 
 .left-panel {
@@ -23,7 +23,7 @@
   .row, .navbar {
     flex-direction: column;
   }
-  .left-panel{
-    height: 20px;
+  .left-panel {
+    flex: none;
   }
 }
