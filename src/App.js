@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import Header         from './Components/Header/Header';
-import Footer         from './Components/Footer/Footer';
-import Navbar         from './Components/Navbar/Navbar';
-import LeftPanel      from './Components/LeftPanel/LeftPanel';
-import MainContainer  from './Components/MainContainer/MainContainer';
+import Header             from './Components/Header/Header';
+import Footer             from './Components/Footer/Footer';
+import Navbar             from './Components/Navbar/Navbar';
+import LeftPanel          from './Components/LeftPanel/LeftPanel';
+import CartPanel          from './Components/CartPanel/CartPanel';
+import MainContainer      from './Components/MainContainer/MainContainer';
 import {texts, constants} from './strings';
 
 class App extends React.Component{
@@ -13,6 +14,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       adminConsoleOpen: false,
+      cartOpen: true,
       currentTab: "products",
       selectedProductCategory: "",
       selectedProductCategoryData: {
@@ -113,6 +115,7 @@ class App extends React.Component{
                 howToOrderTabClicked={this.howToOrderTabClicked}
                 searchProducts={this.searchProducts}
         />
+        {this.state.cartOpen && <CartPanel />}
         <div className={"mainContentContainer"}>
           <div className={"row"}>
             {this.state.currentTab === "products" && <LeftPanel

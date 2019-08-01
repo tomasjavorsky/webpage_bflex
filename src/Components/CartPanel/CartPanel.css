@@ -1,0 +1,20 @@
+.cartPanelContainer{
+  height: 280px;
+  background: var(--colorUISemiDark);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.cartPanelOrderedProducts{
+  max-width: 98vw;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  overflow-x: auto;
+}
+
+.cartPanelContainer .primaryButton{
+  margin: 5px;
+  align-self: center;
+}

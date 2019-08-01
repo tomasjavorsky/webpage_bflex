@@ -5,7 +5,7 @@
 .row {
   display: flex;
   min-height: calc(100vh - 354px);
-  max-width: 1400px;
+  max-width: var(--pageMaxWidth);
   width: 100%;
 }
 

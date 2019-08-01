@@ -10,12 +10,15 @@
   --colorUISemiLight: #eaebe9;
   --colorUISemiLightDarker: #c2c3c1;
   --colorUILight: #ffffff;
+  --colorUIThumbBG: #696258;
   --colorTextDark: #000000;
   --colorTextNonFocus: #cccdcb;
   --colorTextLight: #ffffff;
   --colorTextAdminConsole: #fffcf7;
   --colorShadow: rgba(215, 212, 206, 0.71);
   --colorDelete: rgb(226, 0, 0);
+
+  --pageMaxWidth: 1400px;
 }
 
 
