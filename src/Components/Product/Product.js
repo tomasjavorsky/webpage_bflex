@@ -41,7 +41,7 @@ class Product extends React.Component {
           </tbody>
         </table>
         <div className={"tableHideButton"}>
-          <button className={"primaryButton"}
+          <button className={"secondaryButton"}
                   type={"button"}
                   onClick={props.closeMethod}
           >{texts.close}</button>
@@ -77,9 +77,12 @@ class Product extends React.Component {
               {texts.delete}</button>}
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
-
+            <button className={"primaryButton"}
+                    type={"button"}
+                    onClick={""}
+            >{texts.addToCart}</button>
             {this.props.tabRows !== "" && <div className={"productTable"}>
-              {!this.state.tableOpen && <button className={"primaryButton"}
+              {!this.state.tableOpen && <button className={"secondaryButton"}
                                                 type={"button"}
                                                 onClick={this.detailsClicked}
               >{texts.details}</button>}

@@ -18,3 +18,32 @@
   margin: 5px;
   align-self: center;
 }
+
+.productThumbnailContainer{
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 200px;
+  background-color: var(--colorUIThumbBG);
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px var(--colorUIDark);
+}
+
+.productThumbImage{
+  object-fit: scale-down;
+  max-height: 160px;
+}
+
+.productThumbName{
+  color: var(--colorUISemiLightDarker);
+  white-space: nowrap;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  flex: 50%;
+  align-self: center;
+  font-weight: bold;
+}

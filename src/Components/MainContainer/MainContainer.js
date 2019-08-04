@@ -26,7 +26,7 @@ class MainContainer extends React.Component {
         tabRows={currentProduct.product_rows}
         adminConsoleOpen={props.adminConsoleOpen}
         getCurrentCategoryData={props.getCurrentCategoryData}
-      /> )
+      />)
     }
 
     return(
