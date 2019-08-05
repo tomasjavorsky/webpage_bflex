@@ -34,6 +34,7 @@ class App extends React.Component{
     this.getCurrentCategoryData     = this.getCurrentCategoryData.bind(this);
     this.searchProducts             = this.searchProducts.bind(this);
     this.addProductToCart           = this.addProductToCart.bind(this);
+    this.removeProductFromCart      = this.removeProductFromCart.bind(this);
 
     //-------DATA FROM DB-------
     this.getProductCategoriesData();
@@ -91,6 +92,13 @@ class App extends React.Component{
     this.setState({productsInCart: [...this.state.productsInCart, product]});
   }
 
+  removeProductFromCart(productId){
+    this.setState(prevState => {
+      let temp = this.state.productsInCart.filter(value => value.productID !== productId);
+      return {productsInCart: temp};
+    })
+  }
+
   //-------INPUT-------
   productsTabClicked(){
     this.setState({currentTab: "products",
@@ -122,6 +130,7 @@ class App extends React.Component{
         />
         {this.state.productsInCart.length !== 0 && <CartPanel
           productsInCart={this.state.productsInCart}
+          removeProductFromCart={this.removeProductFromCart}
         />}
         <div className={"mainContentContainer"}>
           <div className={"row"}>

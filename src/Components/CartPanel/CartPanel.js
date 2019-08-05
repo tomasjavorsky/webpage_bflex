@@ -16,7 +16,8 @@ class CartPanel extends React.Component {
           <div className={"removeButtonAntiScroll"} >
             <button className={"secondaryButton deleteThumbnail"}
                     type={"button"}
-                    onClick={""}>
+                    onClick={() => {
+                      props.removeProductFromCart(props.productID,props.removeProductFromCart)}}>
               {texts.delete}</button>
           </div>
           <img className={"productThumbImage"} alt={"product"} src={props.productImageLink}/>
@@ -25,13 +26,13 @@ class CartPanel extends React.Component {
       )
   }
 
-  productThumbnailGenerator(productThumbnailData){
-    console.log(productThumbnailData);
+  productThumbnailGenerator(productThumbnailData, removeFunction){
     return productThumbnailData.map((currentProductThumbnail) => <this.ProductThumbnail
       key={"productThumbKey"+currentProductThumbnail.productID}
       productID = {currentProductThumbnail.productID}
       productName = {currentProductThumbnail.productName}
       productImageLink = {currentProductThumbnail.productImageLink}
+      removeProductFromCart={removeFunction}
     />)
   }
 
@@ -40,7 +41,7 @@ class CartPanel extends React.Component {
     return (
       <div className={"cartPanelContainer"}>
         <div className={"cartPanelOrderedProducts"}>
-          {this.productThumbnailGenerator(this.props.productsInCart)}
+          {this.productThumbnailGenerator(this.props.productsInCart, this.props.removeProductFromCart)}
         </div>
         <button className={"primaryButton"} type={"button"}>{texts.order}</button>
       </div>
