@@ -13,6 +13,12 @@ class CartPanel extends React.Component {
   ProductThumbnail(props){
       return (
         <div className={"productThumbnailContainer"}>
+          <div className={"removeButtonAntiScroll"} >
+            <button className={"secondaryButton deleteThumbnail"}
+                    type={"button"}
+                    onClick={""}>
+              {texts.delete}</button>
+          </div>
           <img className={"productThumbImage"} alt={"product"} src={props.productImageLink}/>
           <p className={"productThumbName"}>{props.productName}</p>
         </div>

@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: left;
+  position: relative;
 }
 
 .cartPanelOrderedProducts{
@@ -46,4 +47,17 @@
   flex: 50%;
   align-self: center;
   font-weight: bold;
+}
+
+.removeButtonAntiScroll{
+  position: relative;
+}
+
+.deleteThumbnail{
+  position: absolute;
+  right: -8px;
+  top: -9px;
+  padding: 2px;
+  background-color: var(--colorUIMiddleTransparent);
+  color: var(--colorUISemiLightDarker);
 }
