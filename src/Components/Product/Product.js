@@ -72,17 +72,23 @@ class Product extends React.Component {
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
             <div className={"productButtons"}>
-              {(!this.state.tableOpen && this.props.tabRows !== "") && <button className={"secondaryButton"}
-                                                type={"button"}
-                                                onClick={this.detailsClicked}
+              {(!this.state.tableOpen && this.props.tabRows !== "") && <button
+                      className={"secondaryButton"}
+                      type={"button"}
+                      onClick={this.detailsClicked}
               >{texts.details}</button>}
-              {this.state.tableOpen && <button className={"secondaryButton"}
+              {this.state.tableOpen && <button
+                      className={"secondaryButton"}
                       type={"button"}
                       onClick={this.detailsClicked}
               >{texts.close}</button>}
               <button className={"primaryButton addToCartButton"}
                       type={"button"}
-                      onClick={""}
+                      onClick={() => {this.props.addProductToCart({
+                        productID: this.props.id,
+                        productName: this.props.name,
+                        productImageLink: this.props.imageLink
+                      })}}
               >{texts.addToCart}</button>
             </div>
             {this.props.tabRows !== "" && <div className={"productTable"}>

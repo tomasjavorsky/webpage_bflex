@@ -26,6 +26,7 @@ class MainContainer extends React.Component {
         tabRows={currentProduct.product_rows}
         adminConsoleOpen={props.adminConsoleOpen}
         getCurrentCategoryData={props.getCurrentCategoryData}
+        addProductToCart={props.addProductToCart}
       />)
     }
 
@@ -70,6 +71,7 @@ class MainContainer extends React.Component {
           selectedProductCategoryData={this.props.selectedProductCategoryData}
           adminConsoleOpen={this.props.adminConsoleOpen}
           getCurrentCategoryData={this.props.getCurrentCategoryData}
+          addProductToCart={this.props.addProductToCart}
         />}
         {this.props.currentTab === "contact" && <this.ContactTab/>}
         {this.props.currentTab === "howToOrder" && <this.HowToOrder/>}

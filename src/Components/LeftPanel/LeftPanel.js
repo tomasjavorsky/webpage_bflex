@@ -52,7 +52,7 @@ class LeftPanel extends React.Component {
   //       .then(res=> res.json())
   //   }
   // }
-  
+
   // ---------- COMPONENTS ----------
   CategoryCreator(props) {
     const inlineMargin = {

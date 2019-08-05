@@ -20,6 +20,7 @@ class CartPanel extends React.Component {
   }
 
   productThumbnailGenerator(productThumbnailData){
+    console.log(productThumbnailData);
     return productThumbnailData.map((currentProductThumbnail) => <this.ProductThumbnail
       key={"productThumbKey"+currentProductThumbnail.productID}
       productID = {currentProductThumbnail.productID}
