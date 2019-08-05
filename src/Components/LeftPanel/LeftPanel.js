@@ -41,16 +41,18 @@ class LeftPanel extends React.Component {
         key={index}
         onClick={() => {
           this.props.setSelectedProductCategory(categoryName);
-          this.getProductsForThisCategory(categoryName);
+          //this.getProductsForThisCategory(categoryName);
         }}
       >{categoryName}</button>)
   }
-  getProductsForThisCategory(categoryName){
-    if(categoryName !== ""){
-      fetch(constants.endpoint + '/products?category='+categoryName)
-        .then(res=> console.log(res.body))
-    }
-  }
+
+  // getProductsForThisCategory(categoryName){
+  //   if(categoryName !== ""){
+  //     fetch(constants.endpoint + '/products?category='+categoryName)
+  //       .then(res=> res.json())
+  //   }
+  // }
+  
   // ---------- COMPONENTS ----------
   CategoryCreator(props) {
     const inlineMargin = {
@@ -59,7 +61,6 @@ class LeftPanel extends React.Component {
     };
 
     function addProductCategory(newCategory){
-      console.log(newCategory.category_name);
       if(newCategory.category_name !== ""){
         fetch(constants.endpoint + '/productCategories',
           {

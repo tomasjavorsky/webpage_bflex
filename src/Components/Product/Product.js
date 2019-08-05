@@ -40,12 +40,6 @@ class Product extends React.Component {
             {generateRows()}
           </tbody>
         </table>
-        <div className={"tableHideButton"}>
-          <button className={"secondaryButton"}
-                  type={"button"}
-                  onClick={props.closeMethod}
-          >{texts.close}</button>
-        </div>
       </div>
     );
   }
@@ -77,17 +71,22 @@ class Product extends React.Component {
               {texts.delete}</button>}
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
-            <button className={"primaryButton"}
-                    type={"button"}
-                    onClick={""}
-            >{texts.addToCart}</button>
-            {this.props.tabRows !== "" && <div className={"productTable"}>
-              {!this.state.tableOpen && <button className={"secondaryButton"}
+            <div className={"productButtons"}>
+              {(!this.state.tableOpen && this.props.tabRows !== "") && <button className={"secondaryButton"}
                                                 type={"button"}
                                                 onClick={this.detailsClicked}
               >{texts.details}</button>}
+              {this.state.tableOpen && <button className={"secondaryButton"}
+                      type={"button"}
+                      onClick={this.detailsClicked}
+              >{texts.close}</button>}
+              <button className={"primaryButton addToCartButton"}
+                      type={"button"}
+                      onClick={""}
+              >{texts.addToCart}</button>
+            </div>
+            {this.props.tabRows !== "" && <div className={"productTable"}>
               {this.state.tableOpen && <this.ProductTable
-                closeMethod={this.detailsClicked}
                 tabColumns={this.props.tabColumns}
                 tabRows={this.props.tabRows}
               />}
