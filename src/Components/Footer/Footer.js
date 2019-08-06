@@ -196,7 +196,8 @@ class Footer extends React.Component {
         <div className={"adminConsoleFields"}>
           <div className={"adminConsoleDescription"}>
             <input className={"adminConsoleProductName"}
-                   type="text" placeholder={texts.productNamePlaceholder}
+                   type="text"
+                   placeholder={texts.productNamePlaceholder}
                    onChange={props.onProductNameChange}/>
             <textarea className={"adminConsoleProductDescription"}
                       rows="3" cols="75"

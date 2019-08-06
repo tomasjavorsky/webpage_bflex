@@ -61,3 +61,23 @@
   background-color: var(--colorUIMiddleTransparent);
   color: var(--colorUISemiLightDarker);
 }
+
+.customModal{
+  background-color: var(--colorUISemiLight);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+ }
+
+.customModal input{
+  font-size: 20px;
+  width: 300px;
+  background-color: var(--colorUIMiddle);
+}
+
+.centerInModal{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
