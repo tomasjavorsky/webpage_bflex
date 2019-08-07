@@ -1,6 +1,6 @@
 import React from 'react';
 import './CartPanel.css';
-import {texts} from "../../strings";
+import {constants, texts} from "../../strings";
 import Modal from 'react-responsive-modal';
 
 class CartPanel extends React.Component {
@@ -46,19 +46,32 @@ class CartPanel extends React.Component {
   }
 
   //-------MODAL WINDOW-------
-  onOpenModal = () => {
+  onOpenModal(){
     this.setState({ modalOpen: true });
   };
-  onCloseModal = () => {
+  onCloseModal(){
     this.setState({ modalOpen: false });
   };
   onCustomerNameChange = (event) => {
     this.setState({customerName: event.target.value});
-  }
+  };
   onCustomerEmailChange = (event) => {
     this.setState({customerEmail: event.target.value});
   };
-
+  sendMail(){
+    fetch(constants.endpoint + '/sendOrder',
+      {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: "",
+          email: "",
+          message: "AYYY",
+        })
+      }
+    )
+      .then(res => console.log("mail sent"));
+  }
 
   render() {
     return (
@@ -88,7 +101,7 @@ class CartPanel extends React.Component {
             <button
               className={"primaryButton"}
               type={"button"}
-              onClick={""}
+              onClick={this.sendMail}
             >{texts.send}</button>
           </div>
         </Modal>

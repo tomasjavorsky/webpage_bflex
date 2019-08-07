@@ -5,10 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,13 +21,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1135">
+            <state relative-caret-position="561">
               <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
                 <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
                 <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
+                <element signature="n#!!block;n#searchProducts#0;n#App#0" />
                 <element signature="n#!!block;n#productsTabClicked#0;n#App#0" />
                 <element signature="n#!!block;n#contactTabClicked#0;n#App#0" />
                 <element signature="n#!!block;n#howToOrderTabClicked#0;n#App#0" />
@@ -41,10 +39,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="896">
+              <caret line="74" column="56" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="74" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#getCategoryData#0;n#LeftPanel#0" />
+                <element signature="n#!!block;n#getProductCategoryNames#0;n#LeftPanel#0" />
+                <element signature="n#!!block;n#removeProductCategory#0;n#!!block;n#CategoryCreator#0;n#LeftPanel#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="74" column="4" lean-forward="true" selection-start-line="67" selection-start-column="2" selection-end-line="74" selection-end-column="4" />
+            <state relative-caret-position="1904">
+              <caret line="74" column="4" selection-start-line="67" selection-start-column="2" selection-end-line="74" selection-end-column="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
@@ -61,12 +74,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
+            <state relative-caret-position="168">
+              <caret line="60" column="10" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
                 <element signature="n#!!block;n#productThumbnailGenerator#0;n#CartPanel#0" />
+                <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
+                <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
+                <element signature="e#1927#1987#0" />
+                <element signature="e#2025#2086#0" />
               </folding>
             </state>
           </provider>
@@ -75,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="1904">
               <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
             </state>
           </provider>
@@ -93,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/strings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
+            <state relative-caret-position="1036">
               <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
             </state>
           </provider>
@@ -124,6 +141,7 @@
       <find>outlineButton</find>
       <find>getProductsForThisCategory</find>
       <find>centerInModal</find>
+      <find>POST</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -176,6 +194,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="bflex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Tomus\Desktop\Web\bflex" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,17 +283,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Product" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="bflex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Tomus\Desktop\Web\bflex" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -392,12 +410,13 @@
       <workItem from="1564988758949" duration="7927000" />
       <workItem from="1565023729418" duration="8139000" />
       <workItem from="1565088001372" duration="4419000" />
-      <workItem from="1565119457097" duration="3714000" />
+      <workItem from="1565119457097" duration="4014000" />
+      <workItem from="1565155171156" duration="4722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307079000" />
+    <option name="totallyTimeSpent" value="312101000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,8 +428,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22195704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -572,19 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getCategoryData#0;n#LeftPanel#0" />
-            <element signature="n#!!block;n#getProductCategoryNames#0;n#LeftPanel#0" />
-            <element signature="n#!!block;n#removeProductCategory#0;n#!!block;n#CategoryCreator#0;n#LeftPanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
@@ -618,41 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/strings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1135">
-          <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
-            <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
-            <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
-            <element signature="n#!!block;n#productsTabClicked#0;n#App#0" />
-            <element signature="n#!!block;n#contactTabClicked#0;n#App#0" />
-            <element signature="n#!!block;n#howToOrderTabClicked#0;n#App#0" />
-            <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="74" column="4" lean-forward="true" selection-start-line="67" selection-start-column="2" selection-end-line="74" selection-end-column="4" />
+        <state relative-caret-position="1904">
+          <caret line="74" column="4" selection-start-line="67" selection-start-column="2" selection-end-line="74" selection-end-column="4" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
@@ -667,19 +641,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="1904">
           <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
+            <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
+            <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
+            <element signature="n#!!block;n#searchProducts#0;n#App#0" />
+            <element signature="n#!!block;n#productsTabClicked#0;n#App#0" />
+            <element signature="n#!!block;n#contactTabClicked#0;n#App#0" />
+            <element signature="n#!!block;n#howToOrderTabClicked#0;n#App#0" />
+            <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="74" column="56" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="74" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#getCategoryData#0;n#LeftPanel#0" />
+            <element signature="n#!!block;n#getProductCategoryNames#0;n#LeftPanel#0" />
+            <element signature="n#!!block;n#removeProductCategory#0;n#!!block;n#CategoryCreator#0;n#LeftPanel#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
+        <state relative-caret-position="168">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="10" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
             <element signature="n#!!block;n#productThumbnailGenerator#0;n#CartPanel#0" />
+            <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
+            <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
+            <element signature="e#1927#1987#0" />
+            <element signature="e#2025#2086#0" />
           </folding>
         </state>
       </provider>
