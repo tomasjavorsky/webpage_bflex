@@ -17,6 +17,7 @@ class CartPanel extends React.Component {
     this.onCloseModal           = this.onCloseModal.bind(this);
     this.onCustomerNameChange   = this.onCustomerNameChange.bind(this);
     this.onCustomerEmailChange  = this.onCustomerEmailChange.bind(this);
+    this.sendMail               = this.sendMail.bind(this);
   }
 
   //-------PRODUCT THUMBNAIL-------
@@ -58,15 +59,30 @@ class CartPanel extends React.Component {
   onCustomerEmailChange = (event) => {
     this.setState({customerEmail: event.target.value});
   };
-  sendMail(){
+
+  sendMail(name, email){
+
+    let html =
+      `<table style="background-color: #e9e9e5; padding: 10px; width: 600px; border-radius: 10px;">`+
+        `<tr align="center">`+
+          `<div style="background-color: #ff9900; padding: 10px; border-radius: 10px; margin-bottom: 10px">` +
+            `<h1 style="color: #443d34; font-weight: bold;">OBJEDNÁVKA OD: ${name}</h1>`+
+            `<h2 style="color: #443d34;">email: ${email}</h2></th>`+
+          `</div>`;
+            html = html + this.props.productsInCart.map((product) => `<div style="align: center; border-radius: 5px; background-color: #cdbda4;width: 250px;height: 200px;padding: 5px"><img alt="product" style="max-height: 160px; max-width: 250px; object-fit: scale-down;" src="${product.productImageLink}"><h4>${product.productName}</h4></div>`);
+            html = html +
+        `</tr>` +
+      `</table>`
+    ;
+
     fetch(constants.endpoint + '/sendOrder',
       {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          name: "",
-          email: "",
-          message: "AYYY",
+          name: this.state.customerName,
+          email: this.state.customerEmail,
+          html: html
         })
       }
     )
@@ -101,7 +117,7 @@ class CartPanel extends React.Component {
             <button
               className={"primaryButton"}
               type={"button"}
-              onClick={this.sendMail}
+              onClick={() => {this.sendMail(this.state.customerName,this.state.customerEmail)}}
             >{texts.send}</button>
           </div>
         </Modal>
