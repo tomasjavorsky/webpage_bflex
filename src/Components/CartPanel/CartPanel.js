@@ -11,12 +11,14 @@ class CartPanel extends React.Component {
       modalOpen: false,
       customerName: "",
       customerEmail: "",
+      customerNote: "",
     };
 
     this.onOpenModal            = this.onOpenModal.bind(this);
     this.onCloseModal           = this.onCloseModal.bind(this);
     this.onCustomerNameChange   = this.onCustomerNameChange.bind(this);
     this.onCustomerEmailChange  = this.onCustomerEmailChange.bind(this);
+    this.onCustomerNoteChange  = this.onCustomerNoteChange.bind(this);
     this.sendMail               = this.sendMail.bind(this);
   }
 
@@ -59,17 +61,26 @@ class CartPanel extends React.Component {
   onCustomerEmailChange = (event) => {
     this.setState({customerEmail: event.target.value});
   };
+  onCustomerNoteChange = (event) => {
+    this.setState({customerNote: event.target.value});
+  };
 
-  sendMail(name, email){
+  sendMail(name, email, note){
 
     let html =
       `<table style="background-color: #e9e9e5; padding: 10px; width: 600px; border-radius: 10px;">`+
         `<tr align="center">`+
           `<div style="background-color: #ff9900; padding: 10px; border-radius: 10px; margin-bottom: 10px">` +
             `<h1 style="color: #443d34; font-weight: bold;">OBJEDNÁVKA OD: ${name}</h1>`+
-            `<h2 style="color: #443d34;">email: ${email}</h2></th>`+
+            `<h2 style="color: #443d34;">email: ${email}</h2>`;
+            if(note !== ""){
+              html = html +
+              `<h2 style="color: #443d34;">poznámka:</h2>` +
+              `<div>${note}</div>`;
+            }
+            html = html +
           `</div>`;
-            html = html + this.props.productsInCart.map((product) => `<div style="align: center; border-radius: 5px; background-color: #cdbda4;width: 250px;height: 200px;padding: 5px"><img alt="product" style="max-height: 160px; max-width: 250px; object-fit: scale-down;" src="${product.productImageLink}"><h4>${product.productName}</h4></div>`);
+            html = html + this.props.productsInCart.map((product) => `<div style="align: center; border-radius: 5px; background-color: #bcbcb8;width: 250px;height: 200px;padding: 5px"><img alt="product" style="max-height: 160px; max-width: 250px; object-fit: scale-down;" src="${product.productImageLink}"><h4>${product.productName}</h4></div>`);
             html = html +
         `</tr>` +
       `</table>`
@@ -113,11 +124,17 @@ class CartPanel extends React.Component {
                    placeholder={texts.emailPlaceholder}
                    onChange={this.onCustomerEmailChange}/>
           </div>
+          <div>
+            <p>{texts.note}</p>
+            <textarea className={"adminConsoleTableRows"}
+                      rows="8" cols="35"
+                      onChange={this.onCustomerNoteChange}/>
+          </div>
           <div className={"centerInModal"}>
             <button
               className={"primaryButton"}
               type={"button"}
-              onClick={() => {this.sendMail(this.state.customerName,this.state.customerEmail)}}
+              onClick={() => {this.sendMail(this.state.customerName,this.state.customerEmail,this.state.customerNote)}}
             >{texts.send}</button>
           </div>
         </Modal>

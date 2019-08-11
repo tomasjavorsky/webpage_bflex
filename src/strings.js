@@ -41,6 +41,7 @@ const texts = {
   yourContact: "Kontakt na Vás",
   yourName: "Vaše meno:",
   yourEmail: "Váš Email:",
+  note: "Poznámka:",
 };
 
 const constants = {
