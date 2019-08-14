@@ -90,7 +90,15 @@ class App extends React.Component{
     }
   }
   addProductToCart(product){
-    this.setState({productsInCart: [...this.state.productsInCart, product]});
+    let isAlreadyPresent = false;
+    this.state.productsInCart.forEach((p) => {
+      if(p.productID === product.productID){
+        isAlreadyPresent = true;
+      }
+    });
+    if(!isAlreadyPresent){
+      this.setState({productsInCart: [...this.state.productsInCart, product]});
+    }
   }
 
   removeProductFromCart(productId){

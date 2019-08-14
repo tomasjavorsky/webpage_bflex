@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/landingPageImage.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Firebase/FirebaseSetup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,18 +15,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1708">
-              <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
+            <state relative-caret-position="505">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
                 <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
                 <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
                 <element signature="n#!!block;n#searchProducts#0;n#App#0" />
-                <element signature="n#!!block;n#addProductToCart#0;n#App#0" />
                 <element signature="n#!!block;n#removeProductFromCart#0;n#App#0" />
                 <element signature="n#!!block;n#productsTabClicked#0;n#App#0" />
                 <element signature="n#!!block;n#contactTabClicked#0;n#App#0" />
@@ -47,13 +37,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="87" column="33" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#generateRows#0;n#!!block;n#ProductTable#0;n#Product#0" />
+                <element signature="n#!!block;n#detailsClicked#0;n#Product#0" />
+                <element signature="n#!!block;n#deleteClicked#0;n#Product#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+            <state relative-caret-position="1658">
+              <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
+                <element signature="e#1561#1879#0" />
                 <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
                 <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
                 <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
@@ -75,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -124,6 +130,7 @@
       <find>POST</find>
       <find>,</find>
       <find>sendMail</find>
+      <find>addProductToCart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,9 +167,9 @@
         <option value="$PROJECT_DIR$/src/Components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" />
         <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" />
         <option value="$PROJECT_DIR$/src/Firebase/FirebaseSetup.js" />
+        <option value="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -356,12 +363,12 @@
       <workItem from="1565549465925" duration="914000" />
       <workItem from="1565625443856" duration="10085000" />
       <workItem from="1565776171295" duration="1120000" />
-      <workItem from="1565785476988" duration="1598000" />
+      <workItem from="1565785476988" duration="3443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344495000" />
+    <option name="totallyTimeSpent" value="346340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,7 +380,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17535545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -520,19 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#generateRows#0;n#!!block;n#ProductTable#0;n#Product#0" />
-            <element signature="n#!!block;n#detailsClicked#0;n#Product#0" />
-            <element signature="n#!!block;n#deleteClicked#0;n#Product#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -619,26 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1708">
-          <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
-            <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
-            <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
-            <element signature="n#!!block;n#searchProducts#0;n#App#0" />
-            <element signature="n#!!block;n#addProductToCart#0;n#App#0" />
-            <element signature="n#!!block;n#removeProductFromCart#0;n#App#0" />
-            <element signature="n#!!block;n#productsTabClicked#0;n#App#0" />
-            <element signature="n#!!block;n#contactTabClicked#0;n#App#0" />
-            <element signature="n#!!block;n#howToOrderTabClicked#0;n#App#0" />
-            <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -646,13 +621,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+        <state relative-caret-position="1658">
+          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
+            <element signature="e#1561#1879#0" />
             <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
             <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
             <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
@@ -673,12 +659,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="307">
+          <caret line="87" column="33" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="33" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#generateRows#0;n#!!block;n#ProductTable#0;n#Product#0" />
+            <element signature="n#!!block;n#detailsClicked#0;n#Product#0" />
+            <element signature="n#!!block;n#deleteClicked#0;n#Product#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
+            <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
+            <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
+            <element signature="n#!!block;n#searchProducts#0;n#App#0" />
+            <element signature="n#!!block;n#removeProductFromCart#0;n#App#0" />
+            <element signature="n#!!block;n#productsTabClicked#0;n#App#0" />
+            <element signature="n#!!block;n#contactTabClicked#0;n#App#0" />
+            <element signature="n#!!block;n#howToOrderTabClicked#0;n#App#0" />
+            <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
           </folding>
         </state>
       </provider>
