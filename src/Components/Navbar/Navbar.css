@@ -45,7 +45,7 @@
 }
 
 /*TODO solve navbar layout problem*/
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1305px) {
 
   .navbar button{
     margin-right: 0px;
@@ -64,5 +64,11 @@
   .navButtons{
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navbar{
+    max-height: 50px;
   }
 }

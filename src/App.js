@@ -30,6 +30,8 @@ class App extends React.Component{
     this.productsTabClicked         = this.productsTabClicked.bind(this);
     this.contactTabClicked          = this.contactTabClicked.bind(this);
     this.howToOrderTabClicked       = this.howToOrderTabClicked.bind(this);
+    this.downloadsTabClicked        = this.downloadsTabClicked.bind(this);
+    this.jobsTabClicked             = this.jobsTabClicked.bind(this);
     this.setSelectedProductCategory = this.setSelectedProductCategory.bind(this);
     this.getProductCategoriesData   = this.getProductCategoriesData.bind(this);
     this.getCurrentCategoryData     = this.getCurrentCategoryData.bind(this);
@@ -73,7 +75,6 @@ class App extends React.Component{
       selectedProductCategoryData: this.getCurrentCategoryData(selectedCategoryName)
     });
   }
-
   searchProducts(keyword){
     console.log("searching" + keyword);
     if(keyword && keyword !== ''){
@@ -100,7 +101,6 @@ class App extends React.Component{
       this.setState({productsInCart: [...this.state.productsInCart, product]});
     }
   }
-
   removeProductFromCart(productId){
     this.setState(prevState => {
       let temp = this.state.productsInCart.filter(value => value.productID !== productId);
@@ -124,6 +124,12 @@ class App extends React.Component{
   howToOrderTabClicked(){
     this.setState({currentTab: "howToOrder"});
   }
+  downloadsTabClicked(){
+    this.setState({currentTab: "downloads"});
+  }
+  jobsTabClicked(){
+    this.setState({currentTab: "jobs"});
+  }
   adminConsoleClicked() {
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
@@ -135,6 +141,8 @@ class App extends React.Component{
         <Navbar productsTabClicked={this.productsTabClicked}
                 contactTabClicked={this.contactTabClicked}
                 howToOrderTabClicked={this.howToOrderTabClicked}
+                downloadsTabClicked={this.downloadsTabClicked}
+                jobsTabClicked={this.jobsTabClicked}
                 searchProducts={this.searchProducts}
         />
         {this.state.productsInCart.length !== 0 && <CartPanel

@@ -6,7 +6,6 @@
   display: flex;
   min-height: calc(100vh - 354px);
   max-width: var(--pageMaxWidth);
-  width: 100%;
 }
 
 .left-panel {
