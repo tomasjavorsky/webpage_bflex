@@ -1,10 +1,11 @@
 import React from 'react';
 import './Footer.css';
 import AdminLogin from './AdminLogin';
-import {storage} from '../Firebase/FirebaseSetup';
+import {storage} from '../../Firebase/FirebaseSetup';
 import {css} from '@emotion/core';
 import BarLoader from 'react-spinners/BarLoader';
 import {texts, constants} from '../../strings';
+
 
 
 const override = css`

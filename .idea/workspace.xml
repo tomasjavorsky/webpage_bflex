@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/landingPageImage.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Firebase/FirebaseSetup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+            <state relative-caret-position="1708">
+              <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
@@ -38,57 +46,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="82" column="323" selection-start-line="82" selection-start-column="323" selection-end-line="82" selection-end-column="323" />
+            <state relative-caret-position="283">
+              <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
                 <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
                 <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
-                <element signature="e#1984#2044#0" />
-                <element signature="e#2083#2144#0" />
-                <element signature="e#2183#2244#0" />
                 <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#1;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="228" column="40" lean-forward="true" selection-start-line="227" selection-start-column="12" selection-end-line="228" selection-end-column="40" />
+            <state relative-caret-position="504">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
-                <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
-                <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
-                <element signature="n#!!block;n#showObject#0;n#Footer#0" />
-                <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
-                <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-448">
-              <caret line="29" column="19" selection-start-line="28" selection-start-column="2" selection-end-line="29" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -96,17 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/strings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+            <state relative-caret-position="56">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -170,15 +155,18 @@
         <option value="$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js" />
         <option value="$PROJECT_DIR$/src/Components/Product/Product.js" />
         <option value="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" />
-        <option value="$PROJECT_DIR$/src/Components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/strings.js" />
+        <option value="$PROJECT_DIR$/src/Components/Footer/Footer.js" />
+        <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" />
+        <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" />
+        <option value="$PROJECT_DIR$/src/Firebase/FirebaseSetup.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1167" />
@@ -218,57 +206,7 @@
               <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
               <item name="bflex" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="CartPanel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Firebase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="LeftPanel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainContainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Navbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bflex" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,6 +241,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomus\Desktop\Web\bflex\src" />
+      <recent name="C:\Users\Tomus\Desktop\Web\bflex\src\Components" />
+      <recent name="C:\Users\Tomus\Desktop\Web\bflex\src\Images" />
       <recent name="C:\Users\Tomus\Desktop\Web\bflex\src\Components\Product" />
     </key>
   </component>
@@ -411,12 +352,16 @@
       <workItem from="1565155171156" duration="5006000" />
       <workItem from="1565258056067" duration="8152000" />
       <workItem from="1565321457387" duration="6089000" />
-      <workItem from="1565527562939" duration="3509000" />
+      <workItem from="1565527562939" duration="4152000" />
+      <workItem from="1565549465925" duration="914000" />
+      <workItem from="1565625443856" duration="10085000" />
+      <workItem from="1565776171295" duration="1120000" />
+      <workItem from="1565785476988" duration="1598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330135000" />
+    <option name="totallyTimeSpent" value="344495000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,16 +373,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12848867" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17535545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21666667" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.14411765" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.14215687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -445,7 +389,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159234" side_tool="true" weight="0.14583333" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.092857145" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.092156865" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -517,16 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Firebase/FirebaseSetup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
@@ -538,23 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Navbar/Navbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -603,19 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getCategoryData#0;n#LeftPanel#0" />
-            <element signature="n#!!block;n#getProductCategoryNames#0;n#LeftPanel#0" />
-            <element signature="n#!!block;n#removeProductCategory#0;n#!!block;n#CategoryCreator#0;n#LeftPanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -636,24 +540,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
+    <entry file="file://$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="1820">
+          <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#getCategoryData#0;n#LeftPanel#0" />
+            <element signature="n#!!block;n#getProductCategoryNames#0;n#LeftPanel#0" />
+            <element signature="n#!!block;n#removeProductCategory#0;n#!!block;n#CategoryCreator#0;n#LeftPanel#0" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1204">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Images/landingPageImage.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-448">
+        <state relative-caret-position="140">
           <caret line="29" column="19" selection-start-line="28" selection-start-column="2" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Navbar/Navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
+            <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
+            <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
+            <element signature="n#!!block;n#showObject#0;n#Footer#0" />
+            <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+            <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+        <state relative-caret-position="1708">
+          <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#getProductCategoriesData#0;n#App#0" />
@@ -670,51 +639,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/strings.js">
+    <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="228" column="40" lean-forward="true" selection-start-line="227" selection-start-column="12" selection-end-line="228" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#adminLoginClick#0;n#Footer#0" />
-            <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
-            <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
-            <element signature="n#!!block;n#showObject#0;n#Footer#0" />
-            <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
-            <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
-          </folding>
+        <state relative-caret-position="56">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="82" column="323" selection-start-line="82" selection-start-column="323" selection-end-line="82" selection-end-column="323" />
+        <state relative-caret-position="283">
+          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
             <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
             <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
-            <element signature="e#1984#2044#0" />
-            <element signature="e#2083#2144#0" />
-            <element signature="e#2183#2244#0" />
             <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#1;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

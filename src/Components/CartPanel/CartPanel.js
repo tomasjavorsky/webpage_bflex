@@ -67,21 +67,35 @@ class CartPanel extends React.Component {
 
   sendMail(name, email, note){
 
-    let html =
+    let htmlToBflex =
       `<table style="background-color: #e9e9e5; padding: 10px; width: 600px; border-radius: 10px;">`+
         `<tr align="center">`+
           `<div style="background-color: #ff9900; padding: 10px; border-radius: 10px; margin-bottom: 10px">` +
             `<h1 style="color: #443d34; font-weight: bold;">OBJEDNÁVKA OD: ${name}</h1>`+
             `<h2 style="color: #443d34;">email: ${email}</h2>`;
             if(note !== ""){
-              html = html +
+              htmlToBflex = htmlToBflex +
               `<h2 style="color: #443d34;">poznámka:</h2>` +
               `<div>${note}</div>`;
             }
-            html = html +
+            htmlToBflex = htmlToBflex +
           `</div>`;
-            html = html + this.props.productsInCart.map((product) => `<div style="align: center; border-radius: 5px; background-color: #bcbcb8;width: 250px;height: 200px;padding: 5px"><img alt="product" style="max-height: 160px; max-width: 250px; object-fit: scale-down;" src="${product.productImageLink}"><h4>${product.productName}</h4></div>`);
-            html = html +
+            htmlToBflex = htmlToBflex + this.props.productsInCart.map((product) => `<div style="align: center; border-radius: 5px; background-color: #bcbcb8; height: 200px; padding: 5px"><img alt="product" style="max-height: 160px; max-width: 250px; object-fit: scale-down;" src="${product.productImageLink}"><h4>${product.productName}</h4></div>`);
+            htmlToBflex = htmlToBflex +
+        `</tr>` +
+      `</table>`
+    ;
+
+    let htmlToCustomer =
+      `<table style="background-color: #e9e9e5; padding: 10px; width: 600px; border-radius: 10px;">`+
+        `<tr align="center">`+
+          `<div style="background-color: #ff9900; padding: 10px; border-radius: 10px; margin-bottom: 10px">` +
+            `<h2 style="color: #443d34; font-weight: bold;">Vaša objednávka bola zaregistrovaná.</h2>`+
+            `<h4 style="color: #443d34;">V najbližšej dobe Vás budeme kontaktovať.</h4>` +
+            `<p style="color: #443d34;">Vaše vybraté produkty:</p>` +
+          `</div>`;
+        htmlToCustomer = htmlToCustomer + this.props.productsInCart.map((product) => `<div style="align: center; border-radius: 5px; background-color: #bcbcb8; height: 200px; padding: 5px"><img alt="product" style="max-height: 160px; max-width: 250px; object-fit: scale-down;" src="${product.productImageLink}"><h4>${product.productName}</h4></div>`);
+        htmlToCustomer = htmlToCustomer +
         `</tr>` +
       `</table>`
     ;
@@ -93,7 +107,8 @@ class CartPanel extends React.Component {
         body: JSON.stringify({
           name: this.state.customerName,
           email: this.state.customerEmail,
-          html: html
+          htmlToBflex: htmlToBflex,
+          htmlToCustomer: htmlToCustomer
         })
       }
     )
