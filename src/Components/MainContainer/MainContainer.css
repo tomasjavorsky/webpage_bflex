@@ -6,6 +6,7 @@
 
 .productTab{
   padding: 20px;
+  min-width: 800px;
   box-shadow: inset 3px 3px 5px var(--colorShadow);
 }
 
@@ -30,5 +31,6 @@
 @media screen and (max-width: 720px) {
   .productTab{
     box-shadow: none;
+    min-width: 300px;
   }
 }

@@ -64,6 +64,17 @@ class MainContainer extends React.Component {
 
   //TODO DOWNLOADS
 
+  Downloads(props){
+    return(
+      <div className={"contactTab"}>
+        <h2>{texts.downloads}</h2>
+        <div className={"contactTabInfo howToTab"}>
+          <p>{texts.jobsDescription}</p>
+        </div>
+      </div>
+    );
+  }
+
   //TODO JOBS
   Jobs(props){
     return(
@@ -89,6 +100,7 @@ class MainContainer extends React.Component {
         />}
         {this.props.currentTab === "contact" && <this.ContactTab/>}
         {this.props.currentTab === "howToOrder" && <this.HowToOrder/>}
+        {this.props.currentTab === "downloads" && <this.Downloads/>}
         {this.props.currentTab === "jobs" && <this.Jobs/>}
       </div>
     );
