@@ -15,7 +15,6 @@ class Product extends React.Component {
   }
 
   ProductTable(props){
-
     function generateRows(){
       let numberOfColumns = props.tabColumns.split(",").length;
       let tableData = props.tabRows.split(",");
@@ -29,7 +28,6 @@ class Product extends React.Component {
       }
       return Parser(r);
     }
-    
     return(
       <div className={"productTableContainer"}>
         <table>

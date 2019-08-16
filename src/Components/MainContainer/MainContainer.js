@@ -1,19 +1,32 @@
 import React from 'react';
 import './MainContainer.css';
 import Product from '../Product/Product';
-import {texts} from '../../strings';
+import {constants, texts} from '../../strings';
 
 class MainContainer extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      currentTab: "products"
-    }
+      currentTab: "products",
+      jobListings: [],
+    };
+
+    this.getCurrentJobListings = this.getCurrentJobListings.bind(this);
+
+    //-------DATA FROM DB-------
+    this.getCurrentJobListings();
+  }
+
+  //-------HELPER FUNCTIONS-------
+  getCurrentJobListings(){
+      fetch(constants.endpoint+'/jobListings')
+        .then(res => res.json())
+        .then(res => this.setState({jobListings: res}))
+        .catch(err => console.log(err));
   }
 
   ProductsTab(props){
-
     function productGenerator(productData) {
       return productData.map((currentProduct) => <Product
         key={"productKey"+currentProduct.product_id}
@@ -29,7 +42,6 @@ class MainContainer extends React.Component {
         addProductToCart={props.addProductToCart}
       />)
     }
-
     return(
       <div className={"productTab"}>
         <h2>{props.selectedProductCategoryData.category_name}</h2>
@@ -62,8 +74,6 @@ class MainContainer extends React.Component {
     );
   }
 
-  //TODO DOWNLOADS
-
   Downloads(props){
     return(
       <div className={"contactTab"}>
@@ -75,14 +85,96 @@ class MainContainer extends React.Component {
     );
   }
 
-  //TODO JOBS
   Jobs(props){
+
+    let jobName = "";
+    let jobDescription = "";
+
+    const onJobNameChange = (event) => {
+      jobName = event.target.value;
+    };
+
+    const onJobDescriptionChange = (event) => {
+      jobDescription = event.target.value;
+    };
+
+    function generateJobCards(){
+      if(props.jobListings.length === 0){
+        return(
+          <div className={"contactTabInfo howToTab"}>
+            <p>{texts.noJobsOpenATM}</p>
+          </div>
+        )
+      }
+      else{
+        return(
+          props.jobListings.map((job) => <div key={"job"+job.job_id} className={"contactTabInfo"}>
+            {props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
+                                                    type={"button"}
+                                                    onClick={() => deleteJob(job)}>
+              {texts.delete}</button>}
+            <h1>{job.job_name}</h1>
+            <p>{job.job_description}</p>
+          </div>)
+        )
+      }
+    }
+    function deleteJob(job) {
+      fetch(constants.endpoint + '/jobListings',
+        {
+          method: 'delete',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+              job_id: job.job_id
+            }
+          )
+        })
+        .then(res => {
+          console.log("deleting");
+          props.getCurrentJobListings()
+        })
+        .catch(res => console.log("unable to delete job listing"))
+    }
+    function addJob(){
+      if(jobName !== ""){
+        fetch(constants.endpoint + '/jobListings',
+          {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              job_name: jobName,
+              job_description: jobDescription,
+            })
+          }
+        )
+          .then(res => {
+            console.log("job added");
+            props.getCurrentJobListings();
+          })
+      }
+    }
     return(
       <div className={"contactTab"}>
         <h2>{texts.jobs}</h2>
-        <div className={"contactTabInfo howToTab"}>
-          <p>{texts.jobsDescription}</p>
-        </div>
+        {generateJobCards()}
+        {props.adminConsoleOpen && <div className={"jobCreateTab"}>
+          <input className={"adminConsoleTableColumns"}
+                 type="text"
+                 placeholder={texts.jobName}
+                 onChange={onJobNameChange}
+          />
+          <textarea className={"adminConsoleTableRows"}
+                    rows="8" cols="75"
+                    placeholder={texts.jobDescription}
+                    onChange={onJobDescriptionChange}
+          />
+          <div>
+            <button className={"primaryButton"}
+                    type={"button"}
+                    onClick={addJob}
+            >{texts.create}</button>
+          </div>
+        </div>}
       </div>
     );
   }
@@ -99,9 +191,17 @@ class MainContainer extends React.Component {
           addProductToCart={this.props.addProductToCart}
         />}
         {this.props.currentTab === "contact" && <this.ContactTab/>}
-        {this.props.currentTab === "howToOrder" && <this.HowToOrder/>}
-        {this.props.currentTab === "downloads" && <this.Downloads/>}
-        {this.props.currentTab === "jobs" && <this.Jobs/>}
+        {this.props.currentTab === "howToOrder" && <this.HowToOrder
+          adminConsoleOpen={this.props.adminConsoleOpen}
+        />}
+        {this.props.currentTab === "downloads" && <this.Downloads
+          adminConsoleOpen={this.props.adminConsoleOpen}
+        />}
+        {this.props.currentTab === "jobs" && <this.Jobs
+          adminConsoleOpen={this.props.adminConsoleOpen}
+          jobListings={this.state.jobListings}
+          getCurrentJobListings={this.getCurrentJobListings}
+        />}
       </div>
     );
   }
