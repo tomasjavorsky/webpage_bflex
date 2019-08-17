@@ -1,7 +1,14 @@
 .header {
-  padding: 60px;
   text-align: center;
-  background: var(--colorPrimary);
+  padding: 60px;
+  background-image: url("../../Images/landingPageImage.jpg");
+  background-size: cover;
+  background-position: center;
   color: var(--colorTextLight);
   width: 100%;
+}
+
+.headerText{
+  text-shadow: 0 0 5px #575757;
+  color: #ffffff;
 }
