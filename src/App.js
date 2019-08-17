@@ -6,7 +6,6 @@ import Navbar             from './Components/Navbar/Navbar';
 import LeftPanel          from './Components/LeftPanel/LeftPanel';
 import CartPanel          from './Components/CartPanel/CartPanel';
 import MainContainer      from './Components/MainContainer/MainContainer';
-import LandingPage        from './Components/LandingPage/LandingPage';
 import {texts, constants} from './strings';
 
 class App extends React.Component{

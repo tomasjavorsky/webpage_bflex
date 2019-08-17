@@ -22,6 +22,7 @@
   border: none;
   background-color: var(--colorUIDark);
   margin-right: 20px;
+  font-family: inherit;
 }
 
 .navSearch input[type="text"]{

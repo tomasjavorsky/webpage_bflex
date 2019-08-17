@@ -5,8 +5,7 @@ import {storage} from '../../Firebase/FirebaseSetup';
 import {css} from '@emotion/core';
 import BarLoader from 'react-spinners/BarLoader';
 import {texts, constants} from '../../strings';
-
-
+let bcrypt = require('bcryptjs');
 
 const override = css`
     display: block;
@@ -19,6 +18,8 @@ class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      login: "",
+      password: "",
       adminLoginOpen: false,
       imageFile: null,
       isUploading: false,
@@ -115,6 +116,7 @@ class Footer extends React.Component {
     this.setState({isUploading: !this.state.isUploading})
   };
 
+  //TODO implement security
   adminLoginClick(){
     this.setState({adminLoginOpen: true});
   }
@@ -126,7 +128,7 @@ class Footer extends React.Component {
     this.props.adminConsoleClick();
   }
 
-  //-------METHODS-------
+  //-------HELPER FUNCTIONS-------
   showObject(){
     console.log(this.state.newProduct);
   }

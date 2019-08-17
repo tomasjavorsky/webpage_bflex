@@ -2,15 +2,15 @@
   /*colors*/
   --colorPrimary: #ff9900;
   --colorPrimaryDark: #cd6b00;
-  --colorUIDark: rgb(61, 54, 45);
-  --colorUISemiDark: rgb(75, 68, 59);
-  --colorUIConsoleDark: #443d34;
-  --colorUIMiddle: rgb(102, 88, 71);
+  --colorUIDark: rgb(49, 53, 59);
+  --colorUISemiDark: rgb(61, 65, 71);
+  --colorUIConsoleDark: #333942;
+  --colorUIMiddle: rgb(82, 90, 102);
   --colorUIMiddleTransparent: rgba(102, 88, 71, 0.1);
   --colorUISemiLight: #eaebe9;
-  --colorUISemiLightDarker: #c2c3c1;
+  --colorUISemiLightDarker: #c2c2c2;
   --colorUILight: #ffffff;
-  --colorUIThumbBG: #696258;
+  --colorUIThumbBG: #585f69;
   --colorTextDark: #000000;
   --colorTextNonFocus: #cccdcb;
   --colorTextLight: #ffffff;
@@ -19,17 +19,16 @@
   --colorDelete: rgb(226, 0, 0);
 
   --pageMaxWidth: 1400px;
+
 }
 
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #3d362d;
+  background-color: var(--colorUIDark);
 }
 
 code {
@@ -45,6 +44,7 @@ code {
   cursor: pointer;
   text-align: center;
   border-radius: 3px;
+  font-family: inherit;
 }
 
 .primaryButton:hover{
@@ -59,6 +59,7 @@ code {
   cursor: pointer;
   text-align: center;
   border-radius: 3px;
+  font-family: inherit;
 }
 
 .secondaryButton:hover{

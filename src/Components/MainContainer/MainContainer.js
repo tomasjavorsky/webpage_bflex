@@ -44,7 +44,7 @@ class MainContainer extends React.Component {
       .then(res => res.json())
       .then(res => {
         this.setState({downloadFiles: res});
-        console.log(this.state.downloadFiles)})
+        })
       .catch(err => console.log(err));
   }
   setUploading = () => {
