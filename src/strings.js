@@ -45,8 +45,11 @@ const texts = {
   yourEmail: "Váš Email:",
   note: "Poznámka:",
   noJobsOpenATM: "Momentálne nemáme otvorené žiadne pracovné pozície",
-  jobName: "Názov Pozície",
-  jobDescription: "Popis pozície"
+  jobNamePlaceholder: "Názov Pozície",
+  jobDescriptionPlaceholder: "Popis pozície",
+  downloadLink: "Stiahnuť",
+  fileNamePlaceholder: "Názov súboru",
+  fileDescriptionPlaceholder: "Popis súboru",
 };
 
 const constants = {
