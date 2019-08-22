@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
 import {texts} from '../../strings';
-import headerImage from '../../Images/landingPageImage.jpg';
 
 class Header extends React.Component {
 
