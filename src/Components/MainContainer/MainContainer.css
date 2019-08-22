@@ -31,14 +31,20 @@
   border-radius: 5px;
   box-shadow: 0px 5px 5px var(--colorShadow);
   background-color: var(--colorUILight);
-  max-width: 350px;
   margin-bottom: 10px;
   min-width: 300px;
+}
+
+.howToTab{
+  max-width: 500px;
 }
 
 @media screen and (max-width: 720px) {
   .productTab{
     box-shadow: none;
     min-width: 300px;
+  }
+  .contactTabInfo{
+    max-width: 350px;
   }
 }

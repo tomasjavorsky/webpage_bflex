@@ -12,3 +12,8 @@
   text-shadow: 0 0 5px #575757;
   color: #ffffff;
 }
+
+.headerText h1{
+  font-size: 40px;
+  font-weight: bold;
+}

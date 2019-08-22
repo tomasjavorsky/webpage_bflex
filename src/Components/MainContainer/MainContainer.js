@@ -286,7 +286,7 @@ class MainContainer extends React.Component {
                                                     type={"button"}
                                                     onClick={() => deleteJob(job)}>
               {texts.delete}</button>}
-            <h1>{job.job_name}</h1>
+            <h2>{job.job_name}</h2>
             <p>{job.job_description}</p>
           </div>)
         )
