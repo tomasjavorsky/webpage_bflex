@@ -149,7 +149,7 @@ class CartPanel extends React.Component {
             <button
               className={"primaryButton"}
               type={"button"}
-              onClick={() => {this.sendMail(this.state.customerName,this.state.customerEmail,this.state.customerNote)}}
+              onClick={() => {this.sendMail(this.state.customerName,this.state.customerEmail,this.state.customerNote);this.onCloseModal()}}
             >{texts.send}</button>
           </div>
         </Modal>

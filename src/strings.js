@@ -54,7 +54,6 @@ const texts = {
 
 const constants = {
   endpoint: 'https://bflex-api.herokuapp.com',
-  endpointLocal: 'http://192.168.0.31:3001',
 };
 
 export{texts, constants}

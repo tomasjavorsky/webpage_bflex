@@ -254,7 +254,7 @@ class Footer extends React.Component {
           {!props.isUploading && <button className={"secondaryButton"}
                   type={"button"}
                   onClick={props.adminConsoleOpen}
-          >{texts.cancel}</button>}
+          >{texts.close}</button>}
         </div>
       </div>
     );
