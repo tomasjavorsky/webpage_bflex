@@ -35,7 +35,11 @@ const texts = {
   categoryNamePlaceholder: "Názov kategórie",
   categoryDescriptionPlaceholder: "Popis kategórie",
   newestProducts: "Najnovšie produkty",
-  howToOrderDescription: "Kombucha brooklyn bitters, jean shorts kinfolk yuccie +1 sed butcher qui heirloom dolor occupy vexillologist. Kogi trust fund vaporware ut mustache pok pok humblebrag small batch freegan hell of artisan pariatur culpa chartreuse occupy. Twee YOLO shaman vaporware ramps. Salvia laboris slow-carb, vaporware irure nostrud viral. Fanny pack taxidermy kitsch kombucha selfies blog. Normcore aute health goth, pinterest mlkshk chambray ennui ethical ullamco prism ut heirloom.",
+  howToOrderDescription: "Na karte produktu sa nachádza tlačidlo Pridať. " +
+    "Po jeho stlačení sa otvorí zoznam vybratého tovaru, do ktorého môžte dalej pridávať. " +
+    "Keď budete mať všetko vybraté, stlačte tlačidlo Odoslať záujem. " +
+    "Následne vyplnte vaše meno, email a prípadnú poznámku. " +
+    "Bude vám zaslaná potvrdenka a s ďalším postupom Vás budeme následne kontaktovať.",
   searchResultFor: "Výsledok hladania: ",
   send: "Odoslať",
   orderInterest: "Odoslať záujem",
