@@ -162,7 +162,7 @@ class App extends React.Component{
               productData={this.state.productData}
               selectedProductCategoryData={this.state.selectedProductCategoryData}
               adminConsoleOpen={this.state.adminConsoleOpen}
-              getCurrentCategoryData={this.getCurrentCategoryData}
+              getCurrentCategoryData={() => {this.getCurrentCategoryData(this.state.selectedProductCategory)}}
               addProductToCart={this.addProductToCart}
             />
           </div>

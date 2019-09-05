@@ -57,16 +57,48 @@ class Product extends React.Component {
       .then(res => {console.log("deleting");props.getCurrentCategoryData()})
   }
 
+  adjustProductOrder(props, increase){
+    fetch(constants.endpoint + '/products',
+      {
+        method: 'put',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          product_id: props.id,
+          increase: increase}
+        )
+      })
+      .then(res => {props.getCurrentCategoryData(props.selectedProductCategory)})
+  }
+
   render() {
+
+    const inlineMargin ={
+      marginRight: "3px",
+    }
+
     return (
       <div>
         <div className={"productContainer"}>
           <img className={"productImage"} alt={"product"} src={this.props.imageLink}/>
           <div className={"productInfo"}>
-            {this.props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
+            {this.props.adminConsoleOpen && <div>
+              <button className={"primaryButton deleteButton"}
                              type={"button"}
                              onClick={() => {this.deleteClicked(this.props)}}>
-              {texts.delete}</button>}
+              {texts.delete}</button>
+              <button className={"secondaryButton"}
+                      type={"button"}
+                      style={inlineMargin}
+                      onClick={() => {this.adjustProductOrder(this.props, true)}}>
+                {texts.orderUP}</button>
+              <button className={"secondaryButton"}
+                      type={"button"}
+                      style={inlineMargin}
+                      onClick={() => {this.adjustProductOrder(this.props, false)}}>
+                {texts.orderDown}</button>
+              {this.props.productOrder}
+
+            </div>}
             <h4>{this.props.name}</h4>
             <p className={"productDescription"}>{this.props.description}</p>
             <div className={"productButtons"}>

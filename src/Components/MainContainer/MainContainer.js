@@ -62,6 +62,7 @@ class MainContainer extends React.Component {
         tags={currentProduct.product_tags}
         tabColumns={currentProduct.product_columns}
         tabRows={currentProduct.product_rows}
+        productOrder={currentProduct.product_order}
         adminConsoleOpen={props.adminConsoleOpen}
         getCurrentCategoryData={props.getCurrentCategoryData}
         addProductToCart={props.addProductToCart}

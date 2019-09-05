@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Product/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +22,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1038">
-              <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="57" />
+            <state relative-caret-position="3052">
+              <caret line="157" column="70" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
                 <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
                 <element signature="n#!!block;n#searchProducts#0;n#App#0" />
                 <element signature="n#!!block;n#addProductToCart#0;n#App#0" />
@@ -36,11 +39,75 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#generateRows#0;n#!!block;n#ProductTable#0;n#Product#0" />
+                <element signature="n#!!block;n#detailsClicked#0;n#Product#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#ContactTab#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/strings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+            <state relative-caret-position="1736">
+              <caret line="62" column="2" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4032">
+              <caret line="256" column="23" selection-start-line="256" selection-start-column="23" selection-end-line="256" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1990#2180#0" />
+                <element signature="e#2224#2421#0" />
+                <element signature="e#2458#2648#0" />
+                <element signature="e#2689#2887#0" />
+                <element signature="e#2930#3126#0" />
+                <element signature="e#3166#3359#0" />
+                <element signature="e#3395#3553#0" />
+                <element signature="e#3595#3690#0" />
+                <element signature="e#3715#3778#0" />
+                <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
+                <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
+                <element signature="n#!!block;n#showObject#0;n#Footer#0" />
+                <element signature="n#!!block;n#addProductToDB#0;n#Footer#0" />
+                <element signature="n#!!block;n#createNewProduct#0;n#Footer#0" />
+                <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+                <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3304">
+            <state relative-caret-position="3556">
               <caret line="151" column="137" selection-start-line="151" selection-start-column="137" selection-end-line="151" selection-end-column="137" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -56,20 +123,6 @@
                 <element signature="e#1561#1879#0" />
                 <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
                 <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,7 +145,6 @@
       <find>generateProductCategoryButtons</find>
       <find>getCategoryData</find>
       <find>uploadImageToFirebase</find>
-      <find>getCurrentCategoryData</find>
       <find>close</find>
       <find>endpoint</find>
       <find>oncreatePressed</find>
@@ -116,6 +168,7 @@
       <find>getProductCategoriesData</find>
       <find>contactTabInfo</find>
       <find>bcryptjs</find>
+      <find>getCurrentCategoryData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,27 +194,26 @@
         <option value="$PROJECT_DIR$/src/Firebase/FirebaseSetup.js" />
         <option value="$PROJECT_DIR$/src/Components/Navbar/Navbar.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/Components/Product/Product.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Components/Navbar/Navbar.css" />
         <option value="$PROJECT_DIR$/src/Components/LeftPanel/LeftPanel.css" />
         <option value="$PROJECT_DIR$/src/Components/Footer/Footer.css" />
-        <option value="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" />
         <option value="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.css" />
         <option value="$PROJECT_DIR$/src/Components/Header/Header.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/Components/Header/Header.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" />
+        <option value="$PROJECT_DIR$/src/Components/Product/Product.js" />
         <option value="$PROJECT_DIR$/src/strings.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="310" />
-    <option name="y" value="59" />
-    <option name="width" value="1312" />
+    <option name="x" value="1034" />
+    <option name="width" value="1274" />
     <option name="height" value="1167" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -254,6 +306,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Navbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bflex" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
@@ -407,11 +466,14 @@
       <workItem from="1566323699605" duration="2073000" />
       <workItem from="1566389654626" duration="599000" />
       <workItem from="1566457115241" duration="599000" />
+      <workItem from="1567198401616" duration="42000" />
+      <workItem from="1567440162379" duration="131000" />
+      <workItem from="1567672491169" duration="5475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="399484000" />
+    <option name="totallyTimeSpent" value="405188000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,13 +488,13 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1348078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1348078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21666667" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.39411765" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.16568628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,25 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="57" column="3" lean-forward="true" selection-start-line="47" selection-start-column="2" selection-end-line="57" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#generateRows#0;n#!!block;n#ProductTable#0;n#Product#0" />
-            <element signature="n#!!block;n#detailsClicked#0;n#Product#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -630,21 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3009">
-          <caret line="191" column="33" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#ProductsTab#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#ContactTab#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Header/Header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -671,7 +699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
+        <state relative-caret-position="4032">
           <caret line="256" column="23" selection-start-line="256" selection-start-column="23" selection-end-line="256" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -695,13 +723,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1038">
-          <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="57" />
+        <state relative-caret-position="3556">
+          <caret line="151" column="137" selection-start-line="151" selection-start-column="137" selection-end-line="151" selection-end-column="137" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getCurrentCategoryData#0;n#App#0" />
+            <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
+            <element signature="e#1561#1879#0" />
+            <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
+            <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#ContactTab#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#generateRows#0;n#!!block;n#ProductTable#0;n#Product#0" />
+            <element signature="n#!!block;n#detailsClicked#0;n#Product#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3052">
+          <caret line="157" column="70" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#setSelectedProductCategory#0;n#App#0" />
             <element signature="n#!!block;n#searchProducts#0;n#App#0" />
             <element signature="n#!!block;n#addProductToCart#0;n#App#0" />
@@ -714,38 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3304">
-          <caret line="151" column="137" selection-start-line="151" selection-start-column="137" selection-end-line="151" selection-end-column="137" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#ProductThumbnail#0;n#CartPanel#0" />
-            <element signature="e#1561#1879#0" />
-            <element signature="n#!!block;n#onOpenModal#0;n#CartPanel#0" />
-            <element signature="n#!!block;n#onCloseModal#0;n#CartPanel#0" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/strings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+        <state relative-caret-position="1736">
+          <caret line="62" column="2" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
         </state>
       </provider>
     </entry>

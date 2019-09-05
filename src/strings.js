@@ -54,6 +54,8 @@ const texts = {
   downloadLink: "Stiahnuť",
   fileNamePlaceholder: "Názov súboru",
   fileDescriptionPlaceholder: "Popis súboru",
+  orderUP: "▲",
+  orderDown: "▼",
 };
 
 const constants = {
