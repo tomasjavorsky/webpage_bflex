@@ -27,6 +27,7 @@ class MainContainer extends React.Component {
     this.getCurrentJobListings = this.getCurrentJobListings.bind(this);
     this.getCurrentDownloadFiles = this.getCurrentDownloadFiles.bind(this);
     this.setUploading = this.setUploading.bind(this);
+    this.getCurrentContactInfo = this.getCurrentContactInfo.bind(this);
 
     //-------DATA FROM DB-------
     this.getCurrentJobListings();

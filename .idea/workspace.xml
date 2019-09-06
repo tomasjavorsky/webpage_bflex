@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,25 +52,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+            <state relative-caret-position="370">
+              <caret line="29" column="71" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#ProductsTab#0;n#MainContainer#0" />
                 <element signature="e#2745#2788#0" />
                 <element signature="n#!!block;n#deleteJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
-                <element signature="n#!!block;n#addJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
                 <element signature="e#7122#7165#0" />
                 <element signature="e#7213#7263#0" />
                 <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#addJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
-                <element signature="n#!!block;n#generateJobCards#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
               </folding>
             </state>
           </provider>
@@ -215,7 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="366" />
     <option name="width" value="1274" />
     <option name="height" value="1167" />
@@ -473,12 +471,12 @@
       <workItem from="1567198401616" duration="42000" />
       <workItem from="1567440162379" duration="131000" />
       <workItem from="1567672491169" duration="6075000" />
-      <workItem from="1567788982395" duration="3749000" />
+      <workItem from="1567788982395" duration="4165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="409537000" />
+    <option name="totallyTimeSpent" value="409953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,7 +488,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08741443" />
@@ -788,25 +786,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+        <state relative-caret-position="370">
+          <caret line="29" column="71" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
             <element signature="n#!!block;n#ProductsTab#0;n#MainContainer#0" />
             <element signature="e#2745#2788#0" />
             <element signature="n#!!block;n#deleteJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#addJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
             <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
             <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
             <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
             <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
             <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
             <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
             <element signature="e#7122#7165#0" />
             <element signature="e#7213#7263#0" />
             <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
             <element signature="n#!!block;n#addJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#generateJobCards#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
           </folding>
         </state>
       </provider>
