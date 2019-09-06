@@ -35,6 +35,10 @@
   min-width: 300px;
 }
 
+.deleteButtonContact{
+  background-color: var(--colorDelete);
+}
+
 .howToTab{
   max-width: 500px;
 }

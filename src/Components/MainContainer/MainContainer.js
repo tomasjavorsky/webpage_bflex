@@ -32,6 +32,7 @@ class MainContainer extends React.Component {
     //-------DATA FROM DB-------
     this.getCurrentJobListings();
     this.getCurrentDownloadFiles();
+    this.getCurrentContactInfo();
   }
 
   //-------HELPER FUNCTIONS-------
@@ -86,9 +87,9 @@ class MainContainer extends React.Component {
   }
 
   ContactTab(props){
-    let contactInfo = "";
+    let contactText = "";
     const onContactInfoChange = (event) => {
-      contactInfo = event.target.value;
+      contactText = event.target.value;
     };
     function deleteContact(contact) {
       fetch(constants.endpoint + '/contacts',
@@ -107,13 +108,13 @@ class MainContainer extends React.Component {
         .catch(res => console.log("unable to delete contact"))
     }
     function addContact(){
-      if(contactInfo !== ""){
+      if(contactText !== ""){
         fetch(constants.endpoint + '/contacts',
           {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              contact_info: contactInfo
+              contact_text: contactText
             })
           }
         )
@@ -125,19 +126,22 @@ class MainContainer extends React.Component {
     }
     function generateContacts(){
       return(
-        props.contactInfo.map((contact) => <div key={"contact"+contact.contact_id} className={"contactTabInfo"}>
-          {props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
+        props.contactInfo.map((contact) => <div key={"contact"+contact.contact_id}>
+          {props.adminConsoleOpen && <button className={"primaryButton deleteButtonContact"}
                                              type={"button"}
                                              onClick={() => deleteContact(contact)}>
             {texts.delete}</button>}
-          <p>{contact.contact_info}</p>
+          <p key={"contact"+contact.contact_id}>{contact.contact_text}</p>
         </div>)
       )
     }
     return(
       <div className={"contactTab"}>
         <h2>{texts.contact}</h2>
-        {generateContacts()}
+        <div className={"contactTabInfo"}>
+          <h2>{texts.companyName}</h2>
+          {generateContacts()}
+        </div>
         {props.adminConsoleOpen && <div className={"jobCreateTab"}>
           <input className={"adminConsoleTableColumns"}
                  type="text"
