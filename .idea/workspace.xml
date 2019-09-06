@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Product/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/strings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3052">
+            <state relative-caret-position="764">
               <caret line="157" column="70" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -53,33 +51,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+            <state relative-caret-position="367">
+              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
-                <element signature="n#!!block;n#ContactTab#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#ProductsTab#0;n#MainContainer#0" />
+                <element signature="e#2745#2788#0" />
+                <element signature="n#!!block;n#deleteJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#addJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
                 <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
-                <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
+                <element signature="e#7122#7165#0" />
+                <element signature="e#7213#7263#0" />
                 <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#addJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+                <element signature="n#!!block;n#generateJobCards#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/strings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1736">
-              <caret line="62" column="2" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -128,6 +122,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strings.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -169,6 +172,7 @@
       <find>contactTabInfo</find>
       <find>bcryptjs</find>
       <find>getCurrentCategoryData</find>
+      <find>jobNamePlaceholder</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,14 +209,14 @@
         <option value="$PROJECT_DIR$/src/Components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/Components/CartPanel/CartPanel.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" />
         <option value="$PROJECT_DIR$/src/Components/Product/Product.js" />
         <option value="$PROJECT_DIR$/src/strings.js" />
+        <option value="$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1034" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="366" />
     <option name="width" value="1274" />
     <option name="height" value="1167" />
   </component>
@@ -224,17 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="bflex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Tomus\Desktop\Web\bflex" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,6 +312,17 @@
               <item name="bflex" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="bflex" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Tomus\Desktop\Web\bflex" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -468,12 +472,13 @@
       <workItem from="1566457115241" duration="599000" />
       <workItem from="1567198401616" duration="42000" />
       <workItem from="1567440162379" duration="131000" />
-      <workItem from="1567672491169" duration="5475000" />
+      <workItem from="1567672491169" duration="6075000" />
+      <workItem from="1567788982395" duration="3749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405188000" />
+    <option name="totallyTimeSpent" value="409537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -485,16 +490,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1348078" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08741443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21666667" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.16568628" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.14215687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -697,6 +702,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4032">
@@ -737,33 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#getCurrentJobListings#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#ContactTab#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#Jobs#0;n#MainContainer#0" />
-            <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Product/Product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -778,7 +763,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3052">
+        <state relative-caret-position="764">
           <caret line="157" column="70" selection-start-line="157" selection-start-column="70" selection-end-line="157" selection-end-column="70" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -796,8 +781,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/strings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1736">
-          <caret line="62" column="2" lean-forward="true" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+        <state relative-caret-position="289">
+          <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/MainContainer/MainContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#ProductsTab#0;n#MainContainer#0" />
+            <element signature="e#2745#2788#0" />
+            <element signature="n#!!block;n#deleteJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#addJob#0;n#!!block;n#ContactTab#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#HowToOrder#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#createNewFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#addFileToDB#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#deleteFile#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#generateFilesCards#0;n#!!block;n#Downloads#0;n#MainContainer#0" />
+            <element signature="e#7122#7165#0" />
+            <element signature="e#7213#7263#0" />
+            <element signature="n#!!block;n#deleteJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#addJob#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+            <element signature="n#!!block;n#generateJobCards#0;n#!!block;n#Jobs#0;n#MainContainer#0" />
+          </folding>
         </state>
       </provider>
     </entry>

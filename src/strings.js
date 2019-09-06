@@ -35,11 +35,7 @@ const texts = {
   categoryNamePlaceholder: "Názov kategórie",
   categoryDescriptionPlaceholder: "Popis kategórie",
   newestProducts: "Najnovšie produkty",
-  howToOrderDescription: "Na karte produktu sa nachádza tlačidlo Pridať. " +
-    "Po jeho stlačení sa otvorí zoznam vybratého tovaru, do ktorého môžte dalej pridávať. " +
-    "Keď budete mať všetko vybraté, stlačte tlačidlo Odoslať záujem. " +
-    "Následne vyplnte vaše meno, email a prípadnú poznámku. " +
-    "Bude vám zaslaná potvrdenka a s ďalším postupom Vás budeme následne kontaktovať.",
+  howToOrderDescription: "Na karte produktu sa nachádza tlačidlo Pridať. Po jeho stlačení sa otvorí zoznam vybratého tovaru, do ktorého môžete ďalej pridávať. Keď budete mať všetko vybraté, stlačte tlačidlo Odoslať záujem. Následne vyplňte vaše meno, email a prípadnú poznámku. Bude vám zaslaná potvrdenka a s ďalším postupom Vás budeme následne kontaktovať.",
   searchResultFor: "Výsledok hladania: ",
   send: "Odoslať",
   orderInterest: "Odoslať záujem",

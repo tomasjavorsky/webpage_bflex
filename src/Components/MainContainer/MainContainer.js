@@ -19,6 +19,7 @@ class MainContainer extends React.Component {
     this.state = {
       currentTab: "products",
       jobListings: [],
+      contactInfo: [],
       downloadFiles: [],
       isUploading: false,
     };
@@ -38,6 +39,12 @@ class MainContainer extends React.Component {
         .then(res => res.json())
         .then(res => this.setState({jobListings: res}))
         .catch(err => console.log(err));
+  }
+  getCurrentContactInfo(){
+    fetch(constants.endpoint+'/contacts')
+      .then(res => res.json())
+      .then(res => this.setState({contactInfo: res}))
+      .catch(err => console.log(err));
   }
   getCurrentDownloadFiles(){
     fetch(constants.endpoint+'/downloadFiles')
@@ -78,13 +85,70 @@ class MainContainer extends React.Component {
   }
 
   ContactTab(props){
+    let contactInfo = "";
+    const onContactInfoChange = (event) => {
+      contactInfo = event.target.value;
+    };
+    function deleteContact(contact) {
+      fetch(constants.endpoint + '/contacts',
+        {
+          method: 'delete',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+              contact_id: contact.contact_id
+            }
+          )
+        })
+        .then(res => {
+          console.log("deleting");
+          props.getCurrentContactInfo();
+        })
+        .catch(res => console.log("unable to delete contact"))
+    }
+    function addContact(){
+      if(contactInfo !== ""){
+        fetch(constants.endpoint + '/contacts',
+          {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              contact_info: contactInfo
+            })
+          }
+        )
+          .then(res => {
+            console.log("contact added");
+            props.getCurrentContactInfo();
+          })
+      }
+    }
+    function generateContacts(){
+      return(
+        props.contactInfo.map((contact) => <div key={"contact"+contact.contact_id} className={"contactTabInfo"}>
+          {props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
+                                             type={"button"}
+                                             onClick={() => deleteContact(contact)}>
+            {texts.delete}</button>}
+          <p>{contact.contact_info}</p>
+        </div>)
+      )
+    }
     return(
       <div className={"contactTab"}>
         <h2>{texts.contact}</h2>
-        <div className={"contactTabInfo"}>
-          <h4>{texts.companyName}</h4>
-          {texts.companyContactInfo}
-        </div>
+        {generateContacts()}
+        {props.adminConsoleOpen && <div className={"jobCreateTab"}>
+          <input className={"adminConsoleTableColumns"}
+                 type="text"
+                 onChange={onContactInfoChange}
+          />
+          <div>
+            <button className={"primaryButton"}
+                    type={"button"}
+                    onClick={addContact}
+            >{texts.create}</button>
+          </div>
+        </div>}
       </div>
     );
   }
@@ -331,7 +395,11 @@ class MainContainer extends React.Component {
           getCurrentCategoryData={this.props.getCurrentCategoryData}
           addProductToCart={this.props.addProductToCart}
         />}
-        {this.props.currentTab === "contact" && <this.ContactTab/>}
+        {this.props.currentTab === "contact" && <this.ContactTab
+          adminConsoleOpen={this.props.adminConsoleOpen}
+          contactInfo={this.state.contactInfo}
+          getCurrentContactInfo={this.getCurrentContactInfo}
+        />}
         {this.props.currentTab === "howToOrder" && <this.HowToOrder/>}
         {this.props.currentTab === "downloads" && <this.Downloads
           adminConsoleOpen={this.props.adminConsoleOpen}
