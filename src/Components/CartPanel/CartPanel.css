@@ -81,3 +81,16 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.dataNotCollectedText{
+  font-size: 10px;
+  color: var(--colorUIMiddle);
+  font-style: italic;
+}
+
+.sentText{
+  padding-top: 10px;
+  color: var(--colorTextDark);
+  text-wrap: normal;
+  font-weight: bold;
+}

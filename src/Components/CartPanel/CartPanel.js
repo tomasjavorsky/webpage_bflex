@@ -9,6 +9,7 @@ class CartPanel extends React.Component {
     super(props);
     this.state = {
       modalOpen: false,
+      smallModalOpen: false,
       customerName: "",
       customerEmail: "",
       customerNote: "",
@@ -16,9 +17,11 @@ class CartPanel extends React.Component {
 
     this.onOpenModal            = this.onOpenModal.bind(this);
     this.onCloseModal           = this.onCloseModal.bind(this);
+    this.onOpenSmallModal       = this.onOpenSmallModal.bind(this);
+    this.onCloseSmallModal      = this.onCloseSmallModal.bind(this);
     this.onCustomerNameChange   = this.onCustomerNameChange.bind(this);
     this.onCustomerEmailChange  = this.onCustomerEmailChange.bind(this);
-    this.onCustomerNoteChange  = this.onCustomerNoteChange.bind(this);
+    this.onCustomerNoteChange   = this.onCustomerNoteChange.bind(this);
     this.sendMail               = this.sendMail.bind(this);
   }
 
@@ -54,6 +57,12 @@ class CartPanel extends React.Component {
   };
   onCloseModal(){
     this.setState({ modalOpen: false });
+  };
+  onOpenSmallModal(){
+    this.setState({ smallModalOpen: true });
+  };
+  onCloseSmallModal(){
+    this.setState({ smallModalOpen: false });
   };
   onCustomerNameChange = (event) => {
     this.setState({customerName: event.target.value});
@@ -145,13 +154,30 @@ class CartPanel extends React.Component {
                       rows="8" cols="35"
                       onChange={this.onCustomerNoteChange}/>
           </div>
+          <div><p className={"dataNotCollectedText centerInModal"}>{texts.dataNotCollected}</p></div>
+
           <div className={"centerInModal"}>
             <button
               className={"primaryButton"}
               type={"button"}
-              onClick={() => {this.sendMail(this.state.customerName,this.state.customerEmail,this.state.customerNote);this.onCloseModal()}}
+              onClick={() => {
+                if(this.state.customerName !== "" && this.state.customerEmail !== ""){
+                  this.sendMail(this.state.customerName,this.state.customerEmail,this.state.customerNote);
+                  this.onCloseModal();
+                  this.onOpenSmallModal();
+                }
+              }}
             >{texts.send}</button>
           </div>
+
+        </Modal>
+        <Modal
+          open={this.state.smallModalOpen}
+          onClose={this.onCloseSmallModal}
+          center
+          classNames={{modal: "customModal"}}
+        >
+          <h3 className={"sentText"}>{texts.sent}</h3>
         </Modal>
         <div className={"cartPanelOrderedProducts"}>
           {this.productThumbnailGenerator(this.props.productsInCart, this.props.removeProductFromCart)}

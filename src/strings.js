@@ -38,6 +38,7 @@ const texts = {
   howToOrderDescription: "Na karte produktu sa nachádza tlačidlo Pridať. Po jeho stlačení sa otvorí zoznam vybratého tovaru, do ktorého môžete ďalej pridávať. Keď budete mať všetko vybraté, stlačte tlačidlo Odoslať záujem. Následne vyplňte vaše meno, email a prípadnú poznámku. Bude vám zaslaná potvrdenka a s ďalším postupom Vás budeme následne kontaktovať.",
   searchResultFor: "Výsledok hladania: ",
   send: "Odoslať",
+  sent: "Váš záujem bol odoslaný, v najbližších dňoch Vás budeme kontaktovať.",
   orderInterest: "Odoslať záujem",
   addToCart: "Pridať",
   yourContact: "Kontakt na Vás",
@@ -52,6 +53,7 @@ const texts = {
   fileDescriptionPlaceholder: "Popis súboru",
   orderUP: "▲",
   orderDown: "▼",
+  dataNotCollected: "Váše meno ani email nebudú nikde uložené.",
 };
 
 const constants = {
