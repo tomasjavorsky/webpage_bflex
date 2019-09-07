@@ -74,7 +74,7 @@ class Product extends React.Component {
 
     const inlineMargin ={
       marginRight: "3px",
-    }
+    };
 
     return (
       <div>

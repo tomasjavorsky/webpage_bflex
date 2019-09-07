@@ -44,7 +44,6 @@ class App extends React.Component{
   }
   //-------HELPER FUNCTIONS-------
   getProductCategoriesData(){
-    console.log(constants.endpoint + '/productCategories');
     fetch(constants.endpoint + '/productCategories')
       .then(res => res.json())
       .then(res => this.setState({productCategories: res}))

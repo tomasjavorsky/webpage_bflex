@@ -8,7 +8,7 @@ class LeftPanel extends React.Component {
     super(props);
     this.state = {
       category_name: "",
-      category_description: ""
+      category_description: "",
     };
     this.getCategoryData = this.getCategoryData.bind(this);
   }
@@ -31,27 +31,48 @@ class LeftPanel extends React.Component {
     return categoryData;
   }
 
-  getProductCategoryNames(productCategoriesData){
-    return Array.from(productCategoriesData, x => x.category_name);
-  }
-  generateProductCategoryButtons() {
-    return this.getProductCategoryNames(this.props.productCategories)
-      .map((categoryName, index) => <button
-        className={"productCategoryButton"}
-        key={index}
-        onClick={() => {
-          this.props.setSelectedProductCategory(categoryName);
-          //this.getProductsForThisCategory(categoryName);
-        }}
-      >{categoryName}</button>)
+  adjustCategoryOrder(category, increase){
+    console.log("categoryId:" + category.category_id);
+    fetch(constants.endpoint + '/productCategories',
+      {
+        method: 'put',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          category_id: category.category_id,
+          increase: increase}
+        )
+      })
+      .then(res => {this.props.getProductCategoriesData()})
   }
 
-  // getProductsForThisCategory(categoryName){
-  //   if(categoryName !== ""){
-  //     fetch(constants.endpoint + '/products?category='+categoryName)
-  //       .then(res=> res.json())
-  //   }
-  // }
+  generateProductCategoryButtons() {
+    const inlineMargin ={
+      marginRight: "3px",
+    };
+    return this.props.productCategories.map((category, index) =>
+        <div key={"category" + category.category_id}>
+            {this.props.adminConsoleOpen && <div>
+              <button className={"secondaryButton"}
+                      type={"button"}
+                      style={inlineMargin}
+                      onClick={() => {this.adjustCategoryOrder(category, true)}}>
+                {texts.orderUP}</button>
+              <button className={"secondaryButton"}
+                      type={"button"}
+                      style={inlineMargin}
+                      onClick={() => {this.adjustCategoryOrder(category, false)}}>
+                {texts.orderDown}</button>
+              {category.category_order}
+          </div>}
+          <button
+            className={"productCategoryButton"}
+            key={index}
+            onClick={() => {
+              this.props.setSelectedProductCategory(category.category_name);
+            }}
+          >{category.category_name}</button>
+        </div>)
+  }
 
   // ---------- COMPONENTS ----------
   CategoryCreator(props) {
