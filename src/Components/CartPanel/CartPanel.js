@@ -144,7 +144,7 @@ class CartPanel extends React.Component {
           <div>
             <p>{texts.yourEmail}</p>
             <input className={"adminConsoleProductName"}
-                   type="text"
+                   type="email"
                    placeholder={texts.emailPlaceholder}
                    onChange={this.onCustomerEmailChange}/>
           </div>
