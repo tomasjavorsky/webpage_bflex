@@ -16,8 +16,8 @@ class Product extends React.Component {
 
   ProductTable(props){
     function generateRows(){
-      let numberOfColumns = props.tabColumns.split(",").length;
-      let tableData = props.tabRows.split(",");
+      let numberOfColumns = props.tabColumns.split(";").length;
+      let tableData = props.tabRows.split(";");
       let r = ``;
       for (let i=0; i<tableData.length/numberOfColumns; i++){
         r =`${r}<tr>`;
@@ -33,7 +33,7 @@ class Product extends React.Component {
         <table>
           <tbody>
             <tr>
-              {props.tabColumns.split(",").map((column, index) => <th key={"column"+index}>{column}</th>)}
+              {props.tabColumns.split(";").map((column, index) => <th key={"column"+index}>{column}</th>)}
             </tr>
             {generateRows()}
           </tbody>
