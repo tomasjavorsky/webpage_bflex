@@ -39,7 +39,7 @@ class AdminLogin extends React.Component {
           />
           <input
             className={"adminConsoleProductTags"}
-            type="text"
+            type="password"
             placeholder={texts.passwordPlaceholder}
             onChange={this.onPasswordChanged}
           />

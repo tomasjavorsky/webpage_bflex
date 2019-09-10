@@ -175,6 +175,7 @@ class MainContainer extends React.Component {
     let localFileLink = "";
     let firebaseFileLink = "";
 
+
     const onFileNameChange = (event) => {
       fileName = event.target.value;
     };
@@ -244,13 +245,45 @@ class MainContainer extends React.Component {
         })
         .catch(res => console.log("unable to delete file"))
     }
+    function adjustFileOrder(file, increase){
+      console.log("fileId:" + file.file_id);
+      fetch(constants.endpoint + '/downloadFiles',
+        {
+          method: 'put',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            file_id: file.file_id,
+            increase: increase}
+          )
+        })
+        .then(res => {props.getCurrentDownloadFiles()})
+    }
     function generateFilesCards() {
+      const inlineMargin ={
+        marginRight: "3px",
+      };
       return(
         props.downloadFiles.map((file) => <div key={"file"+file.file_id} className={"contactTabInfo"}>
-          {props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
-                                             type={"button"}
-                                             onClick={() => deleteFile(file)}>
-            {texts.delete}</button>}
+          {props.adminConsoleOpen &&
+          <div>
+            <button className={"primaryButton deleteButton"}
+                    type={"button"}
+                    onClick={() => deleteFile(file)}>
+              {texts.delete}</button>
+            <div>
+              <button className={"secondaryButton"}
+                      type={"button"}
+                      style={inlineMargin}
+                      onClick={() => {adjustFileOrder(file, true)}}>
+                {texts.orderUP}</button>
+              <button className={"secondaryButton"}
+                      type={"button"}
+                      style={inlineMargin}
+                      onClick={() => {adjustFileOrder(file, false)}}>
+                {texts.orderDown}</button>
+              {file.file_order}
+            </div>
+          </div>}
           <h2>{file.file_name}</h2>
           <p>{file.file_description}</p>
           <a href={file.file_link}>{texts.downloadLink}</a>

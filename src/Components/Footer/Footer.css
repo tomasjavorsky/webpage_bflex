@@ -36,7 +36,7 @@
   flex-direction: column;
 }
 
-input[type="text"],input[type="email"], textarea {
+input, textarea {
   border-radius: 3px;
   background-color : var(--colorUIConsoleDark);
   margin: 2px;
