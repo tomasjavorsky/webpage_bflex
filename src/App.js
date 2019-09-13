@@ -7,6 +7,7 @@ import LeftPanel          from './Components/LeftPanel/LeftPanel';
 import CartPanel          from './Components/CartPanel/CartPanel';
 import MainContainer      from './Components/MainContainer/MainContainer';
 import {texts, constants} from './strings';
+import LandingPage from "./Components/LandingPage/LandingPage";
 
 class App extends React.Component{
 
@@ -136,6 +137,7 @@ class App extends React.Component{
   render(){
     return (
       <div className={"app"}>
+
         <Header />
         <Navbar productsTabClicked={this.productsTabClicked}
                 contactTabClicked={this.contactTabClicked}

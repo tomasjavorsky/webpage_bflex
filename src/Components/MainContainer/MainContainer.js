@@ -384,7 +384,7 @@ class MainContainer extends React.Component {
       }
       else{
         return(
-          props.jobListings.map((job) => <div key={"job"+job.job_id} className={"contactTabInfo"}>
+          props.jobListings.map((job) => <div key={"job"+job.job_id} className={"contactTabInfo howToTab"}>
             {props.adminConsoleOpen && <button className={"primaryButton deleteButton"}
                                                     type={"button"}
                                                     onClick={() => deleteJob(job)}>

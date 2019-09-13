@@ -181,6 +181,11 @@ class Footer extends React.Component {
           });
   }
 
+  //-------LIFECYCLE--------
+  componentDidMount() {
+    window.$('#year').text(" " + new Date().getFullYear() + " ");
+  }
+
   //-------COMPONENTS-------
   AdminConsole(props) {
     function getProductCategoriesNames(productCategoriesData){
@@ -263,6 +268,16 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
+        <div className={"footerText"}>
+          <p>
+            Copyright ©
+            <span id={"year"}></span>
+            {texts.companyName} Všetky práva vyhradené.
+          </p>
+          <p className={"footerBorderLeft"}>
+            Created by Tomus
+          </p>
+        </div>
         <button className={"adminButton"} type={"button"} onClick={this.adminLoginClick}/>
         {this.state.adminLoginOpen && <AdminLogin
           adminConsoleOpen={this.adminConsoleOpen}

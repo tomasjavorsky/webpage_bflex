@@ -92,3 +92,14 @@ select{
 .adminLogin button{
   margin-left: 20px;
 }
+
+.footerText{
+  display: flex;
+  flex-direction: row;
+}
+
+.footerBorderLeft{
+  border-left: 1px solid var(--colorTextDark);
+  margin-left: 10px;
+  padding-left: 10px;
+}
