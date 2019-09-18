@@ -5,7 +5,6 @@ import {storage} from '../../Firebase/FirebaseSetup';
 import {css} from '@emotion/core';
 import BarLoader from 'react-spinners/BarLoader';
 import {texts, constants} from '../../strings';
-let bcrypt = require('bcryptjs');
 
 const override = css`
     display: block;

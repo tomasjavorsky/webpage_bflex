@@ -1,49 +1,181 @@
-.landingPageImage{
-  overflow: hidden;
+.landingPageContainer{
+  height: 100vh;
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-image: url("../../Images/landingPageImage.jpg");
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+.landingPageCategoriesHeader{
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px #575757;
+  padding-bottom: 10px;
+}
+
+.landingPageCategoriesHeaderLine{
+  max-width: 80vw;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 0 5px white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.landingPageFooter{
+  display: flex;
   justify-content: center;
 }
 
-.landingPageContentContainer{
-  display: flex;
-  flex-direction: column;
+.landingPageFooter button{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  border-top: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  border-radius: 3px;
+  width: 175px;
+  text-align: center;
 }
 
-.landingPageCompanyName{
-  align-self: center;
-  color: var(--colorTextDark);
-  margin-bottom: 50px;
+.landingPageFooter button:hover {
+  background-color: var(--colorPrimary);
+  border-top: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid var(--colorPrimaryDark);
 }
 
-.landingPageButtonsContainer{
+.landingPageCategoriesContainer{
+  width: 80vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 600px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 600px;
-  height: 100px;
-  margin: auto;
-  border: 1px solid white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-y: auto;
 }
 
-.landingPageButton{
-  align-self: center;
-  border: 2px solid var(--colorTextDark);
-  color: var(--colorTextDark);
-  font-size: 20px;
-  background-color: rgba(255,255,255,0);
-  padding: 10px;
+.landingCategoryImageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--colorUILight);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px var(--colorShadow);
+  max-width: 400px;
+  max-height: 200px;
   cursor: pointer;
-  text-align: center;
-  border-radius: 3px;
-  width: 200px;
-  height: 50px;
 }
 
-.landingPageButton:hover{
-  background-color: rgba(255,153,0,0.5);
+.landingCategoryName{
+  word-break: break-word;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.landingCategoryImage{
+  width: 150px;
+  height: auto;
+  margin: auto;
+}
+
+.landingPageCompanyText{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 5px #575757;
+  color: #ffffff;
+}
+
+.landingPageCompanyText h1{
+  font-family: 'Exo', sans-serif;
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.landingPageCompanyText p{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.landingPageCompanyTextHidden{
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 5px #575757;
+  color: #ffffff;
+  visibility: hidden;
+}
+
+.landingPageCompanyTextHidden h1{
+  font-size: 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.landingPageCompanyTextHidden button{
+  font-size: 20px;
+  text-align: center;
+}
+
+.landingShowOnSmall{
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .landingPageFooter{
+    flex-direction: column;
+  }
+
+  .landingPageFooter p{
+    align-self: center;
+    font-size: 24px;
+  }
+
+  .landingPageContainer{
+    justify-content: unset;
+  }
+
+  .landingHideOnSmall{
+    visibility: collapse;
+  }
+
+  .landingShowOnSmall{
+    display: unset;
+    margin: auto;
+  }
+
+  .landingPageCompanyTextHidden{
+    display: none;
+  }
+
+  .landingPageCompanyText h1{
+    font-size: 3.25rem;
+  }
+
+  .landingPageCompanyText p{
+    font-size: 1rem;
+  }
+
+  .landingPageFooter button{
+    font-size: 22px;
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+  }
 }

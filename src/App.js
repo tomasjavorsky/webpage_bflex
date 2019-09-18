@@ -7,7 +7,7 @@ import LeftPanel          from './Components/LeftPanel/LeftPanel';
 import CartPanel          from './Components/CartPanel/CartPanel';
 import MainContainer      from './Components/MainContainer/MainContainer';
 import {texts, constants} from './strings';
-import LandingPage from "./Components/LandingPage/LandingPage";
+import LandingPage        from "./Components/LandingPage/LandingPage";
 
 class App extends React.Component{
 
@@ -16,6 +16,7 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       cartOpen: true,
+      landingPageOpen: true,
       currentTab: "products",
       selectedProductCategory: "",
       selectedProductCategoryData: {
@@ -25,29 +26,47 @@ class App extends React.Component{
       productCategories: [],
       productData: [],
       productsInCart: [],
+      categoryImages: [],
     };
+
     this.adminConsoleClicked        = this.adminConsoleClicked.bind(this);
     this.productsTabClicked         = this.productsTabClicked.bind(this);
     this.contactTabClicked          = this.contactTabClicked.bind(this);
     this.howToOrderTabClicked       = this.howToOrderTabClicked.bind(this);
     this.downloadsTabClicked        = this.downloadsTabClicked.bind(this);
     this.jobsTabClicked             = this.jobsTabClicked.bind(this);
+
+    this.landingProductsTabClicked  = this.landingProductsTabClicked.bind(this);
+    this.landingContactTabClicked   = this.landingContactTabClicked.bind(this);
+    this.landingDownloadsTabClicked = this.landingDownloadsTabClicked.bind(this);
+    this.landingJobsTabClicked      = this.landingJobsTabClicked.bind(this);
+    this.landingSetSelectedProductCategory = this.landingSetSelectedProductCategory.bind(this);
+
     this.setSelectedProductCategory = this.setSelectedProductCategory.bind(this);
     this.getProductCategoriesData   = this.getProductCategoriesData.bind(this);
     this.getCurrentCategoryData     = this.getCurrentCategoryData.bind(this);
     this.searchProducts             = this.searchProducts.bind(this);
     this.addProductToCart           = this.addProductToCart.bind(this);
     this.removeProductFromCart      = this.removeProductFromCart.bind(this);
+    this.getCategoryImagesData      = this.getCategoryImagesData.bind(this);
 
     //-------DATA FROM DB-------
     this.getProductCategoriesData();
     this.getCurrentCategoryData();
+    this.getCategoryImagesData();
   }
+
   //-------HELPER FUNCTIONS-------
   getProductCategoriesData(){
     fetch(constants.endpoint + '/productCategories')
       .then(res => res.json())
       .then(res => this.setState({productCategories: res}))
+      .catch(err => console.log(err));
+  }
+  getCategoryImagesData(){
+    fetch(constants.endpoint + '/categoryImages')
+      .then(res => res.json())
+      .then(res => this.setState({categoryImages: res.rows}))
       .catch(err => console.log(err));
   }
   getCurrentCategoryData(currentCategoryName){
@@ -65,12 +84,20 @@ class App extends React.Component{
         .then(res => res.json())
         .then(res => this.setState({productData: res}))
         .catch(err => console.log(err));
-      let categoryData = this.state.productCategories.filter(category => category.category_name === currentCategoryName);
-      return categoryData[0];
+       let categoryData = this.state.productCategories.filter(category => category.category_name === currentCategoryName);
+       return categoryData[0];
     }
   }
   setSelectedProductCategory(selectedCategoryName){
     this.setState({
+      selectedProductCategory: selectedCategoryName,
+      selectedProductCategoryData: this.getCurrentCategoryData(selectedCategoryName)
+    });
+  }
+  landingSetSelectedProductCategory(selectedCategoryName){
+    this.setState({
+      landingPageOpen: false,
+
       selectedProductCategory: selectedCategoryName,
       selectedProductCategoryData: this.getCurrentCategoryData(selectedCategoryName)
     });
@@ -130,6 +157,31 @@ class App extends React.Component{
   jobsTabClicked(){
     this.setState({currentTab: "jobs"});
   }
+
+  landingProductsTabClicked(){
+    this.setState({currentTab: "products",
+      selectedProductCategory: "",
+      landingPageOpen: false,
+      selectedProductCategoryData: {
+        category_name: 'Najnovšie produkty',
+        category_description: ''
+      }});
+    this.getCurrentCategoryData();
+  }
+  landingContactTabClicked(){
+    this.setState({currentTab: "contact",
+      landingPageOpen: false,});
+  }
+  landingDownloadsTabClicked(){
+    this.setState({currentTab: "downloads",
+      landingPageOpen: false,});
+  }
+  landingJobsTabClicked(){
+    this.setState({currentTab: "jobs",
+      landingPageOpen: false,});
+  }
+
+
   adminConsoleClicked() {
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
@@ -137,46 +189,57 @@ class App extends React.Component{
   render(){
     return (
       <div className={"app"}>
-
-        <Header />
-        <Navbar productsTabClicked={this.productsTabClicked}
-                contactTabClicked={this.contactTabClicked}
-                howToOrderTabClicked={this.howToOrderTabClicked}
-                downloadsTabClicked={this.downloadsTabClicked}
-                jobsTabClicked={this.jobsTabClicked}
-                searchProducts={this.searchProducts}
-        />
-        {this.state.productsInCart.length !== 0 && <CartPanel
-          productsInCart={this.state.productsInCart}
-          removeProductFromCart={this.removeProductFromCart}
-        />}
-        <div className={"mainContentContainer"}>
-          <div className={"row"}>
-            {this.state.currentTab === "products" && <LeftPanel
-              adminConsoleOpen={this.state.adminConsoleOpen}
-              productCategories={this.state.productCategories}
-              setSelectedProductCategory={this.setSelectedProductCategory}
-              getProductCategoriesData={this.getProductCategoriesData}
-            />}
-            <MainContainer
-              currentTab={this.state.currentTab}
-              productData={this.state.productData}
-              selectedProductCategoryData={this.state.selectedProductCategoryData}
-              adminConsoleOpen={this.state.adminConsoleOpen}
-              getCurrentCategoryData={() => {this.getCurrentCategoryData(this.state.selectedProductCategory)}}
-              addProductToCart={this.addProductToCart}
-            />
-          </div>
-        </div>
-        <Footer adminConsoleOpen={this.state.adminConsoleOpen}
-                adminConsoleClick={this.adminConsoleClicked}
+        {/*Landing Page*/}
+        {this.state.landingPageOpen && <LandingPage
+          categoryImages={this.state.categoryImages}
+          landingProductsTabClicked={this.landingProductsTabClicked}
+          landingContactTabClicked={this.landingContactTabClicked}
+          landingDownloadsTabClicked={this.landingDownloadsTabClicked}
+          landingJobsTabClicked={this.landingJobsTabClicked}
+          landingSetSelectedProductCategory={this.landingSetSelectedProductCategory}
+          />}
+        {/*Website*/}
+        {!this.state.landingPageOpen &&
+        <div>
+          <Header />
+          <Navbar productsTabClicked={this.productsTabClicked}
+                  contactTabClicked={this.contactTabClicked}
+                  howToOrderTabClicked={this.howToOrderTabClicked}
+                  downloadsTabClicked={this.downloadsTabClicked}
+                  jobsTabClicked={this.jobsTabClicked}
+                  searchProducts={this.searchProducts}
+          />
+          {this.state.productsInCart.length !== 0 && <CartPanel
+            productsInCart={this.state.productsInCart}
+            removeProductFromCart={this.removeProductFromCart}
+          />}
+          <div className={"mainContentContainer"}>
+            <div className={"row"}>
+              {this.state.currentTab === "products" && <LeftPanel
+                adminConsoleOpen={this.state.adminConsoleOpen}
                 productCategories={this.state.productCategories}
-                getCurrentCategoryData={this.getCurrentCategoryData}
-        />
+                setSelectedProductCategory={this.setSelectedProductCategory}
+                getProductCategoriesData={this.getProductCategoriesData}
+              />}
+              <MainContainer
+                currentTab={this.state.currentTab}
+                productData={this.state.productData}
+                selectedProductCategoryData={this.state.selectedProductCategoryData}
+                adminConsoleOpen={this.state.adminConsoleOpen}
+                getCurrentCategoryData={() => {this.getCurrentCategoryData(this.state.selectedProductCategory)}}
+                addProductToCart={this.addProductToCart}
+              />
+            </div>
+          </div>
+          <Footer adminConsoleOpen={this.state.adminConsoleOpen}
+                  adminConsoleClick={this.adminConsoleClicked}
+                  productCategories={this.state.productCategories}
+                  getCurrentCategoryData={this.getCurrentCategoryData}
+          />
+        </div>}
       </div>
     );
   }
-
 }
 
 export default App;
