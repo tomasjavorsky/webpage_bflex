@@ -8,6 +8,7 @@ import CartPanel          from './Components/CartPanel/CartPanel';
 import MainContainer      from './Components/MainContainer/MainContainer';
 import {texts, constants} from './strings';
 import LandingPage        from "./Components/LandingPage/LandingPage";
+import dotenv from 'dotenv';
 
 class App extends React.Component{
 
@@ -55,7 +56,8 @@ class App extends React.Component{
     this.getCurrentCategoryData();
     this.getCategoryImagesData();
 
-    console.log(process.env.firebaseApiKey);
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.FB_APIKEY);
   }
 
   //-------HELPER FUNCTIONS-------
