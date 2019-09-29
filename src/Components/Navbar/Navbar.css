@@ -2,6 +2,8 @@
   display: flex;
   background-color: var(--colorUIDark);
   justify-content: space-around;
+  border-top: 1px solid #737981;
+  border-bottom: 1px solid #14191f;
 }
 
 .navHidden{
