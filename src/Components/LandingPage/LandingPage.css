@@ -6,7 +6,7 @@
   background-image: url("../../Images/landingPageImage.jpg");
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .landingPageCategoriesHeader{
@@ -95,7 +95,7 @@
 }
 
 .landingPageCompanyText{
-  margin-top: 20px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   text-shadow: 0 0 5px #575757;
@@ -113,6 +113,7 @@
 .landingPageCompanyText p{
   font-size: 1.5rem;
   text-align: center;
+  margin: 0;
 }
 
 .landingPageCompanyTextHidden{
@@ -129,6 +130,10 @@
   margin-bottom: 0;
 }
 
+.landingPageCompanyTextHidden p{
+  margin: 0;
+}
+
 .landingPageCompanyTextHidden button{
   font-size: 20px;
   text-align: center;
@@ -138,7 +143,7 @@
   display: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 890px) {
   .landingPageFooter{
     flex-direction: column;
   }

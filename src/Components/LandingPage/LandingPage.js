@@ -29,7 +29,6 @@ class LandingPage extends React.Component {
           <p>{texts.companySlogan}</p>
         </div>
         <div className={"landingHideOnSmall"}>
-          <h2 className={"landingPageCategoriesHeader"}>Kategórie Produktov:</h2>
           <div className={"landingPageCategoriesHeaderLine"} />
           <div className={"landingPageCategoriesContainer"}>
             {this.generateCategoryThumbnails()}
