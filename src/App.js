@@ -8,7 +8,6 @@ import CartPanel          from './Components/CartPanel/CartPanel';
 import MainContainer      from './Components/MainContainer/MainContainer';
 import {texts, constants} from './strings';
 import LandingPage        from "./Components/LandingPage/LandingPage";
-import dotenv from 'dotenv';
 
 class App extends React.Component{
 
