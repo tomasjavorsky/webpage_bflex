@@ -54,6 +54,8 @@ class App extends React.Component{
     this.getProductCategoriesData();
     this.getCurrentCategoryData();
     this.getCategoryImagesData();
+
+    console.log(process.env.firebaseApiKey);
   }
 
   //-------HELPER FUNCTIONS-------

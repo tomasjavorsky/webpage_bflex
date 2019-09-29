@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f30d2ac6-166d-4c46-884b-b30963792f34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navbar/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="198" column="43" selection-start-line="198" selection-start-column="10" selection-end-line="198" selection-end-column="43" />
+            <state relative-caret-position="420">
+              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
@@ -30,22 +31,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="168">
+              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
+                <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
+                <element signature="n#!!block;n#showObject#0;n#Footer#0" />
+                <element signature="n#!!block;n#addProductToDB#0;n#Footer#0" />
+                <element signature="n#!!block;n#createNewProduct#0;n#Footer#0" />
+                <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+                <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="159" column="19" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
+            <state relative-caret-position="109">
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,7 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>outlineButton</find>
       <find>getProductsForThisCategory</find>
       <find>centerInModal</find>
       <find>POST</find>
@@ -93,6 +103,7 @@
       <find>landingPageCompanyText</find>
       <find>visibility: collapse</find>
       <find>setselec</find>
+      <find>landingPageCompanyTextHidden</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -128,17 +139,18 @@
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Components/Header/Header.css" />
+        <option value="$PROJECT_DIR$/src/Components/Navbar/Navbar.css" />
+        <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" />
         <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js" />
-        <option value="$PROJECT_DIR$/src/Components/Navbar/Navbar.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1167" />
+    <option name="x" value="241" />
+    <option name="y" value="85" />
+    <option name="width" value="1224" />
+    <option name="height" value="1193" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -176,6 +188,20 @@
               <item name="bflex" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="CartPanel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bflex" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Footer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bflex" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -197,7 +223,20 @@
               <item name="bflex" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainContainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bflex" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Navbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bflex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bflex" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Firebase" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -374,12 +413,12 @@
       <workItem from="1568801957040" duration="5832000" />
       <workItem from="1568815187565" duration="8489000" />
       <workItem from="1569514601118" duration="63000" />
-      <workItem from="1569778533106" duration="1206000" />
+      <workItem from="1569778533106" duration="3121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="481239000" />
+    <option name="totallyTimeSpent" value="483154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,16 +430,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1167" extended-state="0" />
+    <frame x="241" y="85" width="1224" height="1193" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49930844" visible="true" weight="0.23585913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49930844" visible="true" weight="0.18618366" />
       <window_info id="Structure" order="1" sideWeight="0.5006916" side_tool="true" weight="0.122696154" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.21666667" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.2908012" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840763" visible="true" weight="0.28351012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -459,16 +498,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/ProductThumbnail/ProductThumbnail.css" />
     <entry file="file://$PROJECT_DIR$/src/Components/ProductThumbnail/ProductThumbnail.js" />
-    <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Images/landingPageImage.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -493,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/strings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="732">
@@ -508,23 +530,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scripts/parallax.js" />
-    <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
-            <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
-            <element signature="n#!!block;n#showObject#0;n#Footer#0" />
-            <element signature="n#!!block;n#addProductToDB#0;n#Footer#0" />
-            <element signature="n#!!block;n#createNewProduct#0;n#Footer#0" />
-            <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
-            <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/CartPanel/CartPanel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2548">
@@ -660,31 +665,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="198" column="43" selection-start-line="198" selection-start-column="10" selection-end-line="198" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="125" column="29" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="305">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="53" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/LandingPage/LandingPage.css">
+    <entry file="file://$PROJECT_DIR$/src/Components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="159" column="19" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
+        <state relative-caret-position="168">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#adminLoginCancel#0;n#Footer#0" />
+            <element signature="n#!!block;n#adminConsoleOpen#0;n#Footer#0" />
+            <element signature="n#!!block;n#showObject#0;n#Footer#0" />
+            <element signature="n#!!block;n#addProductToDB#0;n#Footer#0" />
+            <element signature="n#!!block;n#createNewProduct#0;n#Footer#0" />
+            <element signature="n#!!block;n#getProductCategoriesNames#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+            <element signature="n#!!block;n#generateProductCategories#0;n#!!block;n#AdminConsole#0;n#Footer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Firebase/FirebaseSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#adminConsoleClicked#0;n#App#0" />
+          </folding>
         </state>
       </provider>
     </entry>

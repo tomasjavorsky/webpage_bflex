@@ -153,16 +153,16 @@
   }
 
   .landingHideOnSmall{
-    visibility: collapse;
-  }
-
-  .landingShowOnSmall{
-    display: unset;
-    margin: auto;
+    display: none;
   }
 
   .landingPageCompanyTextHidden{
-    display: none;
+    display:none;
+  }
+
+  .landingShowOnSmall{
+    display: initial;
+    margin: auto;
   }
 
   .landingPageCompanyText h1{
