@@ -115,7 +115,6 @@ class Footer extends React.Component {
     this.setState({isUploading: !this.state.isUploading})
   };
 
-  //TODO implement security
   adminLoginClick(){
 
     this.setState({adminLoginOpen: true});

@@ -21,7 +21,7 @@ const texts = {
   tableColumnsPlaceholder: "Stĺpce tabulky (oddelovať s ;)",
   tableRowsPlaceholder: "Riadky tabulky (oddelovať s ;)",
   login: "Prihlásiť sa",
-  namePlaceholder: "Meno",
+  namePlaceholder: "Login",
   passwordPlaceholder: "Heslo",
   emailPlaceholder: "Email",
   categoryNamePlaceholder: "Názov kategórie",

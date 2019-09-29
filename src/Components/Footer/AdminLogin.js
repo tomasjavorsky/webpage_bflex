@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import {texts} from '../../strings';
+import {constants, texts} from '../../strings';
 
 class AdminLogin extends React.Component {
 
@@ -14,9 +14,26 @@ class AdminLogin extends React.Component {
   }
 
   loginPressed() {
-    if(this.state.name === "" && this.state.password === ""){
-      this.props.adminConsoleOpen();
-    }
+    fetch(constants.endpoint + '/user',
+      {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          user_login: this.state.name,
+          user_password: this.state.password,
+        })
+      }
+    )
+      .then(res => res.json())
+      .then(res => {
+      console.log(res);
+      if(res.loginStatus === "ok"){
+        this.props.adminConsoleOpen();
+      }
+    })
+    // if(this.state.name === "" && this.state.password === ""){
+    //   this.props.adminConsoleOpen();
+    // }
   }
 
   onNameChanged = (event) =>{
