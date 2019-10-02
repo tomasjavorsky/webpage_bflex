@@ -212,6 +212,7 @@ class App extends React.Component{
                   downloadsTabClicked={this.downloadsTabClicked}
                   jobsTabClicked={this.jobsTabClicked}
                   searchProducts={this.searchProducts}
+                  currentTab={this.state.currentTab}
           />
           {this.state.productsInCart.length !== 0 && <CartPanel
             productsInCart={this.state.productsInCart}

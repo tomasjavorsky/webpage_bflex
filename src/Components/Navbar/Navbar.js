@@ -15,6 +15,12 @@ class Navbar extends React.Component {
     this.setState({searchKeyword: event.target.value});
   };
 
+  searchOnFocus(currentTab, changeToProductTab){
+    if(currentTab !== "products"){
+      changeToProductTab();
+    }
+  }
+
   render() {
     const inlineStyle = {
       color: "var(--colorPrimaryDark)"
@@ -35,6 +41,7 @@ class Navbar extends React.Component {
         <div className={"navSearch"}>
           <input
             type="text"
+            onFocus={()=>{this.searchOnFocus(this.props.currentTab,this.props.productsTabClicked)}}
             onChange={this.onKeywordChanged}
           />
           <button
