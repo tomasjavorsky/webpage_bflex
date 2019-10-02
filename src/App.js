@@ -201,8 +201,12 @@ class App extends React.Component{
         {/*Website*/}
         {!this.state.landingPageOpen &&
         <div>
-          <Header />
-          <Navbar productsTabClicked={this.productsTabClicked}
+          <button className={"secondaryButton floatButton"} onClick={() => {
+            window.scrollTo(0, 0)
+          }}>{texts.orderUP}</button>
+          <Header id={"navbarLocation"}/>
+          <Navbar
+                  productsTabClicked={this.productsTabClicked}
                   contactTabClicked={this.contactTabClicked}
                   howToOrderTabClicked={this.howToOrderTabClicked}
                   downloadsTabClicked={this.downloadsTabClicked}
@@ -231,7 +235,8 @@ class App extends React.Component{
               />
             </div>
           </div>
-          <Footer adminConsoleOpen={this.state.adminConsoleOpen}
+          <Footer
+            adminConsoleOpen={this.state.adminConsoleOpen}
                   adminConsoleClick={this.adminConsoleClicked}
                   productCategories={this.state.productCategories}
                   getCurrentCategoryData={this.getCurrentCategoryData}

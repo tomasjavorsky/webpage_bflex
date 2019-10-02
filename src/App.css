@@ -18,11 +18,23 @@
   background-color: var(--colorUISemiLight);
 }
 
+.floatButton{
+  float: right;
+  margin: 5px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
 @media screen and (max-width: 720px) {
   .row, .navbar {
     flex-direction: column;
   }
   .left-panel {
     flex: none;
+  }
+  .floatButton{
+    display: initial;
   }
 }

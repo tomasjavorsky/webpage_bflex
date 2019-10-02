@@ -116,7 +116,6 @@ class Footer extends React.Component {
   };
 
   adminLoginClick(){
-
     this.setState({adminLoginOpen: true});
   }
   adminLoginCancel(){
