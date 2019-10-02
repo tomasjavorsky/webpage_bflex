@@ -224,6 +224,7 @@ class App extends React.Component{
                 productCategories={this.state.productCategories}
                 setSelectedProductCategory={this.setSelectedProductCategory}
                 getProductCategoriesData={this.getProductCategoriesData}
+                categoryImages={this.state.categoryImages}
               />}
               <MainContainer
                 currentTab={this.state.currentTab}

@@ -49,6 +49,17 @@ class LeftPanel extends React.Component {
     const inlineMargin ={
       marginRight: "3px",
     };
+
+    function getCategoryImage(categoryName, categoryImages) {
+      let link = "not found";
+      for (let j = 0; j < categoryImages.length; j++) {
+        if (categoryImages[j].category_name === categoryName) {
+          link = categoryImages[j].product_image;
+        }
+      }
+      return link;
+    }
+
     return this.props.productCategories.map((category, index) =>
         <div key={"category" + category.category_id}>
             {this.props.adminConsoleOpen && <div>
@@ -64,13 +75,18 @@ class LeftPanel extends React.Component {
                 {texts.orderDown}</button>
               {category.category_order}
           </div>}
-          <button
-            className={"productCategoryButton"}
-            key={index}
-            onClick={() => {
-              this.props.setSelectedProductCategory(category.category_name);
-            }}
-          >{category.category_name}</button>
+          <div className={"productCategoryButtonContainer"}>
+            <div className={"productCategoryButtonImageContainer"}>
+            <img className={"productCategoryButtonImage"} alt={category.category_name} src={getCategoryImage(category.category_name, this.props.categoryImages)}/>
+            </div>
+            <button
+              className={"productCategoryButton"}
+              key={index}
+              onClick={() => {
+                this.props.setSelectedProductCategory(category.category_name);
+              }}
+            >{category.category_name}</button>
+          </div>
         </div>)
   }
 
