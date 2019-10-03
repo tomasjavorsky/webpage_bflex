@@ -1,5 +1,3 @@
-import React from 'react';
-
 const texts = {
   details: "Detaily",
   close: "Zavrieť",
@@ -21,7 +19,7 @@ const texts = {
   tableColumnsPlaceholder: "Stĺpce tabulky (oddelovať s ;)",
   tableRowsPlaceholder: "Riadky tabulky (oddelovať s ;)",
   login: "Prihlásiť sa",
-  namePlaceholder: "Login",
+  namePlaceholder: "Meno",
   passwordPlaceholder: "Heslo",
   emailPlaceholder: "Email",
   categoryNamePlaceholder: "Názov kategórie",
