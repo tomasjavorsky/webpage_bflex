@@ -1,6 +1,7 @@
 const texts = {
   details: "Detaily",
   close: "Zavrieť",
+  homePage: "Domovská stránka",
   products: "Produkty",
   contact: "Kontakt",
   howToOrder: "Ako Objednať",

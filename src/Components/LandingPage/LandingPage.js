@@ -54,10 +54,6 @@ class LandingPage extends React.Component {
             <button onClick={this.props.landingJobsTabClicked}>{texts.jobs}</button>
           </div>
         </div>
-        <div className={"landingPageCompanyTextHidden"}>
-          <h1>{texts.companyName}</h1>
-          <p>{texts.companySlogan}</p>
-        </div>
       </div>
     )
   }

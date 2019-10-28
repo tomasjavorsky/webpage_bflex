@@ -27,11 +27,8 @@ class Navbar extends React.Component {
     };
     return (
       <div className={"navbar"}>
-        <div className={"navHidden"}>
-          <input type="text"/>
-          <button type={"button"}>{texts.search}</button>
-        </div>
         <div className={"navButtons"}>
+          <button onClick={this.props.homeTabClicked}>                {texts.homePage}</button>
           <button onClick={this.props.productsTabClicked}>                {texts.products}</button>
           <button onClick={this.props.contactTabClicked}>                 {texts.contact}</button>
           <button onClick={this.props.howToOrderTabClicked}>              {texts.howToOrder}</button>

@@ -60,7 +60,7 @@
   max-height: 600px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   overflow-y: auto;
 }
@@ -74,8 +74,8 @@
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0px 5px 5px var(--colorShadow);
-  max-width: 400px;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
   cursor: pointer;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .landingCategoryImage{
-  width: 150px;
+  width: 125px;
   height: auto;
   margin: auto;
 }
@@ -116,29 +116,6 @@
   margin: 0;
 }
 
-.landingPageCompanyTextHidden{
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 0 5px #575757;
-  color: #ffffff;
-  visibility: hidden;
-}
-
-.landingPageCompanyTextHidden h1{
-  font-size: 100px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.landingPageCompanyTextHidden p{
-  margin: 0;
-}
-
-.landingPageCompanyTextHidden button{
-  font-size: 20px;
-  text-align: center;
-}
-
 .landingShowOnSmall{
   display: none;
 }
@@ -159,10 +136,6 @@
 
   .landingHideOnSmall{
     display: none;
-  }
-
-  .landingPageCompanyTextHidden{
-    display:none;
   }
 
   .landingShowOnSmall{

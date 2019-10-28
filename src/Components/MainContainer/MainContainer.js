@@ -17,7 +17,7 @@ class MainContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTab: "products",
+      currentTab: "home",
       jobListings: [],
       contactInfo: [],
       downloadFiles: [],
@@ -421,10 +421,36 @@ class MainContainer extends React.Component {
     );
   }
 
+  HomePage(props){
+
+    function generateCategoryThumbnails(){
+      return(
+        props.categoryImages.map((categoryImage) =>
+          <div key={"productThumbnail" + categoryImage.category_name} className={"landingCategoryImageContainer"} onClick={() => props.landingSetSelectedProductCategory(categoryImage.category_name)}>
+            <img className={"landingCategoryImage"} alt={categoryImage.category_name} src={categoryImage.product_image} />
+            <h4 className={"landingCategoryName"}>{categoryImage.category_name}</h4>
+          </div>
+        )
+      )
+    }
+
+    return(
+      <div>
+        <div className={"landingPageCategoriesContainer"}>
+          {generateCategoryThumbnails()}
+        </div>
+      </div>
+    );
+  }
+
   //----MAIN----
   render() {
     return (
       <div className={'main'}>
+        {this.props.currentTab === "home" && <this.HomePage
+          categoryImages={this.props.categoryImages}
+          landingSetSelectedProductCategory={this.props.landingSetSelectedProductCategory}
+        />}
         {this.props.currentTab === "products" &&
         <this.ProductsTab
           productData={this.props.productData}

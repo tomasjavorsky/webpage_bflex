@@ -59,7 +59,7 @@
   }
 
   .navHidden{
-    visibility: collapse;
+    display: none;
   }
 }
 

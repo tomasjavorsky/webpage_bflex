@@ -43,6 +43,47 @@
   max-width: 500px;
 }
 
+.landingPageCategoriesContainer{
+  width: 80vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.landingCategoryImageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--colorUILight);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px var(--colorShadow);
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.landingCategoryName{
+  word-break: break-word;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.landingCategoryImage{
+  width: 125px;
+  height: auto;
+  margin: auto;
+}
+
 @media screen and (max-width: 720px) {
   .productTab{
     box-shadow: none;

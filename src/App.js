@@ -7,7 +7,6 @@ import LeftPanel          from './Components/LeftPanel/LeftPanel';
 import CartPanel          from './Components/CartPanel/CartPanel';
 import MainContainer      from './Components/MainContainer/MainContainer';
 import {texts, constants} from './strings';
-import LandingPage        from "./Components/LandingPage/LandingPage";
 
 class App extends React.Component{
 
@@ -16,8 +15,7 @@ class App extends React.Component{
     this.state = {
       adminConsoleOpen: false,
       cartOpen: true,
-      landingPageOpen: true,
-      currentTab: "products",
+      currentTab: "home",
       selectedProductCategory: "",
       selectedProductCategoryData: {
         category_name: texts.newestProducts,
@@ -35,11 +33,7 @@ class App extends React.Component{
     this.howToOrderTabClicked       = this.howToOrderTabClicked.bind(this);
     this.downloadsTabClicked        = this.downloadsTabClicked.bind(this);
     this.jobsTabClicked             = this.jobsTabClicked.bind(this);
-
-    this.landingProductsTabClicked  = this.landingProductsTabClicked.bind(this);
-    this.landingContactTabClicked   = this.landingContactTabClicked.bind(this);
-    this.landingDownloadsTabClicked = this.landingDownloadsTabClicked.bind(this);
-    this.landingJobsTabClicked      = this.landingJobsTabClicked.bind(this);
+    this.homeTabClicked             = this.homeTabClicked.bind(this);
     this.landingSetSelectedProductCategory = this.landingSetSelectedProductCategory.bind(this);
 
     this.setSelectedProductCategory = this.setSelectedProductCategory.bind(this);
@@ -96,11 +90,11 @@ class App extends React.Component{
   }
   landingSetSelectedProductCategory(selectedCategoryName){
     this.setState({
-      landingPageOpen: false,
-
+      currentTab: "products",
       selectedProductCategory: selectedCategoryName,
       selectedProductCategoryData: this.getCurrentCategoryData(selectedCategoryName)
-    });
+    }, ()=> this.getCurrentCategoryData());
+
   }
   searchProducts(keyword){
     console.log("searching" + keyword);
@@ -157,31 +151,9 @@ class App extends React.Component{
   jobsTabClicked(){
     this.setState({currentTab: "jobs"});
   }
-
-  landingProductsTabClicked(){
-    this.setState({currentTab: "products",
-      selectedProductCategory: "",
-      landingPageOpen: false,
-      selectedProductCategoryData: {
-        category_name: 'Najnovšie produkty',
-        category_description: ''
-      }});
-    this.getCurrentCategoryData();
+  homeTabClicked(){
+    this.setState({currentTab: "home"});
   }
-  landingContactTabClicked(){
-    this.setState({currentTab: "contact",
-      landingPageOpen: false,});
-  }
-  landingDownloadsTabClicked(){
-    this.setState({currentTab: "downloads",
-      landingPageOpen: false,});
-  }
-  landingJobsTabClicked(){
-    this.setState({currentTab: "jobs",
-      landingPageOpen: false,});
-  }
-
-
   adminConsoleClicked() {
     this.setState({adminConsoleOpen: !this.state.adminConsoleOpen});
   }
@@ -189,17 +161,6 @@ class App extends React.Component{
   render(){
     return (
       <div className={"app"}>
-        {/*Landing Page*/}
-        {this.state.landingPageOpen && <LandingPage
-          categoryImages={this.state.categoryImages}
-          landingProductsTabClicked={this.landingProductsTabClicked}
-          landingContactTabClicked={this.landingContactTabClicked}
-          landingDownloadsTabClicked={this.landingDownloadsTabClicked}
-          landingJobsTabClicked={this.landingJobsTabClicked}
-          landingSetSelectedProductCategory={this.landingSetSelectedProductCategory}
-          />}
-        {/*Website*/}
-        {!this.state.landingPageOpen &&
         <div>
           <button className={"secondaryButton floatButton"} onClick={() => {
             window.scrollTo(0, 0)
@@ -211,6 +172,7 @@ class App extends React.Component{
                   howToOrderTabClicked={this.howToOrderTabClicked}
                   downloadsTabClicked={this.downloadsTabClicked}
                   jobsTabClicked={this.jobsTabClicked}
+                  homeTabClicked={this.homeTabClicked}
                   searchProducts={this.searchProducts}
                   currentTab={this.state.currentTab}
           />
@@ -234,6 +196,8 @@ class App extends React.Component{
                 adminConsoleOpen={this.state.adminConsoleOpen}
                 getCurrentCategoryData={() => {this.getCurrentCategoryData(this.state.selectedProductCategory)}}
                 addProductToCart={this.addProductToCart}
+                categoryImages={this.state.categoryImages}
+                landingSetSelectedProductCategory={this.landingSetSelectedProductCategory}
               />
             </div>
           </div>
@@ -243,7 +207,7 @@ class App extends React.Component{
                   productCategories={this.state.productCategories}
                   getCurrentCategoryData={this.getCurrentCategoryData}
           />
-        </div>}
+        </div>
       </div>
     );
   }
