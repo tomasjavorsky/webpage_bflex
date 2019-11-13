@@ -82,10 +82,16 @@
   justify-content: center;
 }
 
-.dataNotCollectedText{
+.youAcceptText{
   font-size: 10px;
   color: var(--colorUIMiddle);
   font-style: italic;
+}
+
+.textLink{
+  margin-left: 3px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .sentText{

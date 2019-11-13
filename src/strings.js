@@ -44,7 +44,8 @@ const texts = {
   fileDescriptionPlaceholder: "Popis súboru",
   orderUP: "▲",
   orderDown: "▼",
-  dataNotCollected: "Váše meno ani email nebudú nikde uložené.",
+  youAcceptTerms: "Odoslaním záujmu súhlasíte s",
+  terms: "obchodnými podmienkami"
 };
 
 const constants = {

@@ -10,6 +10,7 @@ class CartPanel extends React.Component {
     this.state = {
       modalOpen: false,
       smallModalOpen: false,
+      termsModalOpen: false,
       customerName: "",
       customerEmail: "",
       customerNote: "",
@@ -19,6 +20,8 @@ class CartPanel extends React.Component {
     this.onCloseModal           = this.onCloseModal.bind(this);
     this.onOpenSmallModal       = this.onOpenSmallModal.bind(this);
     this.onCloseSmallModal      = this.onCloseSmallModal.bind(this);
+    this.onOpenTermsModal       = this.onOpenTermsModal.bind(this);
+    this.onCloseTermsModal      = this.onCloseTermsModal.bind(this);
     this.onCustomerNameChange   = this.onCustomerNameChange.bind(this);
     this.onCustomerEmailChange  = this.onCustomerEmailChange.bind(this);
     this.onCustomerNoteChange   = this.onCustomerNoteChange.bind(this);
@@ -63,6 +66,12 @@ class CartPanel extends React.Component {
   };
   onCloseSmallModal(){
     this.setState({ smallModalOpen: false });
+  };
+  onOpenTermsModal(){
+    this.setState({ termsModalOpen: true });
+  };
+  onCloseTermsModal(){
+    this.setState({ termsModalOpen: false });
   };
   onCustomerNameChange = (event) => {
     this.setState({customerName: event.target.value});
@@ -154,7 +163,11 @@ class CartPanel extends React.Component {
                       rows="8" cols="35"
                       onChange={this.onCustomerNoteChange}/>
           </div>
-          <div><p className={"dataNotCollectedText centerInModal"}>{texts.dataNotCollected}</p></div>
+          <div className={"youAcceptText centerInModal"}>
+            {texts.youAcceptTerms}
+            <div onClick={this.onOpenTermsModal} className={"youAcceptText textLink"}>{texts.terms}</div>
+          </div>
+          
 
           <div className={"centerInModal"}>
             <button
@@ -178,6 +191,14 @@ class CartPanel extends React.Component {
           classNames={{modal: "customModal"}}
         >
           <h3 className={"sentText"}>{texts.sent}</h3>
+        </Modal>
+        <Modal
+          open={this.state.termsModalOpen}
+          onClose={this.onCloseTermsModal}
+          center
+          classNames={{modal: "customModal"}}
+        >
+          <h3 className={"sentText"}>{"podmienky"}</h3>
         </Modal>
         <div className={"cartPanelOrderedProducts"}>
           {this.productThumbnailGenerator(this.props.productsInCart, this.props.removeProductFromCart)}

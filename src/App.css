@@ -8,10 +8,6 @@
   max-width: var(--pageMaxWidth);
 }
 
-.left-panel {
-  flex: 20%;
-}
-
 .mainContentContainer{
   display: flex;
   justify-content: center;

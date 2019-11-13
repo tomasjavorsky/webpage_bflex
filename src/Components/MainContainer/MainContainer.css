@@ -1,12 +1,11 @@
 .main {
-  flex: 80%;
   display: flex;
   justify-content: center;
 }
 
 .productTab{
   padding: 20px;
-  min-width: 800px;
+  width: 800px;
   box-shadow: inset 3px 3px 5px var(--colorShadow);
 }
 
