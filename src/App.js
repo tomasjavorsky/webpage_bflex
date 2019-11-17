@@ -93,7 +93,7 @@ class App extends React.Component{
       currentTab: "products",
       selectedProductCategory: selectedCategoryName,
       selectedProductCategoryData: this.getCurrentCategoryData(selectedCategoryName)
-    }, ()=> this.getCurrentCategoryData());
+    });
 
   }
   searchProducts(keyword){
