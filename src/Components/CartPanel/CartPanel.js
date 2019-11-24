@@ -10,22 +10,27 @@ class CartPanel extends React.Component {
     this.state = {
       modalOpen: false,
       smallModalOpen: false,
-      termsModalOpen: false,
       customerName: "",
       customerEmail: "",
       customerNote: "",
+      termsDocumentLink: "#",
     };
 
     this.onOpenModal            = this.onOpenModal.bind(this);
     this.onCloseModal           = this.onCloseModal.bind(this);
     this.onOpenSmallModal       = this.onOpenSmallModal.bind(this);
     this.onCloseSmallModal      = this.onCloseSmallModal.bind(this);
-    this.onOpenTermsModal       = this.onOpenTermsModal.bind(this);
-    this.onCloseTermsModal      = this.onCloseTermsModal.bind(this);
     this.onCustomerNameChange   = this.onCustomerNameChange.bind(this);
     this.onCustomerEmailChange  = this.onCustomerEmailChange.bind(this);
     this.onCustomerNoteChange   = this.onCustomerNoteChange.bind(this);
     this.sendMail               = this.sendMail.bind(this);
+  }
+
+  componentDidMount(){
+      fetch(constants.endpoint+'/gdprText')
+        .then(res => res.json())
+        .then(res => this.setState({termsDocumentLink: res[0].file_link}))
+        .catch(err => console.log(err));
   }
 
   //-------PRODUCT THUMBNAIL-------
@@ -66,12 +71,6 @@ class CartPanel extends React.Component {
   };
   onCloseSmallModal(){
     this.setState({ smallModalOpen: false });
-  };
-  onOpenTermsModal(){
-    this.setState({ termsModalOpen: true });
-  };
-  onCloseTermsModal(){
-    this.setState({ termsModalOpen: false });
   };
   onCustomerNameChange = (event) => {
     this.setState({customerName: event.target.value});
@@ -165,7 +164,7 @@ class CartPanel extends React.Component {
           </div>
           <div className={"youAcceptText centerInModal"}>
             {texts.youAcceptTerms}
-            <div onClick={this.onOpenTermsModal} className={"youAcceptText textLink"}>{texts.terms}</div>
+            <a className={"textLink"} href={this.state.termsDocumentLink} target="_blank" rel="noopener noreferrer">{texts.terms}</a>
           </div>
           
 
@@ -192,14 +191,7 @@ class CartPanel extends React.Component {
         >
           <h3 className={"sentText"}>{texts.sent}</h3>
         </Modal>
-        <Modal
-          open={this.state.termsModalOpen}
-          onClose={this.onCloseTermsModal}
-          center
-          classNames={{modal: "customModal"}}
-        >
-          <h3 className={"sentText"}>{"podmienky"}</h3>
-        </Modal>
+
         <div className={"cartPanelOrderedProducts"}>
           {this.productThumbnailGenerator(this.props.productsInCart, this.props.removeProductFromCart)}
         </div>
